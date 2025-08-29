@@ -1,0 +1,20 @@
+{
+  "name": "English",
+  "code": "eng",
+  "direction": "ltr",
+  "translations": {
+    "section1_title": "Build powerful applications!",
+    "section1_subtitle": "Unleash the power of Markup Language using FTML in easy or advanced solutions. Create beautiful, easy, fast, and responsive layouts for multiple devices in no-time.",
+    "section2_title": "Paradigm",
+    "section2_subtitle": "Low-code approach with minimalistic logic making it easy for developers to understand and maintain. Combining imperative and declarative style creates a new way of coding in abstractive mode.",
+    "section3_title": "Speed & Performance",
+    "section3_subtitle": "Maximum speed and efficiency are achieved through continuous source-code optimizations and direct manipulation of the real DOM. By avoiding reliance on a virtual DOM and its associated overhead, this approach delivers highly responsive and performant user interfaces.",
+    "section4_title": "Source Code",
+    "section4_subtitle": "Free and open source under the MIT license. Written in ECMAScript 5 for broad browser compatibility; source code is available to explore, fork, and modify as needed.",
+    "movie": "Movie",
+    "Movies": "Movies",
+    "show": "Show",
+    "Shows": "Shows",
+    "input_search": "Search in documentation..."
+  }
+}

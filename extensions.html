@@ -1,0 +1,34 @@
+<script src="http://localhost/front/front.js"></script>
+<title>Extensions</title>
+<template srcdoc="../index" src="../templates/extensions"></template>
+<h1 bindglobal="title:title" settext="{title}" globalize-get="{title}"></h1>
+<hr class="bcblack01">
+<article>
+  <section>
+    <a href="#down"><h2>Featured</h2></a>
+    <hr class="bcblack01">
+    <style>.loader{display: inherit}</style>
+    <div id="loader" class="loader"></div>
+    <div id="error" class="red mb2" hide>Something went wrong!</div>
+    <div id="empty" class="mb2 fwb" hide>Not found!</div>
+    <div id="success" class="green mb2" hide>It's working!</div>
+    <div
+      bindquery="page:page"
+      data-src="./assets/json/data/extensions.json"
+      data-set="page:#page;total_pages:#pages;total_results:#results"
+      data-iterate="extensions"
+      data-loader="#loader"
+      data-onerror="show:#error"
+      data-onempty="#empty"
+      class="box cards gut1-"
+    >
+    <a href="#" class="br05-" bgcolor="#212121">
+            <figure class="bos8 bw1 p1">
+                <img class="w5r m0a" data-get="icon" src="">
+                <figcaption class="fwb" data-get="title"></figcaption>
+                <small data-get="author">Front</small>
+                <small class="z09" data-get="version" jsonbefore="Version: ">Version: 0.1</small>
+            </figure>
+       </a>
+    </div>
+</article>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="version" content="1.0.0">
+  <script
+    src="http://localhost/front/front.js"
+    module="globalize;data;navigate;keyboard;screen"
+    plugin="particles"
+    var="api"
+    conf="debug:false;debugLocalhost:false;varsDir:assets/json/vars;storageKey:front"
+    globalize-conf="folder:assets/json/locales"
+    navigate-conf="startpage:experimental/app/stream;startpageLocal:app/stream">
+  </script>
+  <link type="text/css" href="https://cdn.front.nu/dist/front.css" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <style>
+    [hide] {
+      display: none
+    }
+
+    .box *, .cards{
+      box-sizing: border-box;
+      width: 100%
+    }
+
+    a {
+      color: unset
+    }
+  </style>
+  <title>Front</title>
+</head>
+
+<body bgcolor="black" color="white">
+  <div id="navloader" class="navloader pa t0 bcwhite05" width="100%" height="2" hide><div bgcolor="black" height="2"></div></div>
+  <header class="topbar gap2- shade1" paddingright="2rem" height="4.5rem" color="white">
+    <button click="toggle" clicktargetfield="aside[0]" class="md_du light pl1"><i class="icon32">≡</i></button>
+    <figure class="mh90p md_f2"><a class="b0" href="./" key="0"><img src="assets/img/logo.png" class="pr2"></a></figure>
+    <div class="pr f1" screen-sm="hide" screen-md="show">
+      <input
+        id="query"
+        type="text"
+        class="bs1 p1 h3 br05 dark white w100 md_dn"
+        globalize-get="input_search"
+        globalize-target="placeholder"
+        autocomplete="off">
+      <div 
+        stop="data-src"
+        bindasset="s:api.themoviedb.search.keyword"
+        bindfield="q:#query"
+        data-src="{s}{q}"
+        data-iterate="results"
+        data-loader="false"
+        class="box br05 bcblack- white- border- pa w100"
+        hide>
+        <figure class="p05">
+          <a data-get="title || name" class="md_dn"></a>
+        </figure>
+      </div>
+    </div>
+    <div screen-xs="hide" screen-sm="show;zoom:[0.8]" screen-md="zoom:[1]" class="gap1-">
+      <a href="documentation.html" globalize-get>Documentation</a>
+      <a href="extensions.html" globalize-get>Extensions</a>
+      <a href="playground.html" globalize-get>Playground</a>
+    </div>
+  </header>
+
+  <aside ontoggle="toggle.class[pf t0]" zindex="150" height="100%" class="dark xl_dn"></aside>
+  <main height="100%" include="includes/home.html"></main>
+  <aside></aside>
+  <footer></footer>
+</body>
+
+</html>
