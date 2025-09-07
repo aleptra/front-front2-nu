@@ -1,0 +1,39 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title>Documentation</title>
+<template srcdoc="../../index" src="../../templates/documentation"></template>
+<article>
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
+    <ol>
+      <li><a href="#" bindglobal="title:title" settext="{title}" globalize-get="{title}"></a></li>
+      <li globalize="get_started">Get started</li>
+    </ol>
+  </nav>
+  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"></h1>
+  <p color="#f7f7f7">Welcome! Here you'll find step-by-step guides for setting up your development environment, installing dependencies, and creating your first application using the Front CLI tool. Whether you're a new or experienced developer, follow the instructions below to get started on macOS, Windows, or Linux/Unix.</p>
+  <hr class="bcblack01">
+  <section id="automatic" margintop="2rem">
+    <h2 zoom="0.9" marginbottom="1rem">Automatic Installation</h2>
+    <p>Set up development environment automatically using GIT and Front CLI tool.</p>
+    <h6 margintop="1rem" lineheight="2"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➊</b> Install GIT on your system:</h6>
+    <ul class="list">
+      <li><a target="_blank" href="https://git-scm.com/download/mac">macOS</a></li>
+      <li><a target="_blank" href="https://git-scm.com/download/win">Windows</a></li>
+      <li><a target="_blank" href="https://git-scm.com/download/linux">Linux/Unix</a></li>
+    </ul>
+    <h6 margintop="1rem"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➋</b> Clone project:</h6>
+    <code class="markup antiquewhite" formatify="colors:silver,cornsilk,navajowhite,slategray,green;true">git clone https://github.com/aleptra/front.git</code>
+    <h6 margintop="1rem"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➌</b> Create an application:</h6>
+    <code class="markup antiquewhite" formatify="colors:silver,cornsilk,navajowhite,slategray,green;true">make app:create</code>
+  </section>
+  <hr zoom="0.9" height="2rem">
+  <section id="manual">
+    <h2 zoom="0.9">Manual installation</h2>
+    Set up development environment manually step by step.
+    <h4 globalize="application_structure">Application structure</h4>
+    <ul class="list">
+      <li><a target="_blank" href="https://git-scm.com/download/mac">macOS</a></li>
+      <li><a target="_blank" href="https://git-scm.com/download/win">Windows</a></li>
+      <li><a target="_blank" href="https://git-scm.com/download/linux">Linux/Unix</a></li>
+    </ul>
+  </section>
+</article>
