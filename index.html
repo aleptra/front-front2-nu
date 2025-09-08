@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <base href="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="version" content="1.0.0">
   <script
@@ -10,7 +9,7 @@
     module="globalize;data;navigate;keyboard;screen"
     plugin="particles"
     var="api"
-    conf="debug:false;debugLocalhost:false;varsDir:assets/json/vars;storageKey:front;frontSrcLocal://localhost/front/front.js"
+    conf="debug:false;debugLocalhost:false;varsDir:assets/json/vars;storageKey:front;frontSrcLocal://localhost/front/front.js;baseHref:front-front2-nu"
     globalize-conf="folder:assets/json/locales"
     navigate-conf="startpage:front-front2-nu;startpageLocal:/">
   </script>
@@ -47,7 +46,7 @@
             <input id="query2" name="q" type="text" height="3rem" class="bs1 p1 h3 br05 dark white w100 zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
             <input type="submit" class="bos0 bc0 white p1 h5 w4 icon icon16 pa r0" value="🔍">
           </form>
-          <div stop="data-src" bindglobal="l:globalize.code" bindfield="q:#query2" data-src="data/doc.json" data-iterate="true" data-loader="false" bgcolor="black" class="box br05 pa bos1 w100 ail- zi2 autocomplete" data-onempty="#empty2" hide="" style="display: none !important;">
+          <div stop="data-src" bindglobal="l:globalize.code" bindfield="q:#query2" data-src="assets/json/data/doc.json" data-iterate="true" data-loader="false" bgcolor="black" class="box br05 pa bos1 w100 ail- zi2 autocomplete" data-onempty="#empty2" hide="" style="display: none !important;">
             <figure stop>
               <a style="align-items: normal;" bindglobal="l:globalize.code" data-set="link:link" data-get="title" href="{link}" class="p1" stop="data-set;data-get;href;class"></a>
             </figure>
