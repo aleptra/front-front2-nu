@@ -1,6 +1,10 @@
 [
   {
-    "link": "documentation.html",
+    "link": "documentation",
     "title": "Documentation"
+  },
+  {
+    "link": "documentation/references/ftml/attributes",
+    "title": "Attributes"
   }
 ]
