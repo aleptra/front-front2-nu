@@ -1,10 +1,26 @@
 [
   {
     "attribute": "hide",
-    "description": "Hides the targeted element."
+    "description": "Hides the element."
   },
   {
     "attribute": "show",
-    "description": "Shows the targeted element."
+    "description": "Shows the element."
+  },
+  {
+    "attribute": "lowercase",
+    "description": "Converts content to lowercase."
+  },
+  {
+    "attribute": "uppercase",
+    "description": "Converts content to uppercase."
+  },
+  {
+    "attribute": "height",
+    "description": "Sets the height of the element."
+  },
+  {
+    "attribute": "width",
+    "description": "Sets the width of the element."
   }
 ]
