@@ -1,10 +1,10 @@
 [
   {
     "attribute": "hide",
-    "title": ""
+    "description": "Hides the targeted element."
   },
   {
     "attribute": "show",
-    "title": ""
+    "description": "Shows the targeted element."
   }
 ]
