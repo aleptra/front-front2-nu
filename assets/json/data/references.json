@@ -1,5 +1,13 @@
 [
   {
+    "attribute": "bgcolor",
+    "description": "Sets the background color of the element."
+  },
+  {
+    "attribute": "color",
+    "description": "Sets the color of the content."
+  },
+  {
     "attribute": "hide",
     "description": "Hides the element."
   },
@@ -18,6 +26,14 @@
   {
     "attribute": "height",
     "description": "Sets the height of the element."
+  },
+  {
+    "attribute": "trimleft",
+    "description": "Removes characters from the start of content."
+  },
+  {
+    "attribute": "trimright",
+    "description": "Removes characters from the end of content."
   },
   {
     "attribute": "width",
