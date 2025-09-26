@@ -10,21 +10,62 @@
       <li globalize="attributes">Attributes</li>
     </ol>
   </nav>
-  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem" runorder="bindglobal;settext;globalize-get"></h1>
+  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
   <section id="automatic" margintop="2rem">
    <section>
-    <table class="mt1 w100p">
+      <table class="mt1 w100p" data-src="assets/json/data/references.json">
       <thead>
         <tr>
           <th globalize="attribute">Attribute</th>
-          <th globalize="parameters">Parameters</th>
           <th class="w50" globalize="description">Description</th>
         </tr>
       </thead>
-      <tbody class="z09" data-iterate="true" data-src="assets/json/data/references.json">
+        <tr>
+          <td colspan="2" paddingtop="2rem">
+            <h4>Content</h4>
+            <hr color="darkgray" margin="0.5rem 0">
+          </td>
+        </tr>
+        <tbody class="z09" data-iterate="content">
         <tr>
           <td data-get="attribute"></td>
-          <td></td>
+            <td data-get="description"></td>
+          </tr>
+        </tbody>
+        <tr>
+          <td colspan="2" paddingtop="2rem">
+            <h4>Style</h4>
+            <hr color="darkgray" margin="0.5rem 0">
+          </td>
+        </tr>
+        <tbody class="z09" data-iterate="style">
+          <tr>
+            <td data-get="attribute"></td>
+            <td data-get="description"></td>
+          </tr>
+        </tbody>
+        <tr>
+          <td colspan="2" paddingtop="2rem">
+            <h4>Event</h4>
+            <hr color="darkgray" margin="0.5rem 0">
+          </td>
+        </tr>
+        <tbody class="z09" data-iterate="event">
+          <tr>
+            <td data-get="attribute"></td>
+            <td data-get="description"></td>
+          </tr>
+        </tbody>
+        <tr>
+          <td colspan="2" paddingtop="2rem">
+            <h4>Behavior</h4>
+            <hr color="darkgray" margin="0.5rem 0">
+          </td>
+        </tr>
+        <tbody class="z09" data-iterate="behavior">
+          <tr>
+            <td data-get="attribute"></td>
           <td data-get="description"></td>
         </tr>
       </tbody>

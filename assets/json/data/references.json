@@ -1,42 +1,62 @@
-[
-  {
-    "attribute": "bgcolor",
-    "description": "Sets the background color of the element."
-  },
-  {
-    "attribute": "color",
-    "description": "Sets the color of the content."
-  },
-  {
-    "attribute": "hide",
-    "description": "Hides the element."
-  },
-  {
-    "attribute": "show",
-    "description": "Shows the element."
-  },
-  {
-    "attribute": "lowercase",
-    "description": "Converts content to lowercase."
-  },
-  {
-    "attribute": "uppercase",
-    "description": "Converts content to uppercase."
-  },
-  {
-    "attribute": "height",
-    "description": "Sets the height of the element."
-  },
-  {
-    "attribute": "trimleft",
-    "description": "Removes characters from the start of content."
-  },
-  {
-    "attribute": "trimright",
-    "description": "Removes characters from the end of content."
-  },
-  {
-    "attribute": "width",
-    "description": "Sets the width of the element."
-  }
-]
+{
+  "style": [
+    {
+      "attribute": "bgcolor",
+      "description": "Sets the background color of the element."
+    },
+    {
+      "attribute": "color",
+      "description": "Sets the color of the content."
+    },
+    {
+      "attribute": "hide",
+      "description": "Hides the element."
+    },
+    {
+      "attribute": "show",
+      "description": "Shows the element."
+    },
+    {
+      "attribute": "height",
+      "description": "Sets the height of the element."
+    },
+    {
+      "attribute": "width",
+      "description": "Sets the width of the element."
+    }
+  ],
+  "content": [
+    {
+      "attribute": "lowercase",
+      "description": "Converts content to lowercase."
+    },
+    {
+      "attribute": "uppercase",
+      "description": "Converts content to uppercase."
+    },
+    {
+      "attribute": "trimleft",
+      "description": "Removes characters from the start of content."
+    },
+    {
+      "attribute": "trimright",
+      "description": "Removes characters from the end of content."
+    }
+  ],
+  "event": [
+    {
+      "attribute": "onshow",
+      "description": "Triggered when the element is shown."
+    },
+    {
+      "attribute": "onhide",
+      "description": "Triggered when the element is hidden."
+    }
+  ],
+  "behavior": [
+    {
+      "attribute": "runorder",
+      "description": "Runs attributes in order."
+    }
+  ]
+}
