@@ -9,14 +9,6 @@
       "description": "Sets the color of the content."
     },
     {
-      "attribute": "hide",
-      "description": "Hides the element."
-    },
-    {
-      "attribute": "show",
-      "description": "Shows the element."
-    },
-    {
       "attribute": "height",
       "description": "Sets the height of the element."
     },
@@ -45,15 +37,23 @@
   ],
   "event": [
     {
-      "attribute": "onshow",
-      "description": "Triggered when the element is shown."
-    },
-    {
       "attribute": "onhide",
       "description": "Triggered when the element is hidden."
+    },
+    {
+      "attribute": "onshow",
+      "description": "Triggered when the element is shown."
     }
   ],
   "behavior": [
+    {
+      "attribute": "hide",
+      "description": "Hides the element."
+    },
+    {
+      "attribute": "show",
+      "description": "Shows the element."
+    },
     {
       "attribute": "runorder",
       "description": "Runs attributes in order."
