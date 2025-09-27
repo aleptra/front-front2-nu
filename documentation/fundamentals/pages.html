@@ -12,6 +12,42 @@
   <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <section color="silver">
-    <p>A Page represents a structured, self-contained view of your application. Pages act as containers for elements, layouts, and FTML attributes, defining how content is presented, styled, and behaves. They are the building blocks of your applications, allowing you to organize your app into logical sections or screens.</p>
+    <p>A Page represents a structured, self-contained view of your application. Pages act as containers for elements,
+      layouts, and FTML attributes, defining how content is presented, styled, and behaves. They are the building blocks
+      of your applications, allowing you to organize your app into logical sections or screens. Pages can be of
+      different types depending on their purpose, providing modular and reusable views tailored to specific sections,
+      features, or workflows within your application.</p>
+  </section>
+
+  <h2 zoom="0.8" padding="4rem 0 1rem 0">1. Start Page</h2>
+  <section color="silver">
+    <p>
+      A Start Page is a specialized page that serves as the entry point for your application. It is loaded first and
+      sets up global configurations, scripts, styles, and layout structures that other Standard Pages may rely on.</p>
+
+    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Key Responsibilities:</h3>
+    <ul class="list">
+      <li>Load core attributes, modules, plugins and assets.</li>
+      <li>Set up configurations.</li>
+      <li>Define the default page layout and structure.</li>
+    </ul>
+
+  </section>
+
+  <h2 zoom="0.8" padding="4rem 0 1rem 0">2. Standard Page</h2>
+  <section color="silver">
+    <p>
+      A Standard Page is a flexible page that builds upon the base structure of your application. It can override
+      elements, layouts, or attributes defined in a StartPage, allowing you to customize the content, style, and
+      behavior for specific sections or workflows. Standard Pages act as containers for elements, layouts, and FTML
+      attributes, providing modular and reusable views that help organize your application into logical sections or
+      screens.</p>
+
+    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Key Responsibilities:</h3>
+    <ul class="list">
+      <li>Inherit and optionally override elements, layouts, and configurations from the Start Page.</li>
+      <li>Organize and present content specific to a section, feature, or workflow.</li>
+      <li>Ensure consistency with the application’s overall structure and style.</li>
+    </ul>
   </section>
 </article>
