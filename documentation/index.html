@@ -1,39 +1,27 @@
 <script src="https://cdn.front.nu/nightly/front.js"></script>
-<title>Documentation</title>
-<template srcdoc="../index" src="../_templates/documentation"></template>
+<title>Introduction</title>
+<template srcdoc="../../../../index" src="../../../../_templates/documentation"></template>
 <article>
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
     <ol>
-      <li><a href="#" bindglobal="title:title" settext="{title}" globalize-get="{title}"></a></li>
-      <li globalize="get_started">Get Started</li>
+      <li><a href="#" settext="Documentation"></a></li>
+      <li globalize-get="introduction">Introduction</li>
     </ol>
   </nav>
-  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"></h1>
-  <p color="lightgray">Welcome! Here you'll find step-by-step guides for setting up your development environment, installing dependencies, and creating your first application using the Front CLI tool. Whether you're a new or experienced developer, follow the instructions below to get started on macOS, Windows, or Linux/Unix.</p>
-  <hr class="bcblack01">
-  <section id="automatic" margintop="2rem" color="lightgray">
-    <h2 zoom="0.9" marginbottom="1rem" color="white">Automatic Installation</h2>
-    <p>Set up development environment automatically using GIT and Front CLI tool.</p>
-    <h6 margintop="1rem" lineheight="2"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➊</b> Install GIT on your system:</h6>
+  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
+  <section color="silver">
+    <p><b>Front</b> is a powerful library for building interactive and dynamic applications using declarative HTML-like
+      syntax. It extends standard HTML with FTML (Front Text Markup Language), allowing developers to control content,
+      style, layout, interactivity, and behavior through attributes, and to extend functionality with modules and
+      plugins.</p>
+    <br>
+    <p>Attributes in FTML are organized into three layers:</p>
     <ul class="list">
-      <li><a target="_blank" href="https://git-scm.com/download/mac">macOS</a></li>
-      <li><a target="_blank" href="https://git-scm.com/download/win">Windows</a></li>
-      <li><a target="_blank" href="https://git-scm.com/download/linux">Linux/Unix</a></li>
-    </ul>
-    <h6 margintop="1rem"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➋</b> Clone project:</h6>
-    <code class="markup antiquewhite" formatify="colors:silver,cornsilk,navajowhite,slategray,green;true">git clone https://github.com/aleptra/front.git</code>
-    <h6 margintop="1rem"><b zoom="1.4" transform="translateY(1px)" color="dimgray">➌</b> Create an application:</h6>
-    <code class="markup antiquewhite" formatify="colors:silver,cornsilk,navajowhite,slategray,green;true">make app:create</code>
-  </section>
-  <hr zoom="0.9" height="2rem">
-  <section id="manual" color="lightgray">
-    <h2 zoom="0.9" color="white">Manual installation</h2>
-    <p>Set up development environment manually step by step.</p>
-    <h4 globalize="application_structure" color="white">Application structure</h4>
-    <ul class="list">
-      <li><a target="_blank" href="https://git-scm.com/download/mac">macOS</a></li>
-      <li><a target="_blank" href="https://git-scm.com/download/win">Windows</a></li>
-      <li><a target="_blank" href="https://git-scm.com/download/linux">Linux/Unix</a></li>
+      <li>Core Attributes - fundamental controls for content, style, and basic behavior.</li>
+      <li>Module Attributes - feature-specific extensions that provide domain-level functionality, such as responsive
+        design and layout.</li>
+      <li>Plugin Attributes - external or optional attributes that enable custom behaviors or third-party features.</li>
     </ul>
   </section>
 </article>
