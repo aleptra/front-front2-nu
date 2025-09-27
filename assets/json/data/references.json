@@ -1,26 +1,154 @@
 {
   "style": [
     {
+      "attribute": "align",
+      "description": "Sets alignment of content within the element."
+    },
+    {
       "attribute": "bgcolor",
       "description": "Sets the background color of the element."
     },
     {
+      "attribute": "bgimage",
+      "description": "Sets the background image of the element."
+    },
+    {
+      "attribute": "border",
+      "description": "Sets the border of the element."
+    },
+    {
+      "attribute": "bold",
+      "description": "Makes text bold."
+    },
+    {
+      "attribute": "boxshadow",
+      "description": "Applies a shadow effect to the element."
+    },
+    {
       "attribute": "color",
-      "description": "Sets the color of the content."
+      "description": "Sets the text color."
+    },
+    {
+      "attribute": "cursor",
+      "description": "Sets the cursor when hovering over the element."
+    },
+    {
+      "attribute": "flex",
+      "description": "Sets flex properties for the element."
+    },
+    {
+      "attribute": "flexdirection",
+      "description": "Sets the flex direction."
+    },
+    {
+      "attribute": "flexitem",
+      "description": "Sets properties of a flex item."
+    },
+    {
+      "attribute": "font",
+      "description": "Sets font style and size."
     },
     {
       "attribute": "height",
       "description": "Sets the height of the element."
     },
     {
+      "attribute": "justifycontent",
+      "description": "Aligns flex items along the main axis."
+    },
+    {
+      "attribute": "lineheight",
+      "description": "Sets the height of text lines."
+    },
+    {
+      "attribute": "margin",
+      "description": "Sets margin around the element."
+    },
+    {
+      "attribute": "margintop",
+      "description": "Sets top margin."
+    },
+    {
+      "attribute": "marginbottom",
+      "description": "Sets bottom margin."
+    },
+    {
+      "attribute": "marginleft",
+      "description": "Sets left margin."
+    },
+    {
+      "attribute": "marginright",
+      "description": "Sets right margin."
+    },
+    {
+      "attribute": "minheight",
+      "description": "Sets the minimum height."
+    },
+    {
+      "attribute": "minwidth",
+      "description": "Sets the minimum width."
+    },
+    {
+      "attribute": "maxwidth",
+      "description": "Sets the maximum width."
+    },
+    {
+      "attribute": "padding",
+      "description": "Sets padding inside the element."
+    },
+    {
+      "attribute": "paddingtop",
+      "description": "Sets top padding."
+    },
+    {
+      "attribute": "paddingbottom",
+      "description": "Sets bottom padding."
+    },
+    {
+      "attribute": "paddingleft",
+      "description": "Sets left padding."
+    },
+    {
+      "attribute": "paddingright",
+      "description": "Sets right padding."
+    },
+    {
+      "attribute": "radius",
+      "description": "Sets border radius."
+    },
+    {
+      "attribute": "resize",
+      "description": "Sets resize behavior."
+    },
+    {
+      "attribute": "transform",
+      "description": "Applies a CSS transform."
+    },
+    {
       "attribute": "width",
       "description": "Sets the width of the element."
+    },
+    {
+      "attribute": "wordbreak",
+      "description": "Sets how words break in text."
+    },
+    {
+      "attribute": "whitespace",
+      "description": "Sets whitespace behavior."
+    },
+    {
+      "attribute": "zindex",
+      "description": "Sets the stacking order of the element."
+    },
+    {
+      "attribute": "zoom",
+      "description": "Sets zoom scale of the element."
     }
   ],
   "content": [
     {
       "attribute": "insertbeforebegin",
-      "description": "Inserts new content immediately before the element itself."
+      "description": "Inserts new content immediately before the element."
     },
     {
       "attribute": "insertafterbegin",
@@ -32,7 +160,15 @@
     },
     {
       "attribute": "insertafterend",
-      "description": "Inserts new content immediately after the element itself."
+      "description": "Inserts new content immediately after the element."
+    },
+    {
+      "attribute": "trimleft",
+      "description": "Removes characters from the start of content."
+    },
+    {
+      "attribute": "trimright",
+      "description": "Removes characters from the end of content."
     },
     {
       "attribute": "lowercase",
@@ -43,15 +179,123 @@
       "description": "Converts content to uppercase."
     },
     {
-      "attribute": "trimleft",
-      "description": "Removes characters from the start of content."
+      "attribute": "setaction",
+      "description": "Sets an action on the element."
     },
     {
-      "attribute": "trimright",
-      "description": "Removes characters from the end of content."
+      "attribute": "setmax",
+      "description": "Sets a maximum value."
+    },
+    {
+      "attribute": "settext",
+      "description": "Sets the text content."
+    },
+    {
+      "attribute": "sethtml",
+      "description": "Sets HTML content."
+    },
+    {
+      "attribute": "sethref",
+      "description": "Sets the href attribute."
+    },
+    {
+      "attribute": "setqueryhref",
+      "description": "Sets a query-based href."
+    },
+    {
+      "attribute": "setvalue",
+      "description": "Sets the value of the element."
+    },
+    {
+      "attribute": "setid",
+      "description": "Sets the element's id."
+    },
+    {
+      "attribute": "setname",
+      "description": "Sets the element's name."
+    },
+    {
+      "attribute": "setsrc",
+      "description": "Sets the source of an element."
+    }
+  ],
+  "binding": [
+    {
+      "attribute": "bindvar",
+      "description": "Binds a variable."
+    },
+    {
+      "attribute": "bindquery",
+      "description": "Binds data from a query."
+    },
+    {
+      "attribute": "bindasset",
+      "description": "Binds an asset."
+    },
+    {
+      "attribute": "bindglobal",
+      "description": "Binds a global variable."
+    },
+    {
+      "attribute": "bindfield",
+      "description": "Binds a specific field."
+    }
+  ],
+  "logic": [
+    {
+      "attribute": "ifafterbegin",
+      "description": "Conditional insertion after beginning of element."
+    },
+    {
+      "attribute": "ifbeforeend",
+      "description": "Conditional insertion before end of element."
+    },
+    {
+      "attribute": "ifopen",
+      "description": "Conditional insertion for new element."
+    }
+  ],
+  "value": [
+    {
+      "attribute": "resetvalue",
+      "description": "Resets the value of the element."
+    },
+    {
+      "attribute": "togglevalue",
+      "description": "Toggles the value of the element."
+    }
+  ],
+  "mapping": [
+    {
+      "attribute": "mapclass",
+      "description": "Maps classes based on rules."
+    },
+    {
+      "attribute": "mapmargin",
+      "description": "Maps margin values."
+    },
+    {
+      "attribute": "mapbindvar",
+      "description": "Maps a bound variable."
     }
   ],
   "event": [
+    {
+      "attribute": "onclicked",
+      "description": "Triggered when the element is clicked."
+    },
+    {
+      "attribute": "onenabled",
+      "description": "Triggered when the element or feature becomes enabled."
+    },
+    {
+      "attribute": "onfocused",
+      "description": "Triggered when the element gains focus."
+    },
+    {
+      "attribute": "onblur",
+      "description": "Triggered when the element loses focus."
+    },
     {
       "attribute": "onhide",
       "description": "Triggered when the element is hidden."
@@ -59,6 +303,14 @@
     {
       "attribute": "onshow",
       "description": "Triggered when the element is shown."
+    },
+    {
+      "attribute": "onsubmitted",
+      "description": "Triggered when a form is submitted."
+    },
+    {
+      "attribute": "onload",
+      "description": "Triggered when the element is loaded."
     }
   ],
   "behavior": [
