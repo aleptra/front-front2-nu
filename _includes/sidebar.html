@@ -1,38 +1,38 @@
-<nav screen-xs="padding:[0px 1rem 0px 1rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem]" screen-md="padding:[0 2.5rem 0 2.5rem]" screen-lg="padding:[0px 2rem 0rem 2rem]" class="sidebar white-" bgcolor="black">
+<nav screen-xs="padding:[0px 1rem 0px 1rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem]"
+  screen-md="padding:[0 2.5rem 0 2.5rem]" screen-lg="padding:[0px 2rem 0rem 2rem]" class="sidebar white-"
+  bgcolor="black">
   <form form-filter="true">
     <div class="md_du">
-      <a click="toggle" clicktargetfield="aside[0]" keyboard-key="m" keyboard-action="click" keyboard-scope="body" class="button pl1"><i class="icon32">&#171;</i></a>
+      <a click="toggle" clicktargetfield="aside[0]" keyboard-key="m" keyboard-action="click" keyboard-scope="body"
+        class="button pl1"><i class="icon32">&#171;</i></a>
       <hr>
-      <input
-        id="query2"
-        class="bs1 p1 h3 bcblack w100"
-        bindvar=":" type="text"
-        placeholder="Search in documentation ..."
-        autocomplete="off">
+      <input id="query2" class="bs1 p1 h3 bcblack w100" bindvar=":" type="text"
+        placeholder="Search in documentation ..." autocomplete="off">
     </div>
     <details open="" paddingtop="2rem">
-        <summary globalize-get="get_started" bold>Getting Started</summary>
-        <details>
-          <summary globalize-get="installation">Installation</summary>
-          <a href="#automatic" globalize="automatic">Automatic</a>
-          <a href="#manual" globalize="manual">Manual</a>
-        </details>
-        <details>
-          <summary globalize-get="fundamental">Fundamental</summary>
-          <a href="fundamental/page_start.html" globalize="start_page">Start page</a>
-          <a href="fundamental/page_navigation.html" globalize="navigation_page">Navigation page</a>
-          <a href="fundamental/page_template.html" globalize="template_page">Template page</a>
-          <a href="fundamental/module.html" globalize="library">Module</a>
-          <a href="fundamental/plugin.html" globalize="plugin">Plugin</a>
-        </details>
+      <summary globalize-get="get_started" bold>Getting Started</summary>
+      <a href="documentation/introduction/" globalize="introduction">Introduction</a>
+      <details>
+        <summary globalize-get="installation">Installation</summary>
+        <a href="#automatic" globalize="automatic">Automatic</a>
+        <a href="#manual" globalize="manual">Manual</a>
       </details>
       <details>
-        <summary globalize-get="references" bold>Reference</summary>
-        <details>
-          <summary globalize="installation">FTML</summary>
-          <a href="#" globalize="overview">Overview</a>
-          <a href="documentation/references/ftml/attributes.html" globalize="manual">Attributes</a>
-        </details>
+        <summary globalize-get="fundamental">Fundamentals</summary>
+        <a href="fundamental/page_start.html" globalize="start_page">Start page</a>
+        <a href="fundamental/page_navigation.html" globalize="navigation_page">Navigation page</a>
+        <a href="fundamental/page_template.html" globalize="template_page">Template page</a>
+        <a href="fundamental/module.html" globalize="library">Module</a>
+        <a href="fundamental/plugin.html" globalize="plugin">Plugin</a>
       </details>
+    </details>
+    <details>
+      <summary globalize-get="references" bold>Reference</summary>
+      <details>
+        <summary globalize="installation">FTML</summary>
+        <a href="documentation/references/ftml/" globalize="overview">Overview</a>
+        <a href="documentation/references/ftml/attributes.html" globalize="manual">Attributes</a>
+      </details>
+    </details>
   </form>
 </nav>

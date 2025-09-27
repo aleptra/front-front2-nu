@@ -19,6 +19,22 @@
   ],
   "content": [
     {
+      "attribute": "insertbeforebegin",
+      "description": "Inserts new content immediately before the element itself."
+    },
+    {
+      "attribute": "insertafterbegin",
+      "description": "Inserts new content just inside the element, before its first child."
+    },
+    {
+      "attribute": "insertbeforeend",
+      "description": "Inserts new content just inside the element, after its last child."
+    },
+    {
+      "attribute": "insertafterend",
+      "description": "Inserts new content immediately after the element itself."
+    },
+    {
       "attribute": "lowercase",
       "description": "Converts content to lowercase."
     },
