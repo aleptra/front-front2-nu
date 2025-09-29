@@ -9,12 +9,12 @@
       <input id="query2" class="bs1 p1 h3 bcblack w100" bindvar=":" type="text"
         placeholder="Search in documentation ..." autocomplete="off">
     </div>
-    <details open="" paddingtop="2rem">
+    <details open paddingtop="2rem">
       <summary globalize-get="get_started" bold>Getting Started</summary>
       <a href="documentation" globalize-get="introduction">Introduction</a>
       <a href="documentation/installation" globalize-get="installation">Installation</a>
-      <details>
-        <summary globalize-get="fundamental">Fundamentals</summary>
+      <details bindglobal="href:href" ifnew="([{href}]~[/fundamentals/]);setattr:[open]">
+        <summary globalize-get="fundamentals">Fundamentals</summary>
         <a href="documentation/fundamentals/pages.html" globalize-get="pages">Pages</a>
         <a href="documentation/fundamentals/templates.html" globalize-get="templates">Templates</a>
         <a href="documentation/fundamentals/modules.html" globalize-get="modules">Modules</a>
