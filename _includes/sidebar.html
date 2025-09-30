@@ -15,10 +15,10 @@
       <a href="documentation/installation" globalize-get="installation">Installation</a>
       <details bindglobal="href:href" ifnew="([{href}]~[/fundamentals/]);setattr:[open]">
         <summary globalize-get="fundamentals">Fundamentals</summary>
-        <a href="documentation/fundamentals/pages.html" globalize-get="pages">Pages</a>
-        <a href="documentation/fundamentals/templates.html" globalize-get="templates">Templates</a>
-        <a href="documentation/fundamentals/modules.html" globalize-get="modules">Modules</a>
-        <a href="documentation/fundamentals/plugins.html" globalize-get="plugins">Plugins</a>
+        <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/pages]);bold">Pages</a>
+        <a href="documentation/fundamentals/templates.html" globalize-get="templates" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/templates]);bold">Templates</a>
+        <a href="documentation/fundamentals/modules.html" globalize-get="modules" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/modules]);bold">Modules</a>
+        <a href="documentation/fundamentals/plugins.html" globalize-get="plugins" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/plugins]);bold">Plugins</a>
       </details>
     </details>
     <details>
