@@ -6,14 +6,14 @@
       <a click="toggle" clicktargetfield="aside[0]" keyboard-key="m" keyboard-action="click" keyboard-scope="body"
         class="button pl1"><i class="icon32">&#171;</i></a>
       <hr>
-      <input id="query2" class="bs1 p1 h3 bcblack w100" bindvar=":" type="text"
+      <input id="query2" bgcolor="white01" width="100%" height="3rem" padding="1rem" class="bs1" bindvar=":" type="text"
         placeholder="Search in documentation ..." autocomplete="off">
     </div>
     <details open paddingtop="2rem">
       <summary globalize-get="get_started" bold>Getting Started</summary>
       <a href="documentation" globalize-get="introduction">Introduction</a>
       <a href="documentation/installation" globalize-get="installation">Installation</a>
-      <details bindglobal="href:href" ifnew="([{href}]~[/fundamentals/]);setattr:[open]">
+      <details paddingbottom="1rem" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/]);setattr:[open]">
         <summary globalize-get="fundamentals">Fundamentals</summary>
         <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/pages]);bold">Pages</a>
         <a href="documentation/fundamentals/templates.html" globalize-get="templates" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/templates]);bold">Templates</a>
