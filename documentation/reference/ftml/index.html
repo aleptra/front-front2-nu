@@ -13,67 +13,12 @@
   <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <p>FTML extends HTML by using custom attributes to control the presentation, behavior, and content of elements.
-    <br>
+    <br><br>
     Attributes in FTML are organized into three layers:
   </p>
   <ul class="list">
     <li>Core Attributes - fundamental controls for content, style, and basic behavior.</li>
-    <li>Module Attributes - feature-specific extensions that provide domain-level functionality, such as responsive
-      design</li>
-    or layout.
+    <li>Module Attributes - enrich the core functionality with additional features.</li>
     <li>Plugin Attributes - external or optional attributes that enable custom behaviors or third-party features.</li>
   </ul>
-  <section id="automatic" margintop="2rem">
-    <section>
-      <table class="mt1 w100p" data-src="assets/json/data/references.json">
-        <tr>
-          <td colspan="2" paddingtop="2rem">
-            <h4>Content</h4>
-            <hr color="darkgray" margin="0.5rem 0">
-          </td>
-        </tr>
-        <tbody class="z09" data-iterate="content">
-          <tr>
-            <td data-get="attribute"></td>
-            <td data-get="description"></td>
-          </tr>
-        </tbody>
-        <tr>
-          <td colspan="2" paddingtop="2rem">
-            <h4>Style</h4>
-            <hr color="darkgray" margin="0.5rem 0">
-          </td>
-        </tr>
-        <tbody class="z09" data-iterate="style">
-          <tr>
-            <td data-get="attribute"></td>
-            <td data-get="description"></td>
-          </tr>
-        </tbody>
-        <tr>
-          <td colspan="2" paddingtop="2rem">
-            <h4>Event</h4>
-            <hr color="darkgray" margin="0.5rem 0">
-          </td>
-        </tr>
-        <tbody class="z09" data-iterate="event">
-          <tr>
-            <td data-get="attribute"></td>
-            <td data-get="description"></td>
-          </tr>
-        </tbody>
-        <tr>
-          <td colspan="2" paddingtop="2rem">
-            <h4>Behavior</h4>
-            <hr color="darkgray" margin="0.5rem 0">
-          </td>
-        </tr>
-        <tbody class="z09" data-iterate="behavior">
-          <tr>
-            <td data-get="attribute"></td>
-            <td data-get="description"></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
 </article>
