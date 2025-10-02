@@ -326,5 +326,15 @@
       "attribute": "runorder",
       "description": "Runs attributes in order."
     }
+  ],
+  "variable": [
+    {
+      "name": "href",
+      "description": ""
+    },
+    {
+      "name": "title",
+      "description": "Gets the title of the current page."
+    }
   ]
 }

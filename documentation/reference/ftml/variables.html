@@ -1,0 +1,36 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title>Variables</title>
+<template srcdoc="../../../../index" src="../../../../_templates/documentation"></template>
+<article>
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
+    <ol>
+      <li><a href="#" settext="Documentation"></a></li>
+      <li><a href="#" settext="Reference"></a></li>
+      <li><a href="#" settext="FTML"></a></li>
+      <li bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+    </ol>
+  </nav>
+  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
+  <section id="automatic" margintop="2rem">
+    <table width="100%" data-src="assets/json/data/references.json">
+      <thead>
+        <tr>
+          <th globalize-get>Variable</th>
+          <th globalize-get>Description</th>
+        </tr>
+      </thead>
+      <tr>
+        <td colspan="2">
+          <hr color="darkgray" margin="0.5rem 0">
+        </td>
+      </tr>
+      <tbody class="z09" data-iterate="variable">
+        <tr>
+          <td data-get="name"></td>
+          <td data-get="description"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
