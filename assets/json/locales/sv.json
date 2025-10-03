@@ -3,6 +3,13 @@
   "code": "swe",
   "direction": "ltr",
   "translations": {
-    "Pages": "Sidor"
+    "Documentation": "Dokumentation",
+    "Fundamentals": "Grunderna",
+    "Getting Started": "Kom igång",
+    "Introduction": "Introduktion",
+    "Installation": "Installation",
+    "Modules": "Moduler",
+    "Pages": "Sidor",
+    "Plugins": "Plugins"
   }
 }

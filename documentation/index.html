@@ -1,11 +1,11 @@
 <script src="https://cdn.front.nu/nightly/front.js"></script>
-<title>Introduction</title>
+<title globalize-get>Introduction</title>
 <template srcdoc="../index" src="../_templates/documentation"></template>
 <article>
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
     <ol>
-      <li><a href="documentation" settext="Documentation"></a></li>
-      <li globalize-get="introduction">Introduction</li>
+      <li><a href="documentation" settext="Documentation" globalize-get></a></li>
+      <li bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
     </ol>
   </nav>
   <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
@@ -17,7 +17,6 @@
       interactivity, and behavior directly through <b>core attributes</b> — and extend functionality further via
       <b>modules</b> and <b>plugins</b>.</p>
     <br>
-
     <p>
       For a deeper dive into how Front works and how to structure your application with FTML, see the Fundamentals
       section.
