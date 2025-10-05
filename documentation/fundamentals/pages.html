@@ -83,13 +83,15 @@
     &emsp;&emsp;&lt;script
     &emsp;&emsp;&emsp;&emsp;src="https://cdn.front.nu/nightly/front.js"
     &emsp;&emsp;&emsp;&emsp;var="api"
-    &emsp;&emsp;&emsp;&emsp;module="keyboard"
+    &emsp;&emsp;&emsp;&emsp;module="navigate"
     &emsp;&emsp;&emsp;&emsp;conf="debug:true;"&gt;
     &emsp;&emsp;&lt;/script&gt;
-    &emsp;&emsp;&lt;title&gt;My App Start Page&lt;/title&gt;
+    &emsp;&emsp;&lt;title&gt;Start Page&lt;/title&gt;
     &emsp;&lt;/head&gt;
     &emsp;&lt;body&gt;
-    &emsp;&emsp;&lt;main height="100%" include="_includes/home.html"&gt;&lt;/main&gt;
+    &emsp;&emsp;&lt;main&gt;
+    &emsp;&emsp;&emsp;&lt;a href="page1.html"&gt;Go to Standard Page&lt;/a&gt;
+    &emsp;&emsp;&lt;/main&gt;
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
@@ -129,11 +131,11 @@
     &lt;html&gt;
     &emsp;&lt;head&gt;
     &emsp;&emsp;&lt;script src="https://cdn.front.nu/nightly/front.js"&gt;&lt;/script&gt;
-    &emsp;&emsp;&lt;template srcdoc="./index" src="./template"&gt;&lt;/template&gt;
-    &emsp;&emsp;&lt;title&gt;My App Standard Page&lt;/title&gt;
+    &emsp;&emsp;&lt;template srcdoc="./index" src="./_templates/template"&gt;&lt;/template&gt;
+    &emsp;&emsp;&lt;title&gt;Standard Page&lt;/title&gt;
     &emsp;&lt;/head&gt;
     &emsp;&lt;body&gt;
-    &emsp;&emsp;&lt;main height="100%" include="_includes/home.html"&gt;&lt;/main&gt;
+    &emsp;&emsp;&lt;h1&gt;Hello world!&lt;/h1&gt;
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
