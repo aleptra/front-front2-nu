@@ -19,63 +19,62 @@
       sections, features, or workflows.</p>
   </section>
 
-  <h2 zoom="0.9" padding="3rem 0 1rem 0">Start Page</h3>
-    <section color="silver">
-      <p>
-        A Start Page is the entry point of your application. It sets up the environment by loading core attributes,
-        extended attributes via modules and plugins, and allows defining variable assets that can be used throughout the
-        application. It provides the primary page and layout foundation that Standard Pages and Templates can rely on,
-        and supports global configuration to control the functionality and behavior of the application.</p>
-      <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Requirements:</h4>
-        <ul class="list">
-          <li paddingtop="0.5rem">Page must include the <span bgcolor="white02" color="white"
-              font="monospace">&lt;!doctype
-              html&gt;</span>
-            declaration at the top to define the page as a Start Page.</li>
-          <li paddingtop="0.5rem">Front library must be included inside the <span bgcolor="white02" color="white"
-              font="monospace">&lt;head&gt;</span> tag using src attribute of the <span bgcolor="white02" color="white"
-              font="monospace">&lt;script&gt;</span> tag, either by loading the CDN or by hosting front.js yourself.
-          </li>
-        </ul>
-        <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Optionals:</h4>
-          <p>
-            The following elements can optionally be defined inside the
-            <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> tag:
-          </p>
-          <ul class="list">
-            <li paddingtop="0.5rem">
-              Configuration can be set using
-              <span bgcolor="white02" color="white" font="monospace">conf</span> (core),
-              <span bgcolor="white02" color="white" font="monospace">...-conf</span> (modules), and
-              <span bgcolor="white02" color="white" font="monospace">...--conf</span> (plugins) attributes of
-              the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
-            </li>
-            <li paddingtop="0.5rem">
-              Variables can be set using <span bgcolor="white02" color="white" font="monospace">var</span> attribute
-              of the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
-            </li>
-            <li paddingtop="0.5rem">
-              Base URL can be set using
-              <span bgcolor="white02" color="white" font="monospace">hrefhost</span> attribute of the
-              <span bgcolor="white02" color="white" font="monospace">&lt;base&gt;</span> tag.
-            </li>
-            <li paddingtop="0.5rem">
-              Page title can be set using the <span bgcolor="white02" color="white"
-                font="monospace">&lt;title&gt;</span> tag.
-            </li>
-            <li paddingtop="0.5rem">
-              Metadata can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;meta&gt;</span>
-              tag.
-            </li>
-            <li paddingtop="0.5rem">
-              Favicons, icons, and resource hints can be set using
-              <span bgcolor="white02" color="white" font="monospace">&lt;link&gt;</span> tags.
-            </li>
-          </ul>
-          <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h4>
-            <small>index.html</small>
-            <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
-              syntaxhighlighting--set>
+  <h2 zoom="0.9" padding="3rem 0 1rem 0">Start Page</h2>
+  <section color="silver">
+    <p>
+      A Start Page is the entry point of your application. It sets up the environment by loading core attributes,
+      extended attributes via modules and plugins, and allows defining variable assets that can be used throughout the
+      application. It provides the primary page and layout foundation that Standard Pages and Templates can rely on,
+      and supports global configuration to control the functionality and behavior of the application.</p>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Requirements:</h3>
+    <ul class="list">
+      <li paddingtop="0.5rem">Page must include the <span bgcolor="white02" color="white" font="monospace">&lt;!doctype
+          html&gt;</span>
+        declaration at the top to define the page as a Start Page.</li>
+      <li paddingtop="0.5rem">Front library must be included inside the <span bgcolor="white02" color="white"
+          font="monospace">&lt;head&gt;</span> tag using src attribute of the <span bgcolor="white02" color="white"
+          font="monospace">&lt;script&gt;</span> tag, either by loading the CDN or by hosting front.js yourself.
+      </li>
+    </ul>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Optionals:</h3>
+    <p>
+      The following elements can optionally be defined inside the
+      <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> tag:
+    </p>
+    <ul class="list">
+      <li paddingtop="0.5rem">
+        Configuration can be set using
+        <span bgcolor="white02" color="white" font="monospace">conf</span> (core),
+        <span bgcolor="white02" color="white" font="monospace">...-conf</span> (modules), and
+        <span bgcolor="white02" color="white" font="monospace">...--conf</span> (plugins) attributes of
+        the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Variables can be set using <span bgcolor="white02" color="white" font="monospace">var</span> attribute
+        of the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Base URL can be set using
+        <span bgcolor="white02" color="white" font="monospace">hrefhost</span> attribute of the
+        <span bgcolor="white02" color="white" font="monospace">&lt;base&gt;</span> tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Page title can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;title&gt;</span>
+        tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Metadata can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;meta&gt;</span>
+        tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Favicons, icons, and resource hints can be set using
+        <span bgcolor="white02" color="white" font="monospace">&lt;link&gt;</span> tags.
+      </li>
+    </ul>
+    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
+    <small>index.html</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set>
     &lt;!doctype html&gt;
     &lt;html&gt;
     &emsp;&lt;head&gt;
@@ -95,39 +94,51 @@
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
+  </section>
 
-    </section>
+  <h2 zoom="0.9" padding="3rem 0 1rem 0">Standard Page</h2>
+  <section color="silver">
+    <p>
+      A Standard Page is a regular page that can work independently or inherit settings, configurations, modules, and
+      plugins from a Start Page. It follows the same structural conventions, ensuring consistency across the
+      application.
+      When linked to a Start Page, it extends its setup while allowing its own content and layout to override or
+      supplement what is inherited.
+    </p>
 
-    <h2 zoom="0.9" padding="3rem 0 1rem 0">Standard Page</h3>
-      <section color="silver">
-        <p>
-          A Standard Page is a flexible page that builds upon the base structure of your application. It can override
-          elements, layouts, or attributes defined in a StartPage, allowing you to customize the content, style, and
-          behavior for specific sections or workflows. Standard Pages act as containers for elements, layouts, and FTML
-          attributes, providing modular and reusable views that help organize your application into logical sections or
-          screens.</p>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Requirements:</h3>
+    <ul class="list">
+      <li paddingtop="0.5rem">
+        Page must include the
+        <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span>
+        tag with the Front library to ensure initialization and compatibility.
+      </li>
+    </ul>
 
-        <h4 zoom="0.7" color="white" padding="2rem 0 1rem 0">Responsibilities:</h4>
-        <ul class="list">
-          <li paddingtop="0.5rem">Inherit and optionally override elements, layouts, and configurations from the Start
-            Page.
-          </li>
-          <li paddingtop="0.5rem">Organize and present content specific to a section, feature, or workflow.</li>
-          <li paddingtop="0.5rem">Ensure consistency with the application's overall structure and style.</li>
-        </ul>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Optionals:</h3>
+    <ul class="list">
+      <li paddingtop="0.5rem">
+        Templates can be loaded by including a
+        <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> tag inside the
+        <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> tag, using
+        <span bgcolor="white02" color="white" font="monospace">srcdoc</span> or
+        <span bgcolor="white02" color="white" font="monospace">src</span> attributes to link the source.
+      </li>
+      <li paddingtop="0.5rem">
+        Page title can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;title&gt;</span>
+        tag.
+      </li>
+      <li paddingtop="0.5rem">
+        Content inside the
+        <span bgcolor="white02" color="white" font="monospace">&lt;body&gt;</span>
+        can replace what is defined in the Start Page.
+      </li>
+    </ul>
 
-        <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Requirements:</h4>
-          <ul class="list">
-            <li paddingtop="0.5rem">Front library must be included inside the <span bgcolor="white02" color="white"
-                font="monospace">&lt;head&gt;</span> tag using src attribute of the <span bgcolor="white02"
-                color="white" font="monospace">&lt;script&gt;</span> tag, either by loading the CDN or by hosting
-              front.js yourself.
-            </li>
-          </ul>
-          <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h4>
-            <small>page1.html</small>
-            <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
-              syntaxhighlighting--set>
+    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
+    <small>page1.html</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set>
     &lt;html&gt;
     &emsp;&lt;head&gt;
     &emsp;&emsp;&lt;script src="https://cdn.front.nu/nightly/front.js"&gt;&lt;/script&gt;
@@ -139,5 +150,5 @@
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
-      </section>
+  </section>
 </article>
