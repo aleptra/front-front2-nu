@@ -24,7 +24,7 @@
     <p>
       A Start Page is the entry point of your application. It sets up the environment by loading core attributes,
       extended attributes via modules and plugins, and allows defining variable assets that can be used throughout the
-      application. It provides the primary page and layout foundation that Standard Pages and Templates can rely on,
+      application. It provides the primary page and layout base that Standard Pages can rely on,
       and supports global configuration to control the functionality and behavior of the application.</p>
     <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Requirements:</h3>
     <ul class="list">
@@ -32,14 +32,14 @@
           html&gt;</span>
         declaration at the top to define the page as a Start Page.</li>
       <li paddingtop="0.5rem">Front library must be included inside the <span bgcolor="white02" color="white"
-          font="monospace">&lt;head&gt;</span> tag using src attribute of the <span bgcolor="white02" color="white"
-          font="monospace">&lt;script&gt;</span> tag, either by loading the CDN or by hosting front.js yourself.
+          font="monospace">&lt;head&gt;</span> element using src attribute of the <span bgcolor="white02" color="white"
+          font="monospace">&lt;script&gt;</span> element, either by loading the CDN or by hosting front.js yourself.
       </li>
     </ul>
     <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Optionals:</h3>
     <p>
       The following elements can optionally be defined inside the
-      <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> tag:
+      <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> element:
     </p>
     <ul class="list">
       <li paddingtop="0.5rem">
@@ -47,28 +47,28 @@
         <span bgcolor="white02" color="white" font="monospace">conf</span> (core),
         <span bgcolor="white02" color="white" font="monospace">...-conf</span> (modules), and
         <span bgcolor="white02" color="white" font="monospace">...--conf</span> (plugins) attributes of
-        the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
+        the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
       </li>
       <li paddingtop="0.5rem">
         Variables can be set using <span bgcolor="white02" color="white" font="monospace">var</span> attribute
-        of the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> tag.
+        of the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
       </li>
       <li paddingtop="0.5rem">
         Base URL can be set using
         <span bgcolor="white02" color="white" font="monospace">hrefhost</span> attribute of the
-        <span bgcolor="white02" color="white" font="monospace">&lt;base&gt;</span> tag.
+        <span bgcolor="white02" color="white" font="monospace">&lt;base&gt;</span> element.
       </li>
       <li paddingtop="0.5rem">
         Page title can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;title&gt;</span>
-        tag.
+        element.
       </li>
       <li paddingtop="0.5rem">
         Metadata can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;meta&gt;</span>
-        tag.
+        element.
       </li>
       <li paddingtop="0.5rem">
         Favicons, icons, and resource hints can be set using
-        <span bgcolor="white02" color="white" font="monospace">&lt;link&gt;</span> tags.
+        <span bgcolor="white02" color="white" font="monospace">&lt;link&gt;</span> elements.
       </li>
     </ul>
     <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
@@ -121,7 +121,7 @@
       <li paddingtop="0.5rem">
         Page must include the
         <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span>
-        tag with the Front library to ensure initialization and compatibility.
+        element with the Front library to ensure initialization and compatibility.
       </li>
     </ul>
 
@@ -129,18 +129,18 @@
     <ul class="list">
       <li paddingtop="0.5rem">
         Templates can be loaded by including a
-        <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> tag inside the
-        <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> tag, using
+        <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> element inside the
+        <span bgcolor="white02" color="white" font="monospace">&lt;head&gt;</span> element, using
         <span bgcolor="white02" color="white" font="monospace">srcdoc</span> or
         <span bgcolor="white02" color="white" font="monospace">src</span> attributes to link the source.
       </li>
       <li paddingtop="0.5rem">
         Page title can be set using the <span bgcolor="white02" color="white" font="monospace">&lt;title&gt;</span>
-        tag.
+        element.
       </li>
       <li paddingtop="0.5rem">
         Content inside the
-        <span bgcolor="white02" color="white" font="monospace">&lt;body&gt;</span>
+        <span bgcolor="white02" color="white" font="monospace">&lt;body&gt;</span> element
         can replace what is defined in the Start Page.
       </li>
     </ul>
