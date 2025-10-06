@@ -78,18 +78,23 @@
     &lt;!doctype html&gt;
     &lt;html&gt;
     &emsp;&lt;head&gt;
+    &emsp;&emsp;&lt;!-- Set the base URL according to the host for relative links --&gt;
     &emsp;&emsp;&lt;base hrefhost="front.nu:/"&gt;
+
+    &emsp;&emsp;&lt;!-- Load Front with the navigate module and debug enabled --&gt;
     &emsp;&emsp;&lt;script
     &emsp;&emsp;&emsp;&emsp;src="https://cdn.front.nu/nightly/front.js"
-    &emsp;&emsp;&emsp;&emsp;var="api"
     &emsp;&emsp;&emsp;&emsp;module="navigate"
     &emsp;&emsp;&emsp;&emsp;conf="debug:true;"&gt;
     &emsp;&emsp;&lt;/script&gt;
+
+    &emsp;&emsp;&lt;!-- Set the page title --&gt;
     &emsp;&emsp;&lt;title&gt;Start Page&lt;/title&gt;
     &emsp;&lt;/head&gt;
     &emsp;&lt;body&gt;
     &emsp;&emsp;&lt;header&gt;&lt;/header&gt;
     &emsp;&emsp;&lt;main&gt;
+    &emsp;&emsp;&emsp;&lt;!-- Link to standard page --&gt;
     &emsp;&emsp;&emsp;&lt;a href="page1.html"&gt;Go to Standard Page&lt;/a&gt;
     &emsp;&emsp;&lt;/main&gt;
     &emsp;&emsp;&lt;footer&gt;&lt;/footer&gt;
@@ -144,7 +149,12 @@
     &lt;html&gt;
     &emsp;&lt;head&gt;
     &emsp;&emsp;&lt;script src="https://cdn.front.nu/nightly/front.js"&gt;&lt;/script&gt;
+    &emsp;&emsp;&lt;!-- Loads two templates:
+    &emsp;&emsp; 1. Start Page (srcdoc="./index") — base layout
+    &emsp;&emsp; 2. Layout template (src="./_templates/template") — overrides base layout --&gt;
     &emsp;&emsp;&lt;template srcdoc="./index" src="./_templates/template"&gt;&lt;/template&gt;
+
+    &emsp;&emsp;&lt;!-- Set the page title --&gt;
     &emsp;&emsp;&lt;title&gt;Standard Page&lt;/title&gt;
     &emsp;&lt;/head&gt;
     &emsp;&lt;body&gt;
@@ -152,5 +162,7 @@
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">Note:
+      Make sure the paths to the templates are correct.</div>
   </section>
 </article>
