@@ -6,31 +6,34 @@
     <ol>
       <li><a href="documentation" settext="Documentation"></a></li>
       <li><a href="documentation/fundamentals" settext="Fundamentals"></a></li>
-      <li bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+      <li color="white" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
     </ol>
   </nav>
-  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
-    runorder="bindglobal;settext;globalize-get"></h1>
   <section>
+    <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+      runorder="bindglobal;settext;globalize-get"></h1>
+
     <p>Templates define reusable content blocks that act as blueprints for your application. They allow replacing,
       removing, or adding FTML attributes and content within the layout provided by the Start Page, separating layout
       from content and enabling reuse across Standard Pages.</p>
   </section>
 
-  <h2 zoom="0.8" color="white" padding="3rem 0 0 0">Define Template File</h2>
-  <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Best practice:</h3>
-  <ul class="list">
-    <li paddingtop="0.5rem">Template should be wrapped inside a <span bgcolor="white02" color="white"
-        font="monospace">&lt;template&gt;</span> element.</li>
-    <li paddingtop="0.5rem">No other tags should be outside the <span bgcolor="white02" color="white"
-        font="monospace">&lt;template&gt;</span> element.
-    </li>
-    <li paddingtop="0.5rem">
-      Store template files inside a _templates folder at the root of your project.</li>
-  </ul>
+  <section paddingtop="3rem">
+    <h2 zoom="0.8" color="white" padding="0 0 1rem 0">Define Template File</h2>
+    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Best practice:</h3>
+    <ul class="list">
+      <li paddingtop="0.5rem">Template should be wrapped inside a <span bgcolor="white02" color="white"
+          font="monospace">&lt;template&gt;</span> element.</li>
+      <li paddingtop="0.5rem">No other tags should be outside the <span bgcolor="white02" color="white"
+          font="monospace">&lt;template&gt;</span> element.
+      </li>
+      <li paddingtop="0.5rem">
+        Store template files inside a _templates folder at the root of your project.</li>
+    </ul>
+  </section>
 
-  <section>
-    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
+  <section paddingtop="3rem">
+    <h3 zoom="0.7" color="white" padding="0 0 1rem 0">Example:</h3>
     <small padding="0.25rem">_templates/template1.html</small>
     <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
       syntaxhighlighting--set>
@@ -47,38 +50,28 @@
       If an FTML attribute is without a value, it will be removed from the final output.</div>
   </section>
 
-  <h2 zoom="0.8" color="white" padding="3rem 0 1rem 0">Load Template in a Standard Page</h2>
-  <p>Once you have defined a template file (e.g., template1.html), you can load it into a Standard Page using the
-    <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> element and src attribute:
-  </p>
+  <section paddingtop="3rem">
+    <h2 zoom="0.8" color="white" padding="0 0 1rem 0">Load Template in a Standard Page</h2>
+    <p>Once you have defined a template file (e.g., template1.html), you can load it into a Standard Page using the
+      <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> element and src attribute:
+    </p>
 
-  <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Important:</h3>
-  <ul class="list">
-  <li>The src attribute, which points to a layout template, requires a srcdoc attribute.</li>
-  <li>srcdoc defines the base Start Page layout, and src will override or inject content into it.</li>
-</ul>
-  <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
-  <small padding="0.25rem">page1.html</small>
-  <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
-    syntaxhighlighting--set>
-    &lt;html&gt;
-    &emsp;&lt;head&gt;
-    &emsp;&emsp;&lt;script src="https://cdn.front.nu/nightly/front.js"&gt;&lt;/script&gt;
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Important:</h3>
+    <ul class="list">
+      <li>src attribute, which points to a layout template, requires a srcdoc attribute.</li>
+      <li>srcdoc attribute defines the base Start Page layout, and src attribute will override or inject content into it.</li>
+    </ul>
+
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Example:</h3>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set>
     &emsp;&emsp;&lt;!-- Loads two templates:
     &emsp;&emsp; 1. Start Page (srcdoc="./index") — base layout
     &emsp;&emsp; 2. Layout template (src="./_templates/template") — overrides base layout --&gt;
     &emsp;&emsp;&lt;template srcdoc="./index" src="./_templates/template1"&gt;&lt;/template&gt;
-
-    &emsp;&emsp;&lt;!-- Set the page title --&gt;
-    &emsp;&emsp;&lt;title&gt;Standard Page&lt;/title&gt;
-    &emsp;&lt;/head&gt;
-    &emsp;&lt;body&gt;
-    &emsp;&emsp;&lt;h1&gt;Hello world!&lt;/h1&gt;
-    &emsp;&lt;/body&gt;
-    &lt;/html&gt;
     </code>
-  <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">Note: Ensure template paths are correct and do
-    not include file extensions.
-  </div>
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">Note: Ensure template paths are correct and do
+      not include file extensions.
+    </div>
   </section>
 </article>

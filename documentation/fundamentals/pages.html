@@ -1,17 +1,17 @@
 <script src="https://cdn.front.nu/nightly/front.js"></script>
 <title>Pages</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
-<article>
+<article color="silver">
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
     <ol>
       <li><a href="documentation" settext="Documentation"></a></li>
       <li><a href="documentation/fundamentals" settext="Fundamentals"></a></li>
-      <li bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+      <li color="white" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
     </ol>
   </nav>
-  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-  <section color="silver">
+  <section>
     <p>Pages represent structured, self-contained views of your application. They act as containers for elements,
       layouts, and FTML attributes, defining how content is presented, styled, and behaves. As the building blocks of
       your application, pages help organize your app into logical sections or screens and can be navigated to directly.
@@ -19,8 +19,8 @@
       sections, features, or workflows.</p>
   </section>
 
-  <h2 id="start" zoom="0.9" padding="3rem 0 1rem 0">Start Page</h2>
-  <section color="silver">
+  <section>
+    <h2 color="white" id="start" zoom="0.9" padding="3rem 0 1rem 0">Start Page</h2>
     <p>
       A Start Page is the entry point of your application. It sets up the environment by loading core attributes,
       extended attributes via modules and plugins, and allows defining variable assets that can be used throughout the
@@ -71,7 +71,7 @@
         <span bgcolor="white02" color="white" font="monospace">&lt;link&gt;</span> elements.
       </li>
     </ul>
-    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Example:</h3>
     <small padding="0.25rem">index.html</small>
     <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
       syntaxhighlighting--set>
@@ -106,8 +106,8 @@
     </div>
   </section>
 
-  <h2 id="standard" zoom="0.9" padding="3rem 0 1rem 0">Standard Page</h2>
-  <section color="silver">
+  <section>
+    <h2 color="white" id="standard" zoom="0.9" padding="3rem 0 1rem 0">Standard Page</h2>
     <p>
       A Standard Page is a regular page that can work independently or inherit settings, configurations, modules, and
       plugins from a Start Page. It follows the same structural conventions, ensuring consistency across the
@@ -145,7 +145,7 @@
       </li>
     </ul>
 
-    <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Example:</h3>
     <small padding="0.25rem">page1.html</small>
     <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
       syntaxhighlighting--set>
@@ -165,8 +165,5 @@
     &emsp;&lt;/body&gt;
     &lt;/html&gt;
     </code>
-    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">Note: Ensure template paths are correct and do
-      not include file extensions.
-    </div>
   </section>
 </article>
