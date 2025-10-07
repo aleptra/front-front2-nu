@@ -47,11 +47,16 @@
       If an FTML attribute is without a value, it will be removed from the final output.</div>
   </section>
 
-  <h2 zoom="0.8" color="white" padding="3rem 0 0 0">Load Template in a Standard Page</h2>
+  <h2 zoom="0.8" color="white" padding="3rem 0 1rem 0">Load Template in a Standard Page</h2>
   <p>Once you have defined a template file (e.g., template1.html), you can load it into a Standard Page using the
-    &gt;template&gt; tag and src attribute:</p>
+    <span bgcolor="white02" color="white" font="monospace">&lt;template&gt;</span> element and src attribute:
   </p>
 
+  <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Important:</h3>
+  <ul class="list">
+  <li>The src attribute, which points to a layout template, requires a srcdoc attribute.</li>
+  <li>srcdoc defines the base Start Page layout, and src will override or inject content into it.</li>
+</ul>
   <h3 zoom="0.7" color="white" padding="2rem 0 1rem 0">Example:</h3>
   <small padding="0.25rem">page1.html</small>
   <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
