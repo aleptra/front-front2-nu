@@ -1,25 +1,64 @@
 <script src="https://cdn.front.nu/nightly/front.js"></script>
 <title globalize-get>Introduction</title>
 <template srcdoc="../index" src="../_templates/documentation"></template>
-<article>
-  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
       <li><a href="documentation" settext="Documentation" globalize-get></a></li>
-      <li bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
     </ol>
   </nav>
-  <h1 zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <section color="silver">
-    <p><b>Front</b> is a powerful low-code library for building interactive and dynamic applications using declarative
-      HTML-like syntax. It extends standard HTML with <b>FTML (Front Text Markup Language)</b>, keeping the code pure markup
-      without the need for JavaScript or CSS, while letting developers and designers control content, style, layout,
-      interactivity, and behavior directly through <b>core attributes</b> — and extend functionality further via
-      <b>modules</b> and <b>plugins</b>.</p>
-    <br>
-    <p>
-      For a deeper dive into how Front works and how to structure your application with FTML, see the Fundamentals
-      section.
+    <p>Front is a low-code library for building interactive, data-driven, and modular web applications using a
+      markup-first approach. It extends standard HTML with FTML (Front Text Markup Language) — a declarative layer that
+      allows you to define structure, style, layout, interactivity, and behavior directly through attributes, without
+      writing any JavaScript or CSS.
+      <br><br>
+      Unlike traditional frameworks that rely heavily on complex logic, Front keeps development simple, clean, and
+      maintainable. Everything can be expressed through markup, enabling developers and designers to work seamlessly
+      together while producing readable and scalable code.
     </p>
+  </section>
+  <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Key Features:</h3>
+  <section>
+    <ul class="list">
+      <li>Markup-First Development: Define all UI elements and behavior directly in FTML.</li>
+      <li>Interactive and Dynamic: Built-in attributes allow events, data-binding, and reactive behavior.</li>
+      <li>Modular Architecture: Extend core functionality with modules and plugins without modifying your HTML.</li>
+      <li>Template-Driven Layouts: Reusable templates ensure consistency across your application.</li>
+      <li>Instant Prototyping: Runs natively in the browser — no compilers or build tools required.</li>
+      <li>Minimal Learning Curve: HTML-like syntax makes it approachable for both designers and developers.</li>
+    </ul>
+  </section>
+  <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Why Choose Front?</h3>
+  <section>
+    <ul class="list">
+      <li>Reduces boilerplate code and setup time.</li>
+      <li>Encourages readable, maintainable, and scalable markup.</li>
+      <li>Simplifies collaboration between design and development teams.</li>
+      <li>Ideal for rapid prototyping and projects that need fast iteration without heavy logic or state management.
+      </li>
+    </ul>
+  </section>
+  <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Use Cases</h3>
+  <section>
+    Front is perfect for:
+    <ul class="list">
+      <li>Rapid web application prototypes.</li>
+      <li>Interactive dashboards or data-driven interfaces.</li>
+      <li>Small to medium-scale applications with minimal complexity.</li>
+      <li>Projects where designers and developers need to collaborate efficiently.</li>
+    </ul>
+  </section>
+  <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Try It Now</h3>
+  <section>
+    Front comes with a live <a href="playground.html">Playground</a>
+    where you can experiment with FTML in real time. Simply write markup and see the results instantly in your browser —
+    no setup required.
+    <br><br>
+    For a deeper dive into how Front works and how to structure your application with FTML, see the
+    <strong>Fundamentals</strong> section.
   </section>
 </article>

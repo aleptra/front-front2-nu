@@ -9,9 +9,88 @@
       <li color="white" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
     </ol>
   </nav>
+
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
+
   <section>
-    <p>Modules are a self-contained packages that extends the core functionality of your application. Modules provide additional features, integrations, or behavior enhancements without modifying the base system. They allow developers to customize and scale applications efficiently while maintaining a clean, modular structure.</p>
+    <p>
+      Modules are self-contained packages that extend the core functionality of your application. They provide additional
+      features, integrations, or behavioral enhancements without modifying the base system. Modules promote
+      modularization, scalability, and clean separation of concerns by allowing developers to enable or disable features
+      as needed.
+    </p>
+    <p>
+      Each module can define its own attributes, configuration settings, and events, seamlessly integrating with the
+      Front core or other modules. Modules can be included dynamically in your application and are initialized
+      automatically when Front loads.
+    </p>
+  </section>
+
+  <section>
+    <h2 color="white" id="include" zoom="0.9" padding="3rem 0 1rem 0">Including Modules</h2>
+    <p>
+      Modules are loaded via the
+      <span bgcolor="white02" color="white" font="monospace">module</span>
+      attribute of the
+      <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
+      You can include one or multiple modules in your application. When specifying multiple modules, separate each name
+      with a semicolon (<span bgcolor="white02" color="white" font="monospace">;</span>).
+    </p>
+
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Example:</h3>
+    <small padding="0.25rem">index.html</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set>
+    &lt;!doctype html&gt;
+    &lt;html&gt;
+    &emsp;&lt;head&gt;
+    &emsp;&emsp;&lt;!-- Load Front with multiple modules (navigate and animate) --&gt;
+    &emsp;&emsp;&lt;script
+    &emsp;&emsp;&emsp;&emsp;src="https://cdn.front.nu/nightly/front.js"
+    &emsp;&emsp;&emsp;&emsp;module="navigate;animate"
+    &emsp;&emsp;&emsp;&emsp;conf="debug:true;"&gt;
+    &emsp;&emsp;&lt;/script&gt;
+    &emsp;&lt;/head&gt;
+    &emsp;&lt;body&gt;
+    &emsp;&emsp;&lt;main&gt;
+    &emsp;&emsp;&emsp;&lt;h1&gt;Modules Example&lt;/h1&gt;
+    &emsp;&emsp;&lt;/main&gt;
+    &emsp;&lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">
+      Note: Separate multiple modules using semicolons (<span bgcolor="white02" color="white"
+        font="monospace">;</span>). Avoid using commas or spaces.
+    </div>
+  </section>
+
+  <section>
+    <h2 color="white" id="configure" zoom="0.9" padding="3rem 0 1rem 0">Configuring Modules</h2>
+    <p>
+      Each module can define its own configuration parameters using the
+      <span bgcolor="white02" color="white" font="monospace">...-conf</span> attribute of the
+      <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
+      You can pass initialization settings such as enabling debug mode, defining routes, or adjusting animation behavior.
+    </p>
+
+    <h3 zoom="0.7" color="white" padding="3rem 0 1rem 0">Example:</h3>
+    <small padding="0.25rem">index.html</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set>
+    &lt;script
+    &emsp;src="https://cdn.front.nu/nightly/front.js"
+    &emsp;module="navigate;animate"
+    &emsp;navigate-conf="transition:'fade',speed:300"
+    &emsp;animate-conf="duration:500,easing:'ease-in-out'"&gt;
+    &lt;/script&gt;
+    </code>
+
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">
+      Note: Configuration attributes follow the pattern
+      <span bgcolor="white02" color="white" font="monospace">{module}-conf</span> and must be placed on the same
+      <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element that loads Front.
+    </div>
   </section>
 </article>
