@@ -2,15 +2,15 @@
 <title>Modules</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
 <article color="silver">
-  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
-      <li><a href="documentation" settext="Documentation"></a></li>
-      <li><a href="documentation/fundamentals" settext="Fundamentals"></a></li>
-      <li color="white" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/fundamentals" globalize-get>Fundamentals</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
     </ol>
   </nav>
 
-  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <section>
     <p>

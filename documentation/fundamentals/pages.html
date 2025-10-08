@@ -2,14 +2,14 @@
 <title>Pages</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
 <article color="silver">
-  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="lightgray">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
-      <li><a href="documentation" settext="Documentation"></a></li>
-      <li><a href="documentation/fundamentals" settext="Fundamentals"></a></li>
-      <li color="white" bindglobal="title:title" settext="{title}" globalize-get="{title}"></li>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/fundamentals" globalize-get>Fundamentals</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
     </ol>
   </nav>
-  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <section>
     <p>Pages represent structured, self-contained views of your application. They act as containers for elements,
@@ -20,7 +20,7 @@
   </section>
 
   <section>
-    <h2 color="white" id="start" zoom="0.9" padding="3rem 0 1rem 0">Start Page</h2>
+    <h2 color="white" id="start" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Start Page</h2>
     <p>
       A Start Page is the entry point of your application. It sets up the environment by loading core attributes,
       extended attributes via modules and plugins, and allows defining variable assets that can be used throughout the
@@ -107,7 +107,7 @@
   </section>
 
   <section>
-    <h2 color="white" id="standard" zoom="0.9" padding="3rem 0 1rem 0">Standard Page</h2>
+    <h2 color="white" id="standard" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Standard Page</h2>
     <p>
       A Standard Page is a regular page that can work independently or inherit settings, configurations, modules, and
       plugins from a Start Page. It follows the same structural conventions, ensuring consistency across the

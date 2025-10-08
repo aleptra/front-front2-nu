@@ -3,13 +3,21 @@
   "code": "swe",
   "direction": "ltr",
   "translations": {
+    "Attributes": "Attributer",
     "Documentation": "Dokumentation",
     "Fundamentals": "Grunderna",
-    "Getting Started": "Kom igång",
+    "Get Started": "Kom igång",
+    "Getting Started": "Komma igång",
     "Introduction": "Introduktion",
     "Installation": "Installation",
     "Modules": "Moduler",
+    "Overview": "Översikt",
     "Pages": "Sidor",
-    "Plugins": "Plugins"
+    "Plugins": "Plugins",
+    "Reference": "Referens",
+    "Standard Page": "Standardsida",
+    "Start Page": "Startsida",
+    "Templates": "Mallar",
+    "Variables": "Variabler"
   }
 }
