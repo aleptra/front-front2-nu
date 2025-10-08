@@ -12,30 +12,20 @@
 
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get="{title}" marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-
   <section>
     <p>
-      Modules are self-contained packages that extend the core functionality of your application. They provide additional
-      features, integrations, or behavioral enhancements without modifying the base system. Modules promote
-      modularization, scalability, and clean separation of concerns by allowing developers to enable or disable features
-      as needed.
-    </p>
-    <p>
-      Each module can define its own attributes, configuration settings, and events, seamlessly integrating with the
-      Front core or other modules. Modules can be included dynamically in your application and are initialized
-      automatically when Front loads.
+      Modules are self-contained packages that extend the core functionality of your application. They provide
+      additional features, integrations, or behavioral enhancements without modifying the base system. They are included
+      in the Front library and promote modularity, scalability, and a clean separation of concerns by allowing
+      developers to enable or disable them as needed.
     </p>
   </section>
 
   <section>
-    <h2 color="white" id="include" zoom="0.9" padding="3rem 0 1rem 0">Including Modules</h2>
+    <h2 color="white" id="include" zoom="0.9" padding="3rem 0 1rem 0">Activate Modules</h2>
     <p>
-      Modules are loaded via the
-      <span bgcolor="white02" color="white" font="monospace">module</span>
-      attribute of the
-      <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
-      You can include one or multiple modules in your application. When specifying multiple modules, separate each name
-      with a semicolon (<span bgcolor="white02" color="white" font="monospace">;</span>).
+      Modules are loaded via the module attribute of the <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element. You can activate one or multiple modules
+      in your application.
     </p>
 
     <h3 zoom="0.8" color="white" padding="3rem 0 1rem 0">Example:</h3>
@@ -70,9 +60,10 @@
     <h2 color="white" id="configure" zoom="0.9" padding="3rem 0 1rem 0">Configuring Modules</h2>
     <p>
       Each module can define its own configuration parameters using the
-      <span bgcolor="white02" color="white" font="monospace">...-conf</span> attribute of the
+      <span bgcolor="white02" color="white" font="monospace">{module}-conf</span> attribute of the
       <span bgcolor="white02" color="white" font="monospace">&lt;script&gt;</span> element.
-      You can pass initialization settings such as enabling debug mode, defining routes, or adjusting animation behavior.
+      You can pass initialization settings such as enabling debug mode, defining routes, or adjusting animation
+      behavior.
     </p>
 
     <h3 zoom="0.8" color="white" padding="3rem 0 1rem 0">Example:</h3>
