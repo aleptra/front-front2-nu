@@ -13,17 +13,17 @@
       <summary globalize-get bold>Getting Started</summary>
       <a margintop="1rem" href="documentation" globalize-get>Introduction</a>
       <a href="documentation/installation" globalize-get>Installation</a>
-      <details paddingbottom="1rem" bindglobal="href:href" ifnew="([{href}]~[/fundamentals/]);setattr:[open]">
+      <details paddingbottom="1rem" bindglobal="href:href" if="([{href}]~[/fundamentals/]);setattr:[open]">
         <summary globalize-get>Fundamentals</summary>
-        <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/pages]);bold">Pages</a>
-        <a href="documentation/fundamentals/templates.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/templates]);bold">Templates</a>
-        <a href="documentation/fundamentals/modules.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/modules]);bold">Modules</a>
-        <a href="documentation/fundamentals/plugins.html" globalize-get bindglobal="href:href" ifnew="([{href}]~[/fundamentals/plugins]);bold">Plugins</a>
+        <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/pages]);bold">Pages</a>
+        <a href="documentation/fundamentals/templates.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/templates]);bold">Templates</a>
+        <a href="documentation/fundamentals/modules.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/modules]);bold">Modules</a>
+        <a href="documentation/fundamentals/plugins.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/plugins]);bold">Plugins</a>
       </details>
     </details>
-    <details bindglobal="href:href" ifnew="([{href}]~[/reference]);setattr:[open]">
+    <details bindglobal="href:href" if="([{href}]~[/reference]);setattr:[open]">
       <summary globalize-get bold>Reference</summary>
-      <details bindglobal="href:href" ifnew="([{href}]~[/reference/ftml]);setattr:[open]">
+      <details bindglobal="href:href" if="([{href}]~[/reference/ftml]);setattr:[open]">
         <summary>FTML</summary>
         <a href="documentation/reference/ftml" globalize-get>Overview</a>
         <a href="documentation/reference/ftml/attributes.html" globalize-get>Attributes</a>
