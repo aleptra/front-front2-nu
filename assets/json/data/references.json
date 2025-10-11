@@ -327,10 +327,16 @@
       "description": "Runs attributes in order."
     }
   ],
+    "configuration": [
+    {
+      "attribute": "hrefhost",
+      "description": "Sets the base URL based on host match."
+    }
+  ],
   "variable": [
     {
       "name": "href",
-      "description": ""
+      "description": "Gets the current URL of the current page."
     },
     {
       "name": "title",
