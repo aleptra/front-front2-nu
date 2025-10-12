@@ -25,7 +25,8 @@
   },
   "color": {
     "category": "style",
-    "description_short": "Sets the text color."
+    "description_short": "Sets the text color.",
+    "example": "<p color=\"red\">This is red text</p>"
   },
   "cursor": {
     "category": "style",
