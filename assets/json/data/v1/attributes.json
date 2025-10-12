@@ -47,7 +47,8 @@
   },
   "font": {
     "category": "style",
-    "description_short": "Sets font style and size."
+    "description_short": "Sets font style and size.",
+    "example": "<p font=\"Comic Sans MS\">This text uses a custom font</p>"
   },
   "height": {
     "category": "style",
@@ -171,11 +172,13 @@
   },
   "lowercase": {
     "category": "content",
-    "description_short": "Converts content to lowercase."
+    "description_short": "Converts content to lowercase.",
+    "example": "<p lowercase>THIS TEXT WILL APPEAR IN LOWERCASE LETTERS</p>"
   },
   "uppercase": {
     "category": "content",
-    "description_short": "Converts content to uppercase."
+    "description_short": "Converts content to uppercase.",
+    "example": "<p uppercase>This text will appear in uppercase letters</p>"
   },
   "setaction": {
     "category": "content",
