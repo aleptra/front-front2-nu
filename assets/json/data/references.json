@@ -301,6 +301,10 @@
       "description": "Triggered when the element is hidden."
     },
     {
+      "attribute": "onsethtml",
+      "description": "Triggered when the element html is changed."
+    },
+    {
       "attribute": "onshow",
       "description": "Triggered when the element is shown."
     },

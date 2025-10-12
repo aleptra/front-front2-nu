@@ -144,7 +144,8 @@
   },
   "zoom": {
     "category": "style",
-    "description_short": "Sets zoom scale of the element."
+    "description_short": "Sets zoom scale of the element.",
+    "example": "<div zoom=\"1.5\">This text is zoomed in by 150%</div>"
   },
   "insertbeforebegin": {
     "category": "content",
@@ -152,11 +153,13 @@
   },
   "insertafterbegin": {
     "category": "content",
-    "description_short": "Inserts new content just inside the element, before its first child."
+    "description_short": "Inserts new content just inside the element, before its first child.",
+    "example": "<p insertafterbegin=\"Intro: \">Hello World</p>"
   },
   "insertbeforeend": {
     "category": "content",
-    "description_short": "Inserts new content just inside the element, after its last child."
+    "description_short": "Inserts new content just inside the element, after its last child.",
+    "example": "<div insertbeforeend=\"!\">Hello World</div>"
   },
   "insertafterend": {
     "category": "content",
