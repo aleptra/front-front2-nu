@@ -17,7 +17,8 @@
   },
   "bold": {
     "category": "style",
-    "description_short": "Makes text bold."
+    "description_short": "Makes text bold.",
+    "example": "<p bold>This is bold text</p>"
   },
   "boxshadow": {
     "category": "style",
