@@ -12,7 +12,7 @@
   </nav>
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-  <section id="automatic" margintop="2rem">
+  <section margintop="2rem">
     <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json">
       <tr>
         <td colspan="2" paddingtop="2rem">
@@ -22,7 +22,7 @@
       </tr>
       <tbody class="z09" data-iterate="content">
         <tr>
-          <td data-get="attribute"></td>
+          <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a></td>
           <td data-get="description"></td>
         </tr>
       </tbody>

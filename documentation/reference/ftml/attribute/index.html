@@ -1,0 +1,18 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title globalize-get>Attribute</title>
+<template srcdoc="../../../../../index" src="../../../../../_templates/documentation"></template>
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="#" globalize-get>Reference</a></li>
+      <li><a href="#" globalize-get>FTML</a></li>
+      <li><a href="#" bindglobal="title:title" settext="{title}" globalize-get>Attribute</a></li>
+      <li bindquery="a:a" settext="{a}"></li>
+    </ol>
+  </nav>
+  <h1 color="white" zoom="0.9" bindquery="a:a" settext="{a}" marginbottom="2rem" runorder="bindquery;settext"></h1>
+  <section data-src="assets/json/data/v1/attributes.json">
+    <p bindquery="a:a" data-get="{a}.description_short"></p>
+  </section>
+</article>

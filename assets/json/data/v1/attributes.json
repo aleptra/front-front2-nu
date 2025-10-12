@@ -1,0 +1,318 @@
+{
+  "align": {
+    "category": "style",
+    "description_short": "Sets alignment of content within the element."
+  },
+  "bgcolor": {
+    "category": "style",
+    "description_short": "Sets the background color of the element."
+  },
+  "bgimage": {
+    "category": "style",
+    "description_short": "Sets the background image of the element."
+  },
+  "border": {
+    "category": "style",
+    "description_short": "Sets the border of the element."
+  },
+  "bold": {
+    "category": "style",
+    "description_short": "Makes text bold."
+  },
+  "boxshadow": {
+    "category": "style",
+    "description_short": "Applies a shadow effect to the element."
+  },
+  "color": {
+    "category": "style",
+    "description_short": "Sets the text color."
+  },
+  "cursor": {
+    "category": "style",
+    "description_short": "Sets the cursor when hovering over the element."
+  },
+  "flex": {
+    "category": "style",
+    "description_short": "Sets flex properties for the element."
+  },
+  "flexdirection": {
+    "category": "style",
+    "description_short": "Sets the flex direction."
+  },
+  "flexitem": {
+    "category": "style",
+    "description_short": "Sets properties of a flex item."
+  },
+  "font": {
+    "category": "style",
+    "description_short": "Sets font style and size."
+  },
+  "height": {
+    "category": "style",
+    "description_short": "Sets the height of the element."
+  },
+  "justifycontent": {
+    "category": "style",
+    "description_short": "Aligns flex items along the main axis."
+  },
+  "lineheight": {
+    "category": "style",
+    "description_short": "Sets the height of text lines."
+  },
+  "margin": {
+    "category": "style",
+    "description_short": "Sets margin around the element."
+  },
+  "margintop": {
+    "category": "style",
+    "description_short": "Sets top margin."
+  },
+  "marginbottom": {
+    "category": "style",
+    "description_short": "Sets bottom margin."
+  },
+  "marginleft": {
+    "category": "style",
+    "description_short": "Sets left margin."
+  },
+  "marginright": {
+    "category": "style",
+    "description_short": "Sets right margin."
+  },
+  "minheight": {
+    "category": "style",
+    "description_short": "Sets the minimum height."
+  },
+  "minwidth": {
+    "category": "style",
+    "description_short": "Sets the minimum width."
+  },
+  "maxwidth": {
+    "category": "style",
+    "description_short": "Sets the maximum width."
+  },
+  "padding": {
+    "category": "style",
+    "description_short": "Sets padding inside the element."
+  },
+  "paddingtop": {
+    "category": "style",
+    "description_short": "Sets top padding."
+  },
+  "paddingbottom": {
+    "category": "style",
+    "description_short": "Sets bottom padding."
+  },
+  "paddingleft": {
+    "category": "style",
+    "description_short": "Sets left padding."
+  },
+  "paddingright": {
+    "category": "style",
+    "description_short": "Sets right padding."
+  },
+  "radius": {
+    "category": "style",
+    "description_short": "Sets border radius."
+  },
+  "resize": {
+    "category": "style",
+    "description_short": "Sets resize behavior."
+  },
+  "transform": {
+    "category": "style",
+    "description_short": "Applies a CSS transform."
+  },
+  "width": {
+    "category": "style",
+    "description_short": "Sets the width of the element."
+  },
+  "wordbreak": {
+    "category": "style",
+    "description_short": "Sets how words break in text."
+  },
+  "whitespace": {
+    "category": "style",
+    "description_short": "Sets whitespace behavior."
+  },
+  "zindex": {
+    "category": "style",
+    "description_short": "Sets the stacking order of the element."
+  },
+  "zoom": {
+    "category": "style",
+    "description_short": "Sets zoom scale of the element."
+  },
+  "insertbeforebegin": {
+    "category": "content",
+    "description_short": "Inserts new content immediately before the element."
+  },
+  "insertafterbegin": {
+    "category": "content",
+    "description_short": "Inserts new content just inside the element, before its first child."
+  },
+  "insertbeforeend": {
+    "category": "content",
+    "description_short": "Inserts new content just inside the element, after its last child."
+  },
+  "insertafterend": {
+    "category": "content",
+    "description_short": "Inserts new content immediately after the element."
+  },
+  "trimleft": {
+    "category": "content",
+    "description_short": "Removes characters from the start of content."
+  },
+  "trimright": {
+    "category": "content",
+    "description_short": "Removes characters from the end of content."
+  },
+  "lowercase": {
+    "category": "content",
+    "description_short": "Converts content to lowercase."
+  },
+  "uppercase": {
+    "category": "content",
+    "description_short": "Converts content to uppercase."
+  },
+  "setaction": {
+    "category": "content",
+    "description_short": "Sets an action on the element."
+  },
+  "setmax": {
+    "category": "content",
+    "description_short": "Sets a maximum value."
+  },
+  "settext": {
+    "category": "content",
+    "description_short": "Sets the text content."
+  },
+  "sethtml": {
+    "category": "content",
+    "description_short": "Sets HTML content."
+  },
+  "sethref": {
+    "category": "content",
+    "description_short": "Sets the href attribute."
+  },
+  "setqueryhref": {
+    "category": "content",
+    "description_short": "Sets a query-based href."
+  },
+  "setvalue": {
+    "category": "content",
+    "description_short": "Sets the value of the element."
+  },
+  "setid": {
+    "category": "content",
+    "description_short": "Sets the element's id."
+  },
+  "setname": {
+    "category": "content",
+    "description_short": "Sets the element's name."
+  },
+  "setsrc": {
+    "category": "content",
+    "description_short": "Sets the source of an element."
+  },
+  "bindvar": {
+    "category": "binding",
+    "description_short": "Binds a variable."
+  },
+  "bindquery": {
+    "category": "binding",
+    "description_short": "Binds data from a query."
+  },
+  "bindasset": {
+    "category": "binding",
+    "description_short": "Binds an asset."
+  },
+  "bindglobal": {
+    "category": "binding",
+    "description_short": "Binds a global variable."
+  },
+  "bindfield": {
+    "category": "binding",
+    "description_short": "Binds a specific field."
+  },
+  "ifafterbegin": {
+    "category": "logic",
+    "description_short": "Conditional insertion after beginning of element."
+  },
+  "ifbeforeend": {
+    "category": "logic",
+    "description_short": "Conditional insertion before end of element."
+  },
+  "ifopen": {
+    "category": "logic",
+    "description_short": "Conditional insertion for new element."
+  },
+  "resetvalue": {
+    "category": "value",
+    "description_short": "Resets the value of the element."
+  },
+  "togglevalue": {
+    "category": "value",
+    "description_short": "Toggles the value of the element."
+  },
+  "mapclass": {
+    "category": "mapping",
+    "description_short": "Maps classes based on rules."
+  },
+  "mapmargin": {
+    "category": "mapping",
+    "description_short": "Maps margin values."
+  },
+  "mapbindvar": {
+    "category": "mapping",
+    "description_short": "Maps a bound variable."
+  },
+  "onclicked": {
+    "category": "event",
+    "description_short": "Triggered when the element is clicked."
+  },
+  "onenabled": {
+    "category": "event",
+    "description_short": "Triggered when the element or feature becomes enabled."
+  },
+  "onfocused": {
+    "category": "event",
+    "description_short": "Triggered when the element gains focus."
+  },
+  "onblur": {
+    "category": "event",
+    "description_short": "Triggered when the element loses focus."
+  },
+  "onhide": {
+    "category": "event",
+    "description_short": "Triggered when the element is hidden."
+  },
+  "onshow": {
+    "category": "event",
+    "description_short": "Triggered when the element is shown."
+  },
+  "onsubmitted": {
+    "category": "event",
+    "description_short": "Triggered when a form is submitted."
+  },
+  "onload": {
+    "category": "event",
+    "description_short": "Triggered when the element is loaded."
+  },
+  "hide": {
+    "category": "behavior",
+    "description_short": "Hides the element."
+  },
+  "show": {
+    "category": "behavior",
+    "description_short": "Shows the element."
+  },
+  "runorder": {
+    "category": "behavior",
+    "description_short": "Runs attributes in order."
+  },
+  "hrefhost": {
+    "category": "configuration",
+    "description_short": "Sets the base URL based on host match."
+  }
+}
