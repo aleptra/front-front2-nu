@@ -5,7 +5,8 @@
   },
   "bgcolor": {
     "category": "style",
-    "description_short": "Sets the background color of the element."
+    "description_short": "Sets the background color of the element.",
+    "example": "<div bgcolor=\"lightblue\">This div has a light blue background</div>"
   },
   "bgimage": {
     "category": "style",
@@ -13,7 +14,8 @@
   },
   "border": {
     "category": "style",
-    "description_short": "Sets the border of the element."
+    "description_short": "Sets the border of the element.",
+    "example": "<div border=\"1px solid black\">This div has a black border</div>"
   },
   "bold": {
     "category": "style",
@@ -22,7 +24,8 @@
   },
   "boxshadow": {
     "category": "style",
-    "description_short": "Applies a shadow effect to the element."
+    "description_short": "Applies a shadow effect to the element.",
+    "example": "<div boxshadow=\"2px 2px 5px gray\">This div has a shadow</div>"
   },
   "color": {
     "category": "style",
@@ -31,7 +34,8 @@
   },
   "cursor": {
     "category": "style",
-    "description_short": "Sets the cursor when hovering over the element."
+    "description_short": "Sets the cursor when hovering over the element.",
+    "example": "<span cursor=\"default\">Default</span>\n<span cursor=\"pointer\">Pointer</span>\n<span cursor=\"text\">Text</span>\n<span cursor=\"move\">Move</span>\n<span cursor=\"wait\">Wait</span>\n<span cursor=\"crosshair\">Crosshair</span>\n<span cursor=\"not-allowed\">Not Allowed</span>\n<span cursor=\"help\">Help</span>\n<span cursor=\"progress\">Progress</span>\n<span cursor=\"grab\">Grab</span>\n<span cursor=\"grabbing\">Grabbing</span>\n<span cursor=\"cell\">Cell</span>\n<span cursor=\"copy\">Copy</span>\n<span cursor=\"alias\">Alias</span>\n<span cursor=\"zoom-in\">Zoom In</span>\n<span cursor=\"zoom-out\">Zoom Out</span>\n<span cursor=\"col-resize\">Col Resize</span>\n<span cursor=\"row-resize\">Row Resize</span>\n<span cursor=\"n-resize\">N Resize</span>\n<span cursor=\"s-resize\">S Resize</span>\n<span cursor=\"e-resize\">E Resize</span>\n<span cursor=\"w-resize\">W Resize</span>\n<span cursor=\"ne-resize\">NE Resize</span>\n<span cursor=\"nw-resize\">NW Resize</span>\n<span cursor=\"se-resize\">SE Resize</span>\n<span cursor=\"sw-resize\">SW Resize</span>"
   },
   "flex": {
     "category": "style",
@@ -60,7 +64,8 @@
   },
   "lineheight": {
     "category": "style",
-    "description_short": "Sets the height of text lines."
+    "description_short": "Sets the height of text lines.",
+    "example": "<p lineheight=\"2\">This paragraph<br>has double<br>line height</p>"
   },
   "margin": {
     "category": "style",
@@ -96,11 +101,13 @@
   },
   "padding": {
     "category": "style",
-    "description_short": "Sets padding inside the element."
+    "description_short": "Sets padding inside the element.",
+    "example": "<div padding=\"1rem\">Content inside padded box</div>"
   },
   "paddingtop": {
     "category": "style",
-    "description_short": "Sets top padding."
+    "description_short": "Sets top padding.",
+    "example": "<div bgcolor=\"lightgray\" paddingtop=\"1rem\">Top padding example</div>"
   },
   "paddingbottom": {
     "category": "style",
@@ -116,7 +123,8 @@
   },
   "radius": {
     "category": "style",
-    "description_short": "Sets border radius."
+    "description_short": "Sets border radius.",
+    "example": "<span bgcolor=\"black02\" padding=\"1rem\" radius=\"1rem\">Rounded corners</span>"
   },
   "resize": {
     "category": "style",
@@ -167,11 +175,13 @@
   },
   "trimleft": {
     "category": "content",
-    "description_short": "Removes characters from the start of content."
+    "description_short": "Removes characters from the start of content.",
+    "example": "<p trimleft=\"!\">!!!Hello World!</p>"
   },
   "trimright": {
     "category": "content",
-    "description_short": "Removes characters from the end of content."
+    "description_short": "Removes characters from the end of content.",
+    "example": "<p trimright=\"!\">Hello World!!!</p>"
   },
   "lowercase": {
     "category": "content",
@@ -185,7 +195,8 @@
   },
   "setaction": {
     "category": "content",
-    "description_short": "Sets an action on the element."
+    "description_short": "Sets or changes the action URL of a form.",
+    "example": "<form setaction=\"/?submit\" target=\"_blank\">\n  <input type=\"submit\" />\n</form>"
   },
   "setmax": {
     "category": "content",
@@ -193,15 +204,17 @@
   },
   "settext": {
     "category": "content",
-    "description_short": "Sets the text content."
+    "description_short": "Sets the text content.",
+    "example": "<div settext=\"Hello World\"></div>"
   },
   "sethtml": {
     "category": "content",
-    "description_short": "Sets HTML content."
+    "description_short": "Sets HTML content.",
+    "example": "<div sethtml=\"<b>Hello</b> World\"></div>"
   },
   "sethref": {
     "category": "content",
-    "description_short": "Sets the href attribute."
+    "description_short": "Sets the href attribute of the element."
   },
   "setqueryhref": {
     "category": "content",
@@ -213,15 +226,17 @@
   },
   "setid": {
     "category": "content",
-    "description_short": "Sets the element's id."
+    "description_short": "Sets the id of the element.",
+    "example": "<div setid=\"id1\">This div has an id</div>"
   },
   "setname": {
     "category": "content",
-    "description_short": "Sets the element's name."
+    "description_short": "Sets the name of the element."
   },
   "setsrc": {
     "category": "content",
-    "description_short": "Sets the source of an element."
+    "description_short": "Sets the source of the image.",
+    "example": "<img setsrc=\"https:\//placehold.co\/200x100\">"
   },
   "bindvar": {
     "category": "binding",
@@ -305,7 +320,8 @@
   },
   "onload": {
     "category": "event",
-    "description_short": "Triggered when the element is loaded."
+    "description_short": "Triggered when the element is loaded.",
+    "example": "<div onload=\"alert:[Element has loaded]\">Content ready</div>"
   },
   "hide": {
     "category": "behavior",
@@ -321,6 +337,7 @@
   },
   "hrefhost": {
     "category": "configuration",
-    "description_short": "Sets the base URL based on host match."
+    "description_short": "Sets the base URL based on host match.",
+    "example": "<base hrefhost=\"localhost:https://example.com/\">\n<a sethref=\"page.html\">Go to Page</a>"
   }
 }

@@ -180,7 +180,7 @@
     },
     {
       "attribute": "setaction",
-      "description": "Sets an action on the element."
+      "description": "Sets or changes the action URL of a form."
     },
     {
       "attribute": "setmax",
@@ -212,11 +212,11 @@
     },
     {
       "attribute": "setname",
-      "description": "Sets the element's name."
+      "description": "Sets the name of the element."
     },
     {
       "attribute": "setsrc",
-      "description": "Sets the source of an element."
+      "description": "Sets the source of the image."
     }
   ],
   "binding": [
