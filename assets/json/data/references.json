@@ -328,7 +328,7 @@
     },
     {
       "attribute": "runorder",
-      "description": "Runs attributes in order."
+      "description": "Runs attributes in the specified order inside the element."
     }
   ],
     "configuration": [

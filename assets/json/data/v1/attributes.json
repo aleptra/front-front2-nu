@@ -1,7 +1,8 @@
 {
   "align": {
     "category": "style",
-    "description_short": "Sets alignment of content within the element."
+    "description_short": "Sets alignment of content within the element.",
+    "example": "<div align=\"left\">Left aligned</div>\n<div align=\"center\">Center aligned</div>\n<div align=\"right\">Right aligned</div>"
   },
   "bgcolor": {
     "category": "style",
@@ -128,7 +129,8 @@
   },
   "resize": {
     "category": "style",
-    "description_short": "Sets resize behavior."
+    "description_short": "Sets resize behavior of the element.",
+    "example": "<textarea resize=\"both\" width=\"200px\" height=\"100px\">You can resize me</textarea>\n<textarea resize=\"none\" width=\"200px\" height=\"100px\">You cannot resize me</textarea>"
   },
   "transform": {
     "category": "style",
@@ -148,7 +150,8 @@
   },
   "zindex": {
     "category": "style",
-    "description_short": "Sets the stacking order of the element."
+    "description_short": "Sets the stacking order of the element.",
+    "example": "<div relative>\n  <span bgcolor=\"lightblue\" zindex=\"2\" absolute top=\"60\">On top</span>\n  <span bgcolor=\"lightgray\" zindex=\"1\" height=\"3rem\">Behind</span>\n</div>"
   },
   "zoom": {
     "category": "style",
@@ -157,7 +160,8 @@
   },
   "insertbeforebegin": {
     "category": "content",
-    "description_short": "Inserts new content immediately before the element."
+    "description_short": "Inserts new content immediately before the element.",
+    "example": "<p insertbeforebegin=\"Note: \">Hello World</p>"
   },
   "insertafterbegin": {
     "category": "content",
@@ -171,7 +175,8 @@
   },
   "insertafterend": {
     "category": "content",
-    "description_short": "Inserts new content immediately after the element."
+    "description_short": "Inserts new content immediately after the element.",
+    "example": "<div insertafterend=\"!\">Hello World</div>"
   },
   "trimleft": {
     "category": "content",
@@ -200,7 +205,8 @@
   },
   "setmax": {
     "category": "content",
-    "description_short": "Sets a maximum value."
+    "description_short": "Sets the maximum value of a progress bar or input range element.",
+    "example": "<progress value=\"30\" setmax=\"100\"></progress>"
   },
   "settext": {
     "category": "content",
@@ -222,7 +228,8 @@
   },
   "setvalue": {
     "category": "content",
-    "description_short": "Sets the value of the element."
+    "description_short": "Sets the value of the element.",
+    "example": "<input type=\"text\" setvalue=\"Hello World\">"
   },
   "setid": {
     "category": "content",
@@ -231,7 +238,8 @@
   },
   "setname": {
     "category": "content",
-    "description_short": "Sets the name of the element."
+    "description_short": "Sets the name of the element.",
+    "example": "<div setname=\"name1\">This div has a name</div>"
   },
   "setsrc": {
     "category": "content",
@@ -325,15 +333,17 @@
   },
   "hide": {
     "category": "behavior",
-    "description_short": "Hides the element."
+    "description_short": "Hides the element.",
+    "example": "<span hide>This text is hidden</span>"
   },
   "show": {
     "category": "behavior",
-    "description_short": "Shows the element."
+    "description_short": "Shows the element.",
+    "example": "<span show>This text is visible</span>"
   },
   "runorder": {
-    "category": "behavior",
-    "description_short": "Runs attributes in order."
+    "description_short": "Runs attributes in the specified order inside the element.",
+    "example": "<span runorder=\"settext,uppercase\" settext=\"hello WORLD\" uppercase lowercase></span>"
   },
   "hrefhost": {
     "category": "configuration",
