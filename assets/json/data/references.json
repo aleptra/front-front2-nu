@@ -331,7 +331,17 @@
       "description": "Runs attributes in the specified order inside the element."
     }
   ],
-    "configuration": [
+  "interactive": [
+    {
+      "attribute": "alert",
+      "description": "Displays an alert dialog with a message to the user."
+    },
+    {
+      "attribute": "click",
+      "description": "Executes an action or expression when the element is clicked."
+    }
+  ],
+  "configuration": [
     {
       "attribute": "hrefhost",
       "description": "Sets the base URL based on host match."

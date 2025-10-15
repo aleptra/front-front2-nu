@@ -11,7 +11,8 @@
   },
   "bgimage": {
     "category": "style",
-    "description_short": "Sets the background image of the element."
+    "description_short": "Sets the background image of the element.",
+    "example": "<div bgimage=\"https://placehold.co/200x100\" height=\"200px\">Content with background image</div>"
   },
   "border": {
     "category": "style",
@@ -112,15 +113,18 @@
   },
   "paddingbottom": {
     "category": "style",
-    "description_short": "Sets bottom padding."
+    "description_short": "Sets bottom padding.",
+    "example": "<div bgcolor=\"lightgray\" paddingbottom=\"1rem\">Bottom padding example</div>"
   },
   "paddingleft": {
     "category": "style",
-    "description_short": "Sets left padding."
+    "description_short": "Sets left padding.",
+    "example": "<div bgcolor=\"lightgray\" paddingleft=\"1rem\">Left padding example</div>"
   },
   "paddingright": {
     "category": "style",
-    "description_short": "Sets right padding."
+    "description_short": "Sets right padding.",
+    "example": "<span bgcolor=\"lightgray\" paddingright=\"5rem\">Right padding example</span>"
   },
   "radius": {
     "category": "style",
@@ -220,7 +224,8 @@
   },
   "sethref": {
     "category": "content",
-    "description_short": "Sets the href attribute of the element."
+    "description_short": "Sets the href attribute of the element.",
+    "example": "<a sethref=\"https://example.com\">Visit Example</a>"
   },
   "setqueryhref": {
     "category": "content",
@@ -344,6 +349,14 @@
   "runorder": {
     "description_short": "Runs attributes in the specified order inside the element.",
     "example": "<span runorder=\"settext,uppercase\" settext=\"hello WORLD\" uppercase lowercase></span>"
+  },
+  "alert": {
+    "description_short": "Displays an alert dialog with a message to the user.",
+    "example": "<button click=\"alert:[Hello World!]\">Show Alert</button>"
+  },
+  "click": {
+    "description_short": "Executes an action or expression when the element is clicked.",
+    "example": "<button click=\"settext:[Button clicked!]\">Click me</button>"
   },
   "hrefhost": {
     "category": "configuration",
