@@ -289,6 +289,10 @@
       "description": "Triggered when the element or feature becomes enabled."
     },
     {
+      "attribute": "ondisabled",
+      "description": "Triggered when the element or feature becomes disabled."
+    },
+    {
       "attribute": "onfocused",
       "description": "Triggered when the element gains focus."
     },

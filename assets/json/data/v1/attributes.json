@@ -305,11 +305,18 @@
   },
   "onclicked": {
     "category": "event",
-    "description_short": "Triggered when the element is clicked."
+    "description_short": "Triggered when the element is clicked.",
+    "example": "<button click=\"sethtml:[Button clicked!]\" onclicked=\"insertbeforeend:[ Added after]\">Click me</button>"
   },
   "onenabled": {
     "category": "event",
-    "description_short": "Triggered when the element or feature becomes enabled."
+    "description_short": "Triggered when the element or feature becomes enabled.",
+    "example": "<input type=\"checkbox\" click=\"enable\" onenabled=\"insertbeforebegin:[Enabled!]\"> Enable me"
+  },
+  "ondisabled": {
+    "category": "event",
+    "description_short": "Triggered when the element or feature becomes disabled.",
+    "example": "<input type=\"checkbox\" click=\"disable\" ondisabled=\"insertbeforebegin:[Disabled!]\"> Disable me"
   },
   "onfocused": {
     "category": "event",
@@ -334,7 +341,7 @@
   "onload": {
     "category": "event",
     "description_short": "Triggered when the element is loaded.",
-    "example": "<div onload=\"alert:[Element has loaded]\">Content ready</div>"
+    "example": "<body onload=\"sethtml:[Element has loaded]\">Content ready</body>"
   },
   "hide": {
     "category": "behavior",
