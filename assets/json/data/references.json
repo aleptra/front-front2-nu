@@ -243,6 +243,10 @@
   ],
   "logic": [
     {
+      "attribute": "if",
+      "description": "Evaluates a condition and runs actions if true or false."
+    },
+    {
       "attribute": "ifafterbegin",
       "description": "Conditional insertion after beginning of element."
     },

@@ -328,11 +328,13 @@
   },
   "onhide": {
     "category": "event",
-    "description_short": "Triggered when the element is hidden."
+    "description_short": "Triggered when the element is hidden.",
+    "example": "<button click=\"hide\" onhide=\"insertafterend:[Element hidden]\">Hide me</button>"
   },
   "onshow": {
     "category": "event",
-    "description_short": "Triggered when the element is shown."
+    "description_short": "Triggered when the element is shown.",
+    "example": "<div id=\"panel\" bgcolor=\"lightgreen\" hide onshow=\"insertafterend:[ Panel shown]\">Hidden Panel</div>\n<button click=\"show:#panel\">Show Panel</button>"
   },
   "onsubmitted": {
     "category": "event",
