@@ -58,7 +58,8 @@
   },
   "height": {
     "category": "style",
-    "description_short": "Sets the height of the element."
+    "description_short": "Sets the height of the element.",
+    "example": "<div height=\"100px\" bgcolor=\"lightblue\">100px tall div</div>"
   },
   "justifycontent": {
     "category": "style",
@@ -157,7 +158,7 @@
   "zindex": {
     "category": "style",
     "description_short": "Sets the stacking order of the element.",
-    "example": "<div relative>\n  <span bgcolor=\"lightblue\" zindex=\"2\" absolute top=\"60\">On top</span>\n  <span bgcolor=\"lightgray\" zindex=\"1\" height=\"3rem\">Behind</span>\n</div>"
+    "example": "<div relative>\n  <span bgcolor=\"lightblue\" zindex=\"2\" absolute top=\"20\">On top</span>\n  <span bgcolor=\"lightgray\" zindex=\"1\" height=\"3rem\">Behind</span>\n</div>"
   },
   "zoom": {
     "category": "style",
@@ -212,7 +213,7 @@
   "setmax": {
     "category": "content",
     "description_short": "Sets the maximum value of a progress bar or input range element.",
-    "example": "<progress value=\"30\" setmax=\"100\"></progress>"
+    "example": "<progress value=\"30\" setmax=\"100\" border=\"1px solid black\"></progress>"
   },
   "settext": {
     "category": "content",
