@@ -146,11 +146,13 @@
   },
   "wordbreak": {
     "category": "style",
-    "description_short": "Sets how words break in text."
+    "description_short": "Sets how words break in text.",
+    "example": "<div wordbreak=\"normal\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"break-all\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"keep-all\" border=\"1px solid black\" width=\"100px\">This is a long sentence that will not break words in CJK text.</div>"
   },
   "whitespace": {
     "category": "style",
-    "description_short": "Sets whitespace behavior."
+    "description_short": "Sets whitespace behavior.",
+    "example": "<div whitespace=\"normal\">This    text   has    normal    whitespace.</div>\n<div whitespace=\"pre\">This    text   preserves\nall    spaces\nand line breaks.</div>\n<div whitespace=\"nowrap\">This text will not wrap onto the next line, even if it overflows.</div>"
   },
   "zindex": {
     "category": "style",
