@@ -357,12 +357,36 @@
   ],
   "variable": [
     {
+      "name": "docMode",
+      "description": "Gets the document mode of the current browser."
+    },
+    {
       "name": "href",
       "description": "Gets the current URL of the current page."
     },
     {
+      "name": "isFrontpage",
+      "description": "Gets whether the current page is the Start Page."
+    },
+    {
+      "name": "language",
+      "description": "Gets the current language code of the page."
+    },
+    {
+      "name": "mainScrollHeight",
+      "description": "Gets the total scrollable height of the main container."
+    },
+    {
       "name": "title",
       "description": "Gets the title of the current page."
+    },
+    {
+      "name": "windowHeight",
+      "description": "Gets the height of the window in pixels."
+    },
+    {
+      "name": "windowWidth",
+      "description": "Gets the width of the window in pixels."
     }
   ]
 }
