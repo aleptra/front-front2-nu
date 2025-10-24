@@ -1,0 +1,66 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title globalize-get>Build Plugins</title>
+<template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+<article color="silver">
+
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/guides" globalize-get>Guides</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+    </ol>
+  </nav>
+
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
+      runorder="bindglobal;settext;globalize-get"></h1>
+
+  <section>
+    <p>
+      This example shows how to build a simple plugin in Front using the `pluginname--load` convention.
+      The plugin will log a message and modify a page element.
+    </p>
+  </section>
+
+  <section>
+    <h2 color="white" id="example" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Example: Hello Plugin</h2>
+    
+    <small padding="0.25rem">hello.js</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+          syntaxhighlighting--set>
+'use strict'
+
+app.plugin.hello = {
+
+  "hello--load": function (options) {
+    var element = options.element
+    if (element) {
+      element.innerHTML = "Hello from Front plugin!"
+      element.style.backgroundColor = "#f0f0f0"
+    }
+    console.log("Hello plugin loaded!")
+  }
+
+}
+    </code>
+
+    <p>Usage in your page:</p>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace">
+&lt;script src="hello.js"&gt;&lt;/script&gt;
+&lt;div id="my-element"&gt;&lt;/div&gt;
+&lt;script&gt;
+  app.plugin.hello["hello--load"]({ element: document.getElementById("my-element") })
+&lt;/script&gt;
+    </code>
+
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">
+      Note: The `pluginname--load` method is the entry point of your plugin.
+      You can define additional methods using the same `pluginname--method` convention.
+    </div>
+  </section>
+
+  <hr bgcolor="white03" margin="3rem 0">
+  <a href="documentation/guides/plugins-advanced.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
+     paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
+     insertbeforeend=" →" insertcontent="true">Goto Next
+     Step</a>
+</article>
