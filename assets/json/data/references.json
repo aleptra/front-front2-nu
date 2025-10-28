@@ -147,6 +147,10 @@
   ],
   "content": [
     {
+      "attribute": "escape",
+      "description": "Escapes HTML or special characters in content to display them as plain text."
+    },
+    {
       "attribute": "insertbeforebegin",
       "description": "Inserts new content immediately before the element."
     },
@@ -326,6 +330,10 @@
     }
   ],
   "behavior": [
+    {
+      "attribute": "blur",
+      "description": "Removes focus from the element."
+    },
     {
       "attribute": "hide",
       "description": "Hides the element."

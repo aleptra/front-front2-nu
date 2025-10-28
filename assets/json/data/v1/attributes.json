@@ -21,30 +21,39 @@
   },
   "bindvar": {
     "category": "binding",
-    "description_short": "Binds a variable."
+    "description_short": "Binds a variable.",
+    "example": ""
   },
   "bindquery": {
     "category": "binding",
-    "description_short": "Binds data from a query."
+    "description_short": "Binds data from a query.",
+    "example": ""
   },
   "bindasset": {
     "category": "binding",
-    "description_short": "Binds an asset."
+    "description_short": "Binds an asset.",
+    "example": ""
   },
   "bindglobal": {
     "category": "binding",
-    "description_short": "Binds a global variable."
+    "description_short": "Binds a global variable.",
+    "example": ""
   },
   "bindfield": {
     "category": "binding",
-    "description_short": "Binds a specific field."
+    "description_short": "Binds a specific field.",
+    "example": ""
   },
   "border": {
     "category": "style",
     "description_short": "Sets the border of the element.",
     "example": "<div border=\"1px solid black\">This div has a black border</div>"
   },
-  "blur": {},
+  "blur": {
+    "category": "behavior",
+    "description_short": "",
+    "example": ""
+  },
   "bold": {
     "category": "style",
     "description_short": "Makes text bold.",
@@ -56,6 +65,7 @@
     "example": "<div boxshadow=\"2px 2px 5px gray\">This div has a shadow</div>"
   },
   "click": {
+    "category": "interactive",
     "description_short": "Executes an action or expression when the element is clicked.",
     "example": "<button click=\"settext:[Button clicked!]\">Click me</button>"
   },
@@ -70,18 +80,25 @@
     "example": "<span cursor=\"default\">Default</span>\n<span cursor=\"pointer\">Pointer</span>\n<span cursor=\"text\">Text</span>\n<span cursor=\"move\">Move</span>\n<span cursor=\"wait\">Wait</span>\n<span cursor=\"crosshair\">Crosshair</span>\n<span cursor=\"not-allowed\">Not Allowed</span>\n<span cursor=\"help\">Help</span>\n<span cursor=\"progress\">Progress</span>\n<span cursor=\"grab\">Grab</span>\n<span cursor=\"grabbing\">Grabbing</span>\n<span cursor=\"cell\">Cell</span>\n<span cursor=\"copy\">Copy</span>\n<span cursor=\"alias\">Alias</span>\n<span cursor=\"zoom-in\">Zoom In</span>\n<span cursor=\"zoom-out\">Zoom Out</span>\n<span cursor=\"col-resize\">Col Resize</span>\n<span cursor=\"row-resize\">Row Resize</span>\n<span cursor=\"n-resize\">N Resize</span>\n<span cursor=\"s-resize\">S Resize</span>\n<span cursor=\"e-resize\">E Resize</span>\n<span cursor=\"w-resize\">W Resize</span>\n<span cursor=\"ne-resize\">NE Resize</span>\n<span cursor=\"nw-resize\">NW Resize</span>\n<span cursor=\"se-resize\">SE Resize</span>\n<span cursor=\"sw-resize\">SW Resize</span>"
   },
   "confirm": {},
-  "escape": {},
+  "escape": {
+    "category": "content",
+    "description_short": "",
+    "example": ""
+  },
   "flex": {
     "category": "style",
-    "description_short": "Sets flex properties for the element."
+    "description_short": "Sets flex properties for the element.",
+    "example": ""
   },
   "flexdirection": {
     "category": "style",
-    "description_short": "Sets the flex direction."
+    "description_short": "Sets the flex direction.",
+    "example": ""
   },
   "flexitem": {
     "category": "style",
-    "description_short": "Sets properties of a flex item."
+    "description_short": "Sets properties of a flex item.",
+    "example": ""
   },
   "focus": {},
   "font": {
@@ -107,15 +124,18 @@
   },
   "ifafterbegin": {
     "category": "logic",
-    "description_short": "Conditional insertion after beginning of element."
+    "description_short": "Conditional insertion after beginning of element.",
+    "example": ""
   },
   "ifbeforeend": {
     "category": "logic",
-    "description_short": "Conditional insertion before end of element."
+    "description_short": "Conditional insertion before end of element.",
+    "example": ""
   },
   "ifopen": {
     "category": "logic",
-    "description_short": "Conditional insertion for new element."
+    "description_short": "Conditional insertion for new element.",
+    "example": ""
   },
   "insertbeforebegin": {
     "category": "content",
@@ -139,7 +159,8 @@
   },
   "justifycontent": {
     "category": "style",
-    "description_short": "Aligns flex items along the main axis."
+    "description_short": "Aligns flex items along the main axis.",
+    "example": ""
   },
   "lineheight": {
     "category": "style",
@@ -153,47 +174,58 @@
   },
   "mapbindvar": {
     "category": "mapping",
-    "description_short": "Maps a bound variable."
+    "description_short": "Maps a bound variable.",
+    "example": ""
   },
   "mapclass": {
     "category": "mapping",
-    "description_short": "Maps classes based on rules."
+    "description_short": "Maps classes based on rules.",
+    "example": ""
   },
   "mapmargin": {
     "category": "mapping",
-    "description_short": "Maps margin values."
+    "description_short": "Maps margin values.",
+    "example": ""
   },
   "margin": {
     "category": "style",
-    "description_short": "Sets margin around the element."
+    "description_short": "Sets margin around the element.",
+    "example": ""
   },
   "margintop": {
     "category": "style",
-    "description_short": "Sets top margin."
+    "description_short": "Sets top margin.",
+    "example": ""
   },
   "marginbottom": {
     "category": "style",
-    "description_short": "Sets bottom margin."
+    "description_short": "Sets bottom margin.",
+    "example": ""
   },
   "marginleft": {
     "category": "style",
-    "description_short": "Sets left margin."
+    "description_short": "Sets left margin.",
+    "example": ""
   },
   "marginright": {
     "category": "style",
-    "description_short": "Sets right margin."
+    "description_short": "Sets right margin.",
+    "example": ""
   },
   "minheight": {
     "category": "style",
-    "description_short": "Sets the minimum height."
+    "description_short": "Sets the minimum height.",
+    "example": ""
   },
   "minwidth": {
     "category": "style",
-    "description_short": "Sets the minimum width."
+    "description_short": "Sets the minimum width.",
+    "example": ""
   },
   "maxwidth": {
     "category": "style",
-    "description_short": "Sets the maximum width."
+    "description_short": "Sets the maximum width.",
+    "example": ""
   },
   "onclicked": {
     "category": "event",
@@ -277,6 +309,7 @@
     "description_short": "Resets the value of the element."
   },
   "runorder": {
+    "category": "behavior",
     "description_short": "Runs attributes in the specified order inside the element.",
     "example": "<span runorder=\"settext,uppercase\" settext=\"hello WORLD\" uppercase lowercase></span>"
   },
@@ -305,7 +338,11 @@
     "description_short": "Sets HTML content.",
     "example": "<div sethtml=\"<b>Hello</b> World\"></div>"
   },
-  "setattr": {},
+  "setattr": {
+    "category": "content",
+    "description_short": "Sets an attribute on the element.",
+    "example": "<div setattr=\"title:Hello\">Hover me</div>"
+  },
   "sethref": {
     "category": "content",
     "description_short": "Sets the href attribute of the element.",
@@ -343,7 +380,11 @@
     "category": "style",
     "description_short": "Applies a CSS transform."
   },
-  "trim": {},
+  "trim": {
+    "category": "content",
+    "description_short": "Removes whitespace from the start and end of content.",
+    "example": "<p trim>   Hello World!   </p>"
+  },
   "trimleft": {
     "category": "content",
     "description_short": "Removes characters from the start of content.",
@@ -361,7 +402,8 @@
   },
   "width": {
     "category": "style",
-    "description_short": "Sets the width of the element."
+    "description_short": "Sets the width of the element.",
+    "example": "<div width=\"200px\" bgcolor=\"lightblue\">This div is 200px wide</div>\n<div width=\"50%\" bgcolor=\"lightgreen\">This div is 50% of its container's width</div>"
   },
   "wordbreak": {
     "category": "style",
