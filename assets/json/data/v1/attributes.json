@@ -1,4 +1,9 @@
 {
+  "append": {},
+  "alert": {
+    "description_short": "Displays an alert dialog with a message to the user.",
+    "example": "<button click=\"alert:[Hello World!]\">Show Alert</button>"
+  },
   "align": {
     "category": "style",
     "description_short": "Sets alignment of content within the element.",
@@ -14,11 +19,32 @@
     "description_short": "Sets the background image of the element.",
     "example": "<div bgimage=\"https://placehold.co/200x100\" height=\"200px\">Content with background image</div>"
   },
+  "bindvar": {
+    "category": "binding",
+    "description_short": "Binds a variable."
+  },
+  "bindquery": {
+    "category": "binding",
+    "description_short": "Binds data from a query."
+  },
+  "bindasset": {
+    "category": "binding",
+    "description_short": "Binds an asset."
+  },
+  "bindglobal": {
+    "category": "binding",
+    "description_short": "Binds a global variable."
+  },
+  "bindfield": {
+    "category": "binding",
+    "description_short": "Binds a specific field."
+  },
   "border": {
     "category": "style",
     "description_short": "Sets the border of the element.",
     "example": "<div border=\"1px solid black\">This div has a black border</div>"
   },
+  "blur": {},
   "bold": {
     "category": "style",
     "description_short": "Makes text bold.",
@@ -28,6 +54,10 @@
     "category": "style",
     "description_short": "Applies a shadow effect to the element.",
     "example": "<div boxshadow=\"2px 2px 5px gray\">This div has a shadow</div>"
+  },
+  "click": {
+    "description_short": "Executes an action or expression when the element is clicked.",
+    "example": "<button click=\"settext:[Button clicked!]\">Click me</button>"
   },
   "color": {
     "category": "style",
@@ -39,6 +69,8 @@
     "description_short": "Sets the cursor when hovering over the element.",
     "example": "<span cursor=\"default\">Default</span>\n<span cursor=\"pointer\">Pointer</span>\n<span cursor=\"text\">Text</span>\n<span cursor=\"move\">Move</span>\n<span cursor=\"wait\">Wait</span>\n<span cursor=\"crosshair\">Crosshair</span>\n<span cursor=\"not-allowed\">Not Allowed</span>\n<span cursor=\"help\">Help</span>\n<span cursor=\"progress\">Progress</span>\n<span cursor=\"grab\">Grab</span>\n<span cursor=\"grabbing\">Grabbing</span>\n<span cursor=\"cell\">Cell</span>\n<span cursor=\"copy\">Copy</span>\n<span cursor=\"alias\">Alias</span>\n<span cursor=\"zoom-in\">Zoom In</span>\n<span cursor=\"zoom-out\">Zoom Out</span>\n<span cursor=\"col-resize\">Col Resize</span>\n<span cursor=\"row-resize\">Row Resize</span>\n<span cursor=\"n-resize\">N Resize</span>\n<span cursor=\"s-resize\">S Resize</span>\n<span cursor=\"e-resize\">E Resize</span>\n<span cursor=\"w-resize\">W Resize</span>\n<span cursor=\"ne-resize\">NE Resize</span>\n<span cursor=\"nw-resize\">NW Resize</span>\n<span cursor=\"se-resize\">SE Resize</span>\n<span cursor=\"sw-resize\">SW Resize</span>"
   },
+  "confirm": {},
+  "escape": {},
   "flex": {
     "category": "style",
     "description_short": "Sets flex properties for the element."
@@ -51,15 +83,59 @@
     "category": "style",
     "description_short": "Sets properties of a flex item."
   },
+  "focus": {},
   "font": {
     "category": "style",
     "description_short": "Sets font style and size.",
     "example": "<p font=\"Comic Sans MS\">This text uses a custom font</p>"
   },
+  "grid": {},
   "height": {
     "category": "style",
     "description_short": "Sets the height of the element.",
     "example": "<div height=\"100px\" bgcolor=\"lightblue\">100px tall div</div>"
+  },
+  "hide": {
+    "category": "behavior",
+    "description_short": "Hides the element.",
+    "example": "<span hide>This text is hidden</span>"
+  },
+  "hrefhost": {
+    "category": "configuration",
+    "description_short": "Sets the base URL based on host match.",
+    "example": "<base hrefhost=\"localhost:https://example.com/\">\n<a sethref=\"page.html\">Go to Page</a>"
+  },
+  "ifafterbegin": {
+    "category": "logic",
+    "description_short": "Conditional insertion after beginning of element."
+  },
+  "ifbeforeend": {
+    "category": "logic",
+    "description_short": "Conditional insertion before end of element."
+  },
+  "ifopen": {
+    "category": "logic",
+    "description_short": "Conditional insertion for new element."
+  },
+  "insertbeforebegin": {
+    "category": "content",
+    "description_short": "Inserts new content immediately before the element.",
+    "example": "<p insertbeforebegin=\"Note: \">Hello World</p>"
+  },
+  "insertafterbegin": {
+    "category": "content",
+    "description_short": "Inserts new content just inside the element, before its first child.",
+    "example": "<p insertafterbegin=\"Intro: \">Hello World</p>"
+  },
+  "insertbeforeend": {
+    "category": "content",
+    "description_short": "Inserts new content just inside the element, after its last child.",
+    "example": "<div insertbeforeend=\"!\">Hello World</div>"
+  },
+  "insertafterend": {
+    "category": "content",
+    "description_short": "Inserts new content immediately after the element.",
+    "example": "<div insertafterend=\"!\">Hello World</div>"
   },
   "justifycontent": {
     "category": "style",
@@ -69,6 +145,23 @@
     "category": "style",
     "description_short": "Sets the height of text lines.",
     "example": "<p lineheight=\"2\">This paragraph<br>has double<br>line height</p>"
+  },
+  "lowercase": {
+    "category": "content",
+    "description_short": "Converts content to lowercase.",
+    "example": "<p lowercase>THIS TEXT WILL APPEAR IN LOWERCASE LETTERS</p>"
+  },
+  "mapbindvar": {
+    "category": "mapping",
+    "description_short": "Maps a bound variable."
+  },
+  "mapclass": {
+    "category": "mapping",
+    "description_short": "Maps classes based on rules."
+  },
+  "mapmargin": {
+    "category": "mapping",
+    "description_short": "Maps margin values."
   },
   "margin": {
     "category": "style",
@@ -101,6 +194,48 @@
   "maxwidth": {
     "category": "style",
     "description_short": "Sets the maximum width."
+  },
+  "onclicked": {
+    "category": "event",
+    "description_short": "Triggered when the element is clicked.",
+    "example": "<button click=\"sethtml:[Button clicked!]\" onclicked=\"insertbeforeend:[ Added after]\">Click me</button>"
+  },
+  "onenabled": {
+    "category": "event",
+    "description_short": "Triggered when the element or feature becomes enabled.",
+    "example": "<input type=\"checkbox\" click=\"enable\" onenabled=\"insertbeforebegin:[Enabled!]\"> Enable me"
+  },
+  "ondisabled": {
+    "category": "event",
+    "description_short": "Triggered when the element or feature becomes disabled.",
+    "example": "<input type=\"checkbox\" click=\"disable\" ondisabled=\"insertbeforebegin:[Disabled!]\"> Disable me"
+  },
+  "onfocused": {
+    "category": "event",
+    "description_short": "Triggered when the element gains focus."
+  },
+  "onblur": {
+    "category": "event",
+    "description_short": "Triggered when the element loses focus."
+  },
+  "onhide": {
+    "category": "event",
+    "description_short": "Triggered when the element is hidden.",
+    "example": "<button click=\"hide\" onhide=\"insertafterend:[Element hidden]\">Hide me</button>"
+  },
+  "onshow": {
+    "category": "event",
+    "description_short": "Triggered when the element is shown.",
+    "example": "<div id=\"panel\" bgcolor=\"lightgreen\" hide onshow=\"insertafterend:[ Panel shown]\">Hidden Panel</div>\n<button click=\"show:#panel\">Show Panel</button>"
+  },
+  "onsubmitted": {
+    "category": "event",
+    "description_short": "Triggered when a form is submitted."
+  },
+  "onload": {
+    "category": "event",
+    "description_short": "Triggered when the element is loaded.",
+    "example": "<body onload=\"sethtml:[Element has loaded]\">Content ready</body>"
   },
   "padding": {
     "category": "style",
@@ -137,73 +272,18 @@
     "description_short": "Sets resize behavior of the element.",
     "example": "<textarea resize=\"both\" width=\"200px\" height=\"100px\">You can resize me</textarea>\n<textarea resize=\"none\" width=\"200px\" height=\"100px\">You cannot resize me</textarea>"
   },
-  "transform": {
-    "category": "style",
-    "description_short": "Applies a CSS transform."
+  "resetvalue": {
+    "category": "value",
+    "description_short": "Resets the value of the element."
   },
-  "width": {
-    "category": "style",
-    "description_short": "Sets the width of the element."
+  "runorder": {
+    "description_short": "Runs attributes in the specified order inside the element.",
+    "example": "<span runorder=\"settext,uppercase\" settext=\"hello WORLD\" uppercase lowercase></span>"
   },
-  "wordbreak": {
-    "category": "style",
-    "description_short": "Sets how words break in text.",
-    "example": "<div wordbreak=\"normal\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"break-all\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"keep-all\" border=\"1px solid black\" width=\"100px\">This is a long sentence that will not break words in CJK text.</div>"
-  },
-  "whitespace": {
-    "category": "style",
-    "description_short": "Sets whitespace behavior.",
-    "example": "<div whitespace=\"normal\">This    text   has    normal    whitespace.</div>\n<div whitespace=\"pre\">This    text   preserves\nall    spaces\nand line breaks.</div>\n<div whitespace=\"nowrap\">This text will not wrap onto the next line, even if it overflows.</div>"
-  },
-  "zindex": {
-    "category": "style",
-    "description_short": "Sets the stacking order of the element.",
-    "example": "<div relative>\n  <span bgcolor=\"lightblue\" zindex=\"2\" absolute top=\"20\">On top</span>\n  <span bgcolor=\"lightgray\" zindex=\"1\" height=\"3rem\">Behind</span>\n</div>"
-  },
-  "zoom": {
-    "category": "style",
-    "description_short": "Sets zoom scale of the element.",
-    "example": "<div zoom=\"1.5\">This text is zoomed in by 150%</div>"
-  },
-  "insertbeforebegin": {
-    "category": "content",
-    "description_short": "Inserts new content immediately before the element.",
-    "example": "<p insertbeforebegin=\"Note: \">Hello World</p>"
-  },
-  "insertafterbegin": {
-    "category": "content",
-    "description_short": "Inserts new content just inside the element, before its first child.",
-    "example": "<p insertafterbegin=\"Intro: \">Hello World</p>"
-  },
-  "insertbeforeend": {
-    "category": "content",
-    "description_short": "Inserts new content just inside the element, after its last child.",
-    "example": "<div insertbeforeend=\"!\">Hello World</div>"
-  },
-  "insertafterend": {
-    "category": "content",
-    "description_short": "Inserts new content immediately after the element.",
-    "example": "<div insertafterend=\"!\">Hello World</div>"
-  },
-  "trimleft": {
-    "category": "content",
-    "description_short": "Removes characters from the start of content.",
-    "example": "<p trimleft=\"!\">!!!Hello World!</p>"
-  },
-  "trimright": {
-    "category": "content",
-    "description_short": "Removes characters from the end of content.",
-    "example": "<p trimright=\"!\">Hello World!!!</p>"
-  },
-  "lowercase": {
-    "category": "content",
-    "description_short": "Converts content to lowercase.",
-    "example": "<p lowercase>THIS TEXT WILL APPEAR IN LOWERCASE LETTERS</p>"
-  },
-  "uppercase": {
-    "category": "content",
-    "description_short": "Converts content to uppercase.",
-    "example": "<p uppercase>This text will appear in uppercase letters</p>"
+  "show": {
+    "category": "behavior",
+    "description_short": "Shows the element.",
+    "example": "<span show>This text is visible</span>"
   },
   "setaction": {
     "category": "content",
@@ -254,125 +334,52 @@
     "description_short": "Sets the source of the image.",
     "example": "<img setsrc=\"https:\//placehold.co\/200x100\">"
   },
-  "bindvar": {
-    "category": "binding",
-    "description_short": "Binds a variable."
-  },
-  "bindquery": {
-    "category": "binding",
-    "description_short": "Binds data from a query."
-  },
-  "bindasset": {
-    "category": "binding",
-    "description_short": "Binds an asset."
-  },
-  "bindglobal": {
-    "category": "binding",
-    "description_short": "Binds a global variable."
-  },
-  "bindfield": {
-    "category": "binding",
-    "description_short": "Binds a specific field."
-  },
-  "ifafterbegin": {
-    "category": "logic",
-    "description_short": "Conditional insertion after beginning of element."
-  },
-  "ifbeforeend": {
-    "category": "logic",
-    "description_short": "Conditional insertion before end of element."
-  },
-  "ifopen": {
-    "category": "logic",
-    "description_short": "Conditional insertion for new element."
-  },
-  "resetvalue": {
-    "category": "value",
-    "description_short": "Resets the value of the element."
-  },
   "togglevalue": {
     "category": "value",
     "description_short": "Toggles the value of the element."
   },
-  "mapclass": {
-    "category": "mapping",
-    "description_short": "Maps classes based on rules."
+  "transform": {
+    "category": "style",
+    "description_short": "Applies a CSS transform."
   },
-  "mapmargin": {
-    "category": "mapping",
-    "description_short": "Maps margin values."
+  "trim": {},
+  "trimleft": {
+    "category": "content",
+    "description_short": "Removes characters from the start of content.",
+    "example": "<p trimleft=\"!\">!!!Hello World!</p>"
   },
-  "mapbindvar": {
-    "category": "mapping",
-    "description_short": "Maps a bound variable."
+  "trimright": {
+    "category": "content",
+    "description_short": "Removes characters from the end of content.",
+    "example": "<p trimright=\"!\">Hello World!!!</p>"
   },
-  "onclicked": {
-    "category": "event",
-    "description_short": "Triggered when the element is clicked.",
-    "example": "<button click=\"sethtml:[Button clicked!]\" onclicked=\"insertbeforeend:[ Added after]\">Click me</button>"
+  "uppercase": {
+    "category": "content",
+    "description_short": "Converts content to uppercase.",
+    "example": "<p uppercase>This text will appear in uppercase letters</p>"
   },
-  "onenabled": {
-    "category": "event",
-    "description_short": "Triggered when the element or feature becomes enabled.",
-    "example": "<input type=\"checkbox\" click=\"enable\" onenabled=\"insertbeforebegin:[Enabled!]\"> Enable me"
+  "width": {
+    "category": "style",
+    "description_short": "Sets the width of the element."
   },
-  "ondisabled": {
-    "category": "event",
-    "description_short": "Triggered when the element or feature becomes disabled.",
-    "example": "<input type=\"checkbox\" click=\"disable\" ondisabled=\"insertbeforebegin:[Disabled!]\"> Disable me"
+  "wordbreak": {
+    "category": "style",
+    "description_short": "Sets how words break in text.",
+    "example": "<div wordbreak=\"normal\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"break-all\" border=\"1px solid black\" width=\"100px\">Thisisaverylongwordthatmayoverflow.</div>\n<div wordbreak=\"keep-all\" border=\"1px solid black\" width=\"100px\">This is a long sentence that will not break words in CJK text.</div>"
   },
-  "onfocused": {
-    "category": "event",
-    "description_short": "Triggered when the element gains focus."
+  "whitespace": {
+    "category": "style",
+    "description_short": "Sets whitespace behavior.",
+    "example": "<div whitespace=\"normal\">This    text   has    normal    whitespace.</div>\n<div whitespace=\"pre\">This    text   preserves\nall    spaces\nand line breaks.</div>\n<div whitespace=\"nowrap\">This text will not wrap onto the next line, even if it overflows.</div>"
   },
-  "onblur": {
-    "category": "event",
-    "description_short": "Triggered when the element loses focus."
+  "zindex": {
+    "category": "style",
+    "description_short": "Sets the stacking order of the element.",
+    "example": "<div relative>\n  <span bgcolor=\"lightblue\" zindex=\"2\" absolute top=\"20\">On top</span>\n  <span bgcolor=\"lightgray\" zindex=\"1\" height=\"3rem\">Behind</span>\n</div>"
   },
-  "onhide": {
-    "category": "event",
-    "description_short": "Triggered when the element is hidden.",
-    "example": "<button click=\"hide\" onhide=\"insertafterend:[Element hidden]\">Hide me</button>"
-  },
-  "onshow": {
-    "category": "event",
-    "description_short": "Triggered when the element is shown.",
-    "example": "<div id=\"panel\" bgcolor=\"lightgreen\" hide onshow=\"insertafterend:[ Panel shown]\">Hidden Panel</div>\n<button click=\"show:#panel\">Show Panel</button>"
-  },
-  "onsubmitted": {
-    "category": "event",
-    "description_short": "Triggered when a form is submitted."
-  },
-  "onload": {
-    "category": "event",
-    "description_short": "Triggered when the element is loaded.",
-    "example": "<body onload=\"sethtml:[Element has loaded]\">Content ready</body>"
-  },
-  "hide": {
-    "category": "behavior",
-    "description_short": "Hides the element.",
-    "example": "<span hide>This text is hidden</span>"
-  },
-  "show": {
-    "category": "behavior",
-    "description_short": "Shows the element.",
-    "example": "<span show>This text is visible</span>"
-  },
-  "runorder": {
-    "description_short": "Runs attributes in the specified order inside the element.",
-    "example": "<span runorder=\"settext,uppercase\" settext=\"hello WORLD\" uppercase lowercase></span>"
-  },
-  "alert": {
-    "description_short": "Displays an alert dialog with a message to the user.",
-    "example": "<button click=\"alert:[Hello World!]\">Show Alert</button>"
-  },
-  "click": {
-    "description_short": "Executes an action or expression when the element is clicked.",
-    "example": "<button click=\"settext:[Button clicked!]\">Click me</button>"
-  },
-  "hrefhost": {
-    "category": "configuration",
-    "description_short": "Sets the base URL based on host match.",
-    "example": "<base hrefhost=\"localhost:https://example.com/\">\n<a sethref=\"page.html\">Go to Page</a>"
+  "zoom": {
+    "category": "style",
+    "description_short": "Sets zoom scale of the element.",
+    "example": "<div zoom=\"1.5\">This text is zoomed in by 150%</div>"
   }
 }

@@ -1,4 +1,4 @@
-<script src="https://cdn.front.nu/nightly/front.js"></script>
+<script src="http://localhost/front/front.js"></script>
 <title globalize-get>Build Plugins</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
 <article color="silver">
@@ -13,46 +13,55 @@
 
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-
   <section>
-    <p>
-      This example shows how to build a simple plugin in Front using the `pluginname--load` convention.
-      The plugin will log a message and modify a page element.
-    </p>
+    <p>Front uses standard JavaScript (ES5) and extends it with simple helpers for common DOM tasks.</p>
+    <p>You should understand basic concepts like var, function, objects, arrays, and events.</p>
+    <p>If you're new to JavaScript, check <a target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="noopener">MDN Web Docs ↗️</a>.</p>
   </section>
 
   <section>
     <h2 color="white" id="example" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Example: Hello Plugin</h2>
-
+    <p>
+      This example shows how to build a simple plugin in Front using the `pluginname--load` convention.
+      The plugin will log a message and modify a page element.
+    </p>
     <small padding="0.25rem">hello.js</small>
-    <code bgcolor="white01" padding="2rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
-      font="monospace" syntaxhighlighting--set syntaxhighlighting--javascript>'use strict'
+    <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
+      font="monospace" syntaxhighlighting--set>'use strict'
 
 app.plugin.hello = {
+
+  // Automatically triggered when the plugin file is loaded.
   __autoload: function (options) {
-    app.log.info()("Hello plugin loaded!")
+    app.log.info()('Hello plugin loaded!')
   }
 
   load: function (options) {
     var element = options.element
     if (element) {
-      element.innerHTML = "Hello from Front plugin!"
-      element.style.backgroundColor = "#f0f0f0"
+      element.innerHTML = 'Hello from Front plugin!'
+      element.style.backgroundColor = '#f0f0f0'
     }
   }
 }</code>
 
     <h3 zoom="0.8" color="white" padding="3rem 0 1rem 0">Usage:</h3>
     <small padding="0.25rem">page1.html</small>
-    <code bgcolor="white01" padding="2rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
-      syntaxhighlighting--set>&lt;html&gt;
-&emsp;&lt;head&gt;
-&emsp;&emsp;&lt;script src="https://cdn.front.nu/nightly/front.js"&gt;&lt;/script&gt;
-&emsp;&lt;/head&gt;
-&emsp;&lt;body&gt;
-&emsp;&emsp;&lt;!-- Set the page title --&gt;
-&emsp;&emsp;&lt;h1&gt;Hello world!&lt;/h1&gt;
-&emsp;&lt;/body&gt;
+    <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
+      font="monospace" syntaxhighlighting--set>&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Load Front with hello plugin --&gt;
+    &lt;script
+      src="https://cdn.front.nu/nightly/front.js"
+      plugin="hello"
+      conf="debug:true"&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Load function from plugin --&gt;
+    &lt;h1 hello--load&gt;&lt;/h1&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </code>
 

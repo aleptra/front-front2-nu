@@ -1,0 +1,74 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title globalize-get>DOM Helpers</title>
+<template srcdoc="../../../../../index" src="../../../../../_templates/documentation"></template>
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/api" globalize-get>API</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+    </ol>
+  </nav>
+
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"></h1>
+
+  <section>
+    <p>
+      Front provides a set of DOM helper methods that simplify element selection, creation, and manipulation.
+      These helpers are designed to work consistently across pages and plugins, following ES5 conventions.
+      You can use these instead of native <code>document.getElementById</code>, <code>querySelector</code>, etc.
+    </p>
+  </section>
+
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Getting Elements</h2>
+    <p>
+      Use <code>dom.get(selector)</code> to retrieve the first matching element, and <code>dom.find(selector)</code> 
+      to get all matching elements.
+    </p>
+    <small padding="0.25rem">Example:</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set syntaxhighlighting--javascript>
+    var main = dom.get('main');
+    var buttons = dom.find('.btn');
+    </code>
+  </section>
+
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Creating and Removing Elements</h2>
+    <p>
+      Use <code>dom.create(tagName, attributes)</code> to create new elements and <code>dom.remove(element)</code> to remove them.
+    </p>
+    <small padding="0.25rem">Example:</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set syntaxhighlighting--javascript>
+    var div = dom.create('div', { id: 'myDiv', class: 'card' });
+    dom.get('main').appendChild(div);
+
+    dom.remove(div); // removes the element
+    </code>
+  </section>
+
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Manipulating Attributes and Content</h2>
+    <p>
+      Use the helpers to get/set attributes or text content.
+    </p>
+    <small padding="0.25rem">Example:</small>
+    <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" minwidth="30vw" font="monospace"
+      syntaxhighlighting--set syntaxhighlighting--javascript>
+    var header = dom.get('header');
+
+    dom.attr(header, 'data-role', 'main'); // set attribute
+    var role = dom.attr(header, 'data-role'); // get attribute
+
+    dom.text(header, 'Welcome!'); // set text content
+    var title = dom.text(header);   // get text content
+    </code>
+  </section>
+
+  <hr bgcolor="white03" margin="3rem 0">
+  <a href="documentation/api/event-helpers.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
+    paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
+    insertbeforeend=" →" insertcontent="true">Goto Event Helpers</a>
+</article>
