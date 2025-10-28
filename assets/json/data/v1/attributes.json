@@ -305,6 +305,7 @@
     "description_short": "Sets HTML content.",
     "example": "<div sethtml=\"<b>Hello</b> World\"></div>"
   },
+  "setattr": {},
   "sethref": {
     "category": "content",
     "description_short": "Sets the href attribute of the element.",
