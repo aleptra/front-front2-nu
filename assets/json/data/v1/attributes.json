@@ -79,11 +79,15 @@
     "description_short": "Sets the cursor when hovering over the element.",
     "example": "<span cursor=\"default\">Default</span>\n<span cursor=\"pointer\">Pointer</span>\n<span cursor=\"text\">Text</span>\n<span cursor=\"move\">Move</span>\n<span cursor=\"wait\">Wait</span>\n<span cursor=\"crosshair\">Crosshair</span>\n<span cursor=\"not-allowed\">Not Allowed</span>\n<span cursor=\"help\">Help</span>\n<span cursor=\"progress\">Progress</span>\n<span cursor=\"grab\">Grab</span>\n<span cursor=\"grabbing\">Grabbing</span>\n<span cursor=\"cell\">Cell</span>\n<span cursor=\"copy\">Copy</span>\n<span cursor=\"alias\">Alias</span>\n<span cursor=\"zoom-in\">Zoom In</span>\n<span cursor=\"zoom-out\">Zoom Out</span>\n<span cursor=\"col-resize\">Col Resize</span>\n<span cursor=\"row-resize\">Row Resize</span>\n<span cursor=\"n-resize\">N Resize</span>\n<span cursor=\"s-resize\">S Resize</span>\n<span cursor=\"e-resize\">E Resize</span>\n<span cursor=\"w-resize\">W Resize</span>\n<span cursor=\"ne-resize\">NE Resize</span>\n<span cursor=\"nw-resize\">NW Resize</span>\n<span cursor=\"se-resize\">SE Resize</span>\n<span cursor=\"sw-resize\">SW Resize</span>"
   },
-  "confirm": {},
+  "confirm": {
+    "category": "interactive",
+    "description_short": "Shows a confirmation dialog to the user.",
+    "example": "<button confirm=\"Are you sure?\">Delete</button>"
+  },
   "escape": {
     "category": "content",
-    "description_short": "",
-    "example": ""
+    "description_short": "Escapes HTML or special characters to display as plain text.",
+    "example": "<div escape=\"<b>Hello</b>\">Displays &lt;b&gt;Hello&lt;/b&gt;</div>"
   },
   "flex": {
     "category": "style",

@@ -148,7 +148,7 @@
   "content": [
     {
       "attribute": "escape",
-      "description": "Escapes HTML or special characters in content to display them as plain text."
+      "description": "Escapes HTML or special characters to display as plain text."
     },
     {
       "attribute": "insertbeforebegin",
@@ -351,6 +351,10 @@
     {
       "attribute": "alert",
       "description": "Displays an alert dialog with a message to the user."
+    },
+    {
+      "attribute": "confirm",
+      "description": "Shows a confirmation dialog to the user."
     },
     {
       "attribute": "click",
