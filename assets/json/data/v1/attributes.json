@@ -268,11 +268,6 @@
     "category": "event",
     "description_short": "Triggered when a form is submitted."
   },
-  "onload": {
-    "category": "event",
-    "description_short": "Triggered when the element is loaded.",
-    "example": "<body onload=\"sethtml:[Element has loaded]\">Content ready</body>"
-  },
   "padding": {
     "category": "style",
     "description_short": "Sets padding inside the element.",
