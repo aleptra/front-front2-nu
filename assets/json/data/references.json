@@ -249,18 +249,6 @@
     {
       "attribute": "if",
       "description": "Evaluates a condition and runs actions if true or false."
-    },
-    {
-      "attribute": "ifafterbegin",
-      "description": "Conditional insertion after beginning of element."
-    },
-    {
-      "attribute": "ifbeforeend",
-      "description": "Conditional insertion before end of element."
-    },
-    {
-      "attribute": "ifopen",
-      "description": "Conditional insertion for new element."
     }
   ],
   "value": [

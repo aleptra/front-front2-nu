@@ -126,19 +126,9 @@
     "description_short": "Sets the base URL based on host match.",
     "example": "<base hrefhost=\"localhost:https://example.com/\">\n<a sethref=\"page.html\">Go to Page</a>"
   },
-  "ifafterbegin": {
+  "if": {
     "category": "logic",
-    "description_short": "Conditional insertion after beginning of element.",
-    "example": ""
-  },
-  "ifbeforeend": {
-    "category": "logic",
-    "description_short": "Conditional insertion before end of element.",
-    "example": ""
-  },
-  "ifopen": {
-    "category": "logic",
-    "description_short": "Conditional insertion for new element.",
+    "description_short": "Conditional insertion.",
     "example": ""
   },
   "insertbeforebegin": {
