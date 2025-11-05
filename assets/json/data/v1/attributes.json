@@ -49,10 +49,15 @@
     "description_short": "Sets the border of the element.",
     "example": "<div border=\"1px solid black\">This div has a black border</div>"
   },
+  "focus": {
+    "category": "behavior",
+    "description_short": "Gives focus to the element.",
+    "example": "<input type=\"text\" value=\"Hello\" focus>"
+  },
   "blur": {
     "category": "behavior",
-    "description_short": "",
-    "example": ""
+    "description_short": "Removes focus from the element.",
+    "example": "<input type=\"text\" value=\"Hello\" focus blur>"
   },
   "bold": {
     "category": "style",
@@ -104,7 +109,6 @@
     "description_short": "Sets properties of a flex item.",
     "example": ""
   },
-  "focus": {},
   "font": {
     "category": "style",
     "description_short": "Sets font style and size.",
@@ -184,42 +188,42 @@
   "margin": {
     "category": "style",
     "description_short": "Sets margin around the element.",
-    "example": ""
+    "example": "<div margin=\"20px\">This div has 20px margin on all sides</div>"
   },
   "margintop": {
     "category": "style",
     "description_short": "Sets top margin.",
-    "example": ""
+    "example": "<div margintop=\"10px\">This div has 10px top margin</div>"
   },
   "marginbottom": {
     "category": "style",
     "description_short": "Sets bottom margin.",
-    "example": ""
+    "example": "<div marginbottom=\"15px\">This div has 15px bottom margin</div>"
   },
   "marginleft": {
     "category": "style",
     "description_short": "Sets left margin.",
-    "example": ""
+    "example": "<div marginleft=\"5px\">This div has 5px left margin</div>"
   },
   "marginright": {
     "category": "style",
     "description_short": "Sets right margin.",
-    "example": ""
+    "example": "<div marginright=\"8px\">This div has 8px right margin</div>"
   },
   "minheight": {
     "category": "style",
     "description_short": "Sets the minimum height.",
-    "example": ""
+    "example": "<div minheight=\"100px\">This div cannot be shorter than 100px</div>"
   },
   "minwidth": {
     "category": "style",
     "description_short": "Sets the minimum width.",
-    "example": ""
+    "example": "<div minwidth=\"200px\">This div cannot be narrower than 200px</div>"
   },
   "maxwidth": {
     "category": "style",
     "description_short": "Sets the maximum width.",
-    "example": ""
+    "example": "<div maxwidth=\"400px\">This div cannot be wider than 400px</div>"
   },
   "onclicked": {
     "category": "event",
@@ -238,11 +242,13 @@
   },
   "onfocused": {
     "category": "event",
-    "description_short": "Triggered when the element gains focus."
+    "description_short": "Triggered when the element gains focus.",
+    "example": "<button click=\"focus:#field1\">Focus</button>\n<input type=\"text\" id=\"field1\" onfocused=\"setvalue:[onfocused]\">"
   },
   "onblur": {
     "category": "event",
-    "description_short": "Triggered when the element loses focus."
+    "description_short": "Triggered when the element loses focus.",
+    "example": "<button click=\"blur:#field1\">Blur</button>\n<input type=\"text\" id=\"field1\" focus onblur=\"setvalue:[onblur]\">"
   },
   "onhide": {
     "category": "event",
@@ -339,7 +345,8 @@
   },
   "setqueryhref": {
     "category": "content",
-    "description_short": "Sets a query-based href."
+    "description_short": "Updates the href attribute of the element with operation support.",
+    "example": "<a href=\"?page=1\" click=\"setqueryhref:[page:++]\">Next Page</a><br>\n<a href=\"?page=5\" click=\"setqueryhref:[page:--]\">Previous Page</a><br>\n<a href=\"?zoom=1\" click=\"setqueryhref:[zoom:*2]\">Zoom In</a><br>\n<a href=\"?zoom=4\" click=\"setqueryhref:[zoom:/2]\">Zoom Out</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:+5]\">Add 5 Points</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:-3]\">Subtract 3 Points</a>"
   },
   "setvalue": {
     "category": "content",

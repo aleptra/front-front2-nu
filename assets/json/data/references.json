@@ -319,6 +319,10 @@
       "description": "Removes focus from the element."
     },
     {
+      "attribute": "focus",
+      "description": "Gives focus to the element."
+    },
+    {
       "attribute": "hide",
       "description": "Hides the element."
     },
