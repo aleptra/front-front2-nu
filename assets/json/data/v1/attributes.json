@@ -87,7 +87,7 @@
   "confirm": {
     "category": "interactive",
     "description_short": "Shows a confirmation dialog to the user.",
-    "example": "<button confirm=\"Are you sure?\">Delete</button>"
+    "example": "<button click=\"confirm:[Are you sure?]\">Delete</button>"
   },
   "escape": {
     "category": "content",
@@ -224,6 +224,16 @@
     "category": "style",
     "description_short": "Sets the maximum width.",
     "example": "<div maxwidth=\"400px\">This div cannot be wider than 400px</div>"
+  },
+  "onconfirm": {
+    "category": "event",
+    "description_short": "Triggered when the user confirms an action in a confirmation dialog.",
+    "example": "<button click=\"confirm:[Are you sure?]\" onconfirm=\"settext:[Confirmed!]\">Confirm Action</button>"
+  },
+  "onconfirmvalue": {
+    "category": "event",
+    "description_short": "Triggered when a confirmation dialog is accepted; typically used to pass a value or trigger chained actions.",
+    "example": "<button click=\"confirm:[Are you sure?]\" onconfirmvalue=\"true;settext:[Confirmed with yes]\">Delete Item</button>"
   },
   "onclicked": {
     "category": "event",

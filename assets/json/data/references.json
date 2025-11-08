@@ -311,6 +311,14 @@
     {
       "attribute": "onsubmitted",
       "description": "Triggered when a form is submitted."
+    },
+    {
+      "attribute": "onconfirm",
+      "description": "Triggered when the user confirms an action in a confirmation dialog."
+    },
+    {
+      "attribute": "onconfirmvalue",
+      "description": "Triggered when a confirmation dialog is accepted; typically used to pass a value or trigger chained actions."
     }
   ],
   "behavior": [
