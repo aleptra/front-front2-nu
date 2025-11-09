@@ -2,7 +2,6 @@
 <title globalize-get>Build Plugins</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
 <article color="silver">
-
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
       <li><a href="documentation" globalize-get>Documentation</a></li>
@@ -10,70 +9,178 @@
       <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
     </ol>
   </nav>
-
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
+
+  <!-- Section: Overview -->
   <section>
-    <p>Front uses standard JavaScript (ES5) and extends it with simple helpers for common DOM tasks.</p>
-    <p>You should understand basic concepts like var, function, objects, arrays, and events.</p>
-    <p>If you're new to JavaScript, check <a target="_blank"
-        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="noopener">MDN Web Docs ↗️</a>.</p>
+    <h2 color="white" zoom="0.9" padding="0 0 1rem 0">Overview</h2>
+    <p>
+      Plugins are loaded dynamically and enable you to extend functionality using standard JavaScript.
+      They can provide new behaviors, UI components, or reusable logic that integrates seamlessly with the declarative attribute system.
+    </p>
+    <p margintop="1rem">
+      Plugin methods are mapped to custom attributes using the convention <b>pluginName--methodName</b>.
+      When the page is processed, the appropriate plugin method is automatically invoked for each matching attribute.
+    </p>
   </section>
 
+  <!-- Section: Plugin Structure -->
   <section>
-    <h2 color="white" id="example" zoom="0.9" padding="3rem 0 1rem 0" globalize-get>Example: Hello Plugin</h2>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Plugin Structure</h2>
     <p>
-      This example shows how to build a simple plugin in Front using the `pluginname--load` convention.
-      The plugin will log a message and modify a page element.
+      Each plugin is defined as a property on <b>app.plugin</b> with your chosen plugin name. A plugin can export any number of methods.
+      There are two special conventions:
     </p>
-    <small padding="0.25rem">hello.js</small>
+    <ul class="list">
+      <li>
+        <b>__autoload</b>: If present, this function is called automatically when the plugin is loaded, and receives an options object.
+      </li>
+      <li>
+        <b>pluginName--methodName</b>: For each attribute on your FTML elements matching this pattern, the corresponding method is called with an <i>options</i> object (including <i>element</i>).
+      </li>
+    </ul>
+    <p>
+      Plugin methods can manipulate the DOM, handle events, or interact with the API.
+    </p>
+  </section>
+
+  <!-- Section: Example Plugin -->
+  <section>
+    <h2 color="white" id="example" zoom="0.9" padding="3rem 0 1rem 0">Example Plugin</h2>
+    <p>
+      Below is a minimal example plugin that logs when loaded and provides a function to update an element.
+    </p>
+    <small padding="0.25rem">example.js</small>
     <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
-      font="monospace" syntaxhighlighting--set>'use strict'
+      font="monospace" syntaxhighlighting--set>'use strict';
 
-app.plugin.hello = {
+app.plugin.example = {
+  // Called automatically when the plugin is loaded
+  __autoload: function(options) {
+    app.log.info()('Example plugin loaded!', options &amp;&amp; options.name);
+  },
 
-  // Automatically triggered when the plugin file is loaded.
-  __autoload: function (options) {
-    app.log.info()('Hello plugin loaded!')
-  }
+  // Called for every element with attribute example--highlight
+  highlight: function(options) {
+    var el = options.element;
+    if (el) {
+      el.style.background = '#ffe082';
+      el.textContent = 'Highlighted by Example Plugin!';
+    }
+  },
 
-  load: function (options) {
-    var element = options.element
-    if (element) {
-      element.innerHTML = 'Hello from Front plugin!'
-      element.style.backgroundColor = '#f0f0f0'
+  // You can add more methods, e.g. example--greet
+  greet: function(options) {
+    var el = options.element;
+    if (el) {
+      el.textContent = 'Hello from Example Plugin!';
     }
   }
-}</code>
+};
+</code>
+  </section>
 
-    <h3 zoom="0.8" color="white" padding="3rem 0 1rem 0">Usage:</h3>
-    <small padding="0.25rem">page1.html</small>
+  <!-- Section: FTML Usage -->
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">FTML Usage</h2>
+    <p>
+      Use your plugin in FTML as shown below:
+    </p>
+    <small padding="0.25rem">page.ftml</small>
     <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
       font="monospace" syntaxhighlighting--set>&lt;html&gt;
   &lt;head&gt;
-    &lt;!-- Load Front with hello plugin --&gt;
+    &lt;!-- Load the main script with the example plugin --&gt;
     &lt;script
       src="https://cdn.front.nu/nightly/front.js"
-      plugin="hello"
+      plugin="example"
       conf="debug:true"&gt;
     &lt;/script&gt;
+    &lt;!-- Also include example.js in your plugins folder --&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;!-- Load function from plugin --&gt;
-    &lt;h1 hello--load&gt;&lt;/h1&gt;
+    &lt;!-- This element will be highlighted by the plugin --&gt;
+    &lt;div example--highlight&gt;&lt;/div&gt;
+    &lt;!-- This element will display a greeting --&gt;
+    &lt;h2 example--greet&gt;&lt;/h2&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code>
-
     <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">
-      Note: The `pluginname--load` method is the entry point of your plugin.
-      You can define additional methods using the same `pluginname--method` convention.
+      <b>Note:</b> The attribute <b>example--highlight</b> maps to <b>app.plugin.example.highlight</b>.
+      You can define as many plugin methods as needed, and use attributes like <b>example--greet</b> to invoke them.
     </div>
   </section>
 
-  <hr bgcolor="white03" margin="3rem 0">
-  <a href="documentation/guides/plugins-advanced.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
-    paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
-    insertbeforeend=" →" insertcontent="true">Goto Next
-    Step</a>
+  <!-- Section: Usage Details -->
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Usage Details</h2>
+    <ul class="list">
+      <li>
+        <b>Plugin Loading:</b> List your plugin name(s) in the <b>plugin</b> attribute of your main
+        <b>&lt;script src="front.js"&gt;</b> tag.
+        Place your plugin file in the <b>plugins/</b> directory so it can be loaded automatically.
+      </li>
+      <li>
+        <b>Method Mapping:</b> Any attribute in the form <b>pluginName--methodName</b> will invoke
+        <b>app.plugin.pluginName.methodName</b> for that element.
+      </li>
+      <li>
+        <b>Autoload:</b> If your plugin defines <b>__autoload</b>, it will be called once when the
+        plugin is loaded (before any attribute methods are called).
+      </li>
+      <li>
+        <b>Options Object:</b> Every plugin method receives an <b>options</b> object, commonly
+        containing <b>element</b> and <b>name</b>.
+      </li>
+    </ul>
+    <p>
+      For advanced scenarios, you can use the API (e.g., <b>app.call</b>, <b>app.element</b>, etc.)
+      inside your plugin methods.
+    </p>
+  </section>
+
+  <!-- Section: Best Practices -->
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Best Practices</h2>
+    <ul class="list">
+      <li>
+        Use <b>__autoload</b> for setup or initialization logic.
+      </li>
+      <li>
+        Keep plugin methods focused and reusable; avoid side effects outside the provided <b>element</b>.
+      </li>
+      <li>
+        Use descriptive method names for clarity (e.g., <b>highlight</b>, <b>greet</b>).
+      </li>
+      <li>
+        Always check that <b>options.element</b> exists before manipulating the DOM.
+      </li>
+      <li>
+        Document your plugin's attributes and expected behaviors for maintainability.
+      </li>
+    </ul>
+    <p>
+      For more advanced plugin development, see the
+      <a href="documentation/guides/plugins-advanced.html" globalize-get>advanced plugins guide</a>.
+    </p>
+  </section>
+
+  <!-- Section: Next Steps -->
+  <section>
+    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Next Steps</h2>
+    <ul class="list">
+      <li>
+        Explore advanced plugin features in the <a href="documentation/guides/plugins-advanced.html" globalize-get>next guide</a>.
+      </li>
+      <li>
+        Experiment with your own plugins and extend your application's capabilities.
+      </li>
+    </ul>
+  </section>
+    <hr bgcolor="white03" margin="3rem 0">
+        <a href="documentation/guides/plugins-advanced.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
+      paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
+      insertbeforeend=" →" insertcontent="true">Goto Next Step</a>
 </article>
