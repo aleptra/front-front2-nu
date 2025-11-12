@@ -319,6 +319,10 @@
     {
       "attribute": "onconfirmvalue",
       "description": "Triggered when a confirmation dialog is accepted; typically used to pass a value or trigger chained actions."
+    },
+    {
+      "attribute": "onvaluechange",
+      "description": "Triggered when value is changed inside an element."
     }
   ],
   "behavior": [
