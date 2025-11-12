@@ -1,4 +1,4 @@
-<script src="https://cdn.front.nu/nightly/front.js"></script>
+<script src="http://localhost:/front/front.js"></script>
 <title globalize-get>Attributes</title>
 <template srcdoc="../../../../index" src="../../../../_templates/documentation"></template>
 <article color="silver">
@@ -12,8 +12,14 @@
   </nav>
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-  <section margintop="2rem">
-    <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json">
+  <form>
+    <input id="filter" type="text" placeholder="Filter" bindfieldreloadcontent="false" width="15rem" padding="0.75rem 1rem" bgcolor="white01" radius="0.25rem" autocomplete="off">
+    <!--<small margintop="2rem">Filter by type</small>
+    <fieldset><input type="checkbox" id="core" marginright=".5rem"><label for="core">Core</label></fieldset>
+    <fieldset><input type="checkbox" id="module" marginright=".5rem"><label for="module">Module</label></fieldset>-->
+  </form>
+  <section margintop="1rem">
+    <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json" bindfield="josef:#filter" href="{josef:test}">
       <tr>
         <td colspan="2" paddingtop="2rem">
           <h4>Content</h4>
@@ -21,13 +27,13 @@
         </td>
       </tr>
       <tbody class="z09" data-iterate="content">
-        <tr>
+        <tr search-bind>
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr >
         <td colspan="2" paddingtop="2rem">
           <h4>Style</h4>
           <hr color="darkgray" margin="0.5rem 0">
@@ -37,7 +43,7 @@
         <tr>
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
-          <td data-get="description"></td>
+          <td data-get="description" ></td>
         </tr>
       </tbody>
       <tr>

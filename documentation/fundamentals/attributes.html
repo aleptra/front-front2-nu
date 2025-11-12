@@ -1,0 +1,73 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title globalize-get>Attributes</title>
+<template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/fundamentals" globalize-get>Fundamentals</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+    </ol>
+  </nav>
+
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
+
+  <section>
+    <p margintop="1rem">
+      Attributes are the core of FTML: they declaratively define behavior, style, content, interactivity, and
+      logic directly in markup.
+      Everything in FTML is expressed through attributes, making your code readable, maintainable, and fully
+      declarative.
+    </p>
+  </section>
+
+  <section margintop="1rem">
+    <h2 color="white" zoom="0.9" padding="2rem 0 1rem 0">Attribute Layers</h2>
+    <ul class="list">
+      <li><b>Core Attributes:</b> The essential FTML attributes that define element behavior, appearance, and logic.</li>
+      <li><b>Module Attributes:</b> Optional attributes that extend core capabilities with modular features.</li>
+      <li><b>Plugin Attributes:</b> Optional attributes for custom behaviors or third-party integrations.</li>
+    </ul>
+  </section>
+
+  <section margintop="1rem">
+    <h2 color="white" zoom="0.9" padding="2rem 0 1rem 0">Execution order</h2>
+
+    <h3 zoom="0.8" color="white" padding="1.5rem 0 0.5rem 0">Natural Order</h3>
+    <p>
+      By default, attributes run sequentially in the order they appear.
+      When multiple attributes affect the same property, the last one takes precedence.
+    </p>
+    <small margintop="1rem">Example</small>
+    <code bgcolor="white01" color="white" spellcheck="false" padding="1rem" whitespace="pre" minwidth="30vw"
+      font="monospace" syntaxhighlighting--set>&lt;!-- Element displays "Second text" because the last settext wins --&gt;
+&lt;div settext="First text" settext="Second text"&gt;&lt;/div&gt;</code>
+
+    <h3 zoom="0.8" color="white" padding="2rem 0 0.5rem 0">Selective Order</h3>
+    <p>
+      The default sequence can be overriden with the <b>runorder</b> attribute to define the exact execution order for
+      attributes.
+    </p>
+    <small margintop="1rem">Example</small>
+    <code bgcolor="white01" color="white" spellcheck="false" padding="1rem" whitespace="pre" minwidth="30vw"
+      font="monospace" syntaxhighlighting--set>&lt;!-- Attribute execution order: settext → uppercase → lowercase --&gt;
+&lt;div runorder="uppercase;lowercase" settext="hello world" lowercase uppercase&gt;&lt;/div&gt;</code>
+  </section>
+
+  <section margintop="1rem">
+    <h2 color="white" zoom="0.9" padding="2rem 0 1rem 0">Best Practices</h2>
+    <ul class="list">
+      <li>Use attributes declaratively, not imperatively.</li>
+      <li>Group related attributes for clarity.</li>
+      <li>Don't use <b>runorder</b> unless necessary.</li>
+      <li>Keep logic simple; delegate complex behavior to modules or plugins.</li>
+    </ul>
+  </section>
+
+  <hr bgcolor="white03" margin="3rem 0">
+  <a href="documentation/fundamentals/variables.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
+    paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
+    insertbeforeend=" →" insertcontent="true">Goto Next Step</a>
+</article>

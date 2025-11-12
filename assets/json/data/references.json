@@ -355,6 +355,11 @@
     {
       "attribute": "click",
       "description": "Executes an action or expression when the element is clicked."
+    },
+    {
+      "source": "module",
+      "attribute": "keyboard-key",
+      "description": ""
     }
   ],
   "configuration": [

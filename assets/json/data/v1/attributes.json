@@ -160,6 +160,9 @@
     "description_short": "Aligns flex items along the main axis.",
     "example": ""
   },
+  "keyboard-key": {
+    "category": "behavior"
+  },
   "lineheight": {
     "category": "style",
     "description_short": "Sets the height of text lines.",
