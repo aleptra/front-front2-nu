@@ -96,15 +96,15 @@ app.plugin.example = {
       <li><b>Autoload:</b> If defined, <b>__autoload</b> is called once when the plugin loads, before attribute methods.</li>
       <li><b>Options Object:</b> Each method receives an <b>options</b> object, usually with <b>element</b> and <b>name</b>.</li>
     </ul>
-    <p>For advanced scenarios, you can use the API (e.g., <b>app.call</b>, <b>app.element</b>, etc.) inside your plugin methods.</p>
   </section>
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Best Practices</h2>
     <ul class="list">
       <li>Use <b>__autoload</b> for setup or initialization logic.</li>
+      <li>Always use Front API functions instead of direct DOM changes.</li>
       <li>Keep plugin methods focused and reusable; avoid side effects outside the provided <b>element</b>.</li>
-      <li>Use descriptive method names (e.g., <b>highlight</b>, <b>greet</b>).</li>
+      <li>Use descriptive and short method names (e.g., <b>highlight</b>, <b>greet</b>).</li>
       <li>Always check that <b>options.element</b> exists before manipulating the DOM.</li>
       <li>Document your plugin's attributes and expected behaviors for maintainability.</li>
     </ul>
@@ -113,7 +113,6 @@ app.plugin.example = {
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Next Steps</h2>
     <ul class="list">
-      <li>Explore advanced plugin features in the <a href="documentation/guides/plugins-advanced.html" globalize-get>next guide</a>.</li>
       <li>Experiment with your own plugins and extend your application's capabilities.</li>
       <li>Consult the <a href="/documentation/reference/api/functions.html" globalize-get>API reference for functions</a> for detailed information.</li>
     </ul>
