@@ -1,4 +1,4 @@
-<script src="http://localhost:/front/front.js"></script>
+<script src="https://cdn.front.nu/nightly/front.js"></script>
 <title globalize-get>Attributes</title>
 <template srcdoc="../../../../index" src="../../../../_templates/documentation"></template>
 <article color="silver">
@@ -20,92 +20,92 @@
   </form>
   <section margintop="1rem">
     <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json">
-      <tr>
+      <tr id="title1">
         <td colspan="2" paddingtop="2rem">
           <h4>Content</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="content">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count1" if="([{count1}]:[0]);hide:#title1?show:#title1">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title2">
         <td colspan="2" paddingtop="2rem">
           <h4>Style</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
-      <tbody class="z09" data-iterate="style">
-        <tr filtersearch--select>
+     <tbody class="z09" data-iterate="style">
+        <tr filtersearch--select filtersearch--count="count2" if="([{count2}]:[0]);hide:#title2?show:#title2">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title3">
         <td colspan="2" paddingtop="2rem">
           <h4>Event</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="event">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count3" if="([{count3}]:[0]);hide:#title3?show:#title3">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title4">
         <td colspan="2" paddingtop="2rem">
           <h4>Behavior</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="behavior">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count4" if="([{count4}]:[0]);hide:#title4?show:#title4">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title5">
         <td colspan="2" paddingtop="2rem">
           <h4>Interactive</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="interactive">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count5" if="([{count5}]:[0]);hide:#title5?show:#title5">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title6">
         <td colspan="2" paddingtop="2rem">
           <h4>Logic</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="logic">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count6" if="([{count6}]:[0]);hide:#title6?show:#title6">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
         </tr>
       </tbody>
-      <tr>
+      <tr id="title7">
         <td colspan="2" paddingtop="2rem">
           <h4>Configuration</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="configuration">
-        <tr filtersearch--select>
+        <tr filtersearch--select filtersearch--count="count7" if="([{count7}]:[0]);hide:#title7?show:#title7">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
