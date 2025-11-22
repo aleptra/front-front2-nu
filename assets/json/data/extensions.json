@@ -23,6 +23,28 @@
       "cost": "0"
     },
     {
+      "id": 3,
+      "title": "filtersearch",
+      "version": "0.1.0",
+      "screenshot": "",
+      "icon": "./assets/img/icon_plugin.svg",
+      "url": "./marketplace/app/stream",
+      "type": 0,
+      "author": "Josef Gabrielsson",
+      "cost": "0"
+    },
+    {
+      "id": 4,
+      "title": "particles",
+      "version": "0.1.0",
+      "screenshot": "",
+      "icon": "./assets/img/icon_plugin.svg",
+      "url": "./marketplace/app/stream",
+      "type": 0,
+      "author": "Josef Gabrielsson",
+      "cost": "0"
+    },
+    {
       "id": 11,
       "title": "Maps",
       "description": "Integrate Google Maps",
