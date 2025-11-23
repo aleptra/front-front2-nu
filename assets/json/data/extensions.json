@@ -2,7 +2,8 @@
   "extensions": [
     {
       "id": 1,
-      "title": "syntaxhighlighting",
+      "key": "syntaxhighlighting",
+      "title": "Syntax highlighting",
       "version": "0.1.0",
       "screenshot": "",
       "icon": "./assets/img/icon_plugin.svg",
@@ -13,7 +14,8 @@
     },
     {
       "id": 2,
-      "title": "responsivevoice",
+      "key": "responsivevoice",
+      "title": "ResponsiveVoice",
       "version": "0.1.0",
       "screenshot": "",
       "icon": "./assets/img/icon_plugin.svg",
@@ -24,7 +26,8 @@
     },
     {
       "id": 3,
-      "title": "filtersearch",
+      "key": "filtersearch",
+      "title": "Filter Search",
       "version": "0.1.0",
       "screenshot": "",
       "icon": "./assets/img/icon_plugin.svg",
@@ -35,7 +38,9 @@
     },
     {
       "id": 4,
-      "title": "particles",
+      "key": "particles",
+      "title": "Particles",
+      "description": "Bring your page to life with a dynamic particles. This plugin adds configurable and colorful particles that drift downward and subtly follow your mouse movements, creating a lively and interactive effect. You can enjoy a customizable, animated backdrop that makes your content feel more engaging and visually appealing.",
       "version": "0.1.0",
       "screenshot": "",
       "icon": "./assets/img/icon_plugin.svg",
@@ -46,6 +51,7 @@
     },
     {
       "id": 11,
+      "key": "maps",
       "title": "Maps",
       "description": "Integrate Google Maps",
       "version": "0.1.0",
