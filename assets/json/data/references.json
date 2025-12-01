@@ -151,6 +151,10 @@
       "description": "Escapes HTML or special characters to display as plain text."
     },
     {
+      "attribute": "include",
+      "description": "Includes another internal HTML file or page fragment into the element."
+    },
+    {
       "attribute": "insertbeforebegin",
       "description": "Inserts new content immediately before the element."
     },
@@ -323,6 +327,14 @@
     {
       "attribute": "onvaluechange",
       "description": "Triggered when value is changed inside an element."
+    },
+    {
+      "attribute": "mouseover",
+      "description": "Triggered when the mouse pointer moves over the element."
+    },
+    {
+      "attribute": "mouseout",
+      "description": "Triggered when the mouse pointer moves out of the element."
     }
   ],
   "behavior": [
@@ -337,6 +349,10 @@
     {
       "attribute": "hide",
       "description": "Hides the element."
+    },
+    {
+      "attribute": "ignorepayload",
+      "description": "Prevents sending the payload for POST, PUT, or PATCH requests when set."
     },
     {
       "attribute": "show",
