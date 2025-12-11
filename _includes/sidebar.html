@@ -12,10 +12,10 @@
     </div>
     <details open paddingtop="2rem">
       <summary globalize-get bold>Getting Started</summary>
-      <a margintop="1rem" href="documentation" globalize-get>Introduction</a>
-      <a href="documentation/installation" globalize-get>Installation</a>
-      <details paddingbottom="1rem" bindglobal="href:href" if="([{href}]~[/fundamentals/]);setattr:[open]">
-        <summary globalize-get>Fundamentals</summary>
+      <a margintop="1rem" href="documentation" globalize-get bindglobal="title:title" if="([{title}]:[Introduction]);bold">Introduction</a>
+      <a href="documentation/installation" globalize-get bindglobal="href:href" if="([{href}]~[/documentation/installation]);bold">Installation</a>
+      <details paddingbottom="1rem" bindglobal="href:href" if="([{href}]~[/documentation/fundamentals]);setattr:[open]">
+        <summary globalize-get bindglobal="href:href" if="([{href}]~[/documentation/fundamentals]);bold">Fundamentals</summary>
         <a href="documentation/fundamentals/attributes.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/attributes]);bold">Attributes</a>
         <a href="documentation/fundamentals/variables.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/variables]);bold">Variables</a>
         <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href" if="([{href}]~[/fundamentals/pages]);bold">Pages</a>
@@ -26,17 +26,17 @@
     </details>
     <details bindglobal="href:href" if="([{href}]~[/guides]);setattr:[open]">
       <summary globalize-get bold>Guides</summary>
-      <a href="documentation/guides/build-plugins.html" globalize-get margintop="0.5rem" marginbottom="1rem">Build plugins</a>
+      <a href="documentation/guides/build-plugins.html" globalize-get bindglobal="href:href" if="([{href}]~[/guides/build-plugins]);bold" margintop="0.5rem" marginbottom="1rem">Build plugins</a>
     </details>
     <details bindglobal="href:href" if="([{href}]~[/reference]);setattr:[open]">
       <summary globalize-get bold>Reference</summary>
       <details margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/ftml]);setattr:[open]">
-        <summary>FTML</summary>
+        <summary bindglobal="href:href" if="([{href}]~[/reference/ftml]);bold">FTML</summary>
         <a href="documentation/reference/ftml/attributes.html" globalize-get bindglobal="href:href" if="([{href}]~[/reference/ftml/attribute]);bold">Attributes</a>
         <a href="documentation/reference/ftml/variables.html" globalize-get bindglobal="href:href" if="([{href}]~[/reference/ftml/variable]);bold">Variables</a>
       </details>
       <details margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/api]);setattr:[open]">
-        <summary>API</summary>
+        <summary bindglobal="href:href" if="([{href}]~[/reference/api]);bold">API</summary>
         <a href="documentation/reference/api/functions.html" globalize-get bindglobal="href:href" if="([{href}]~[/api/functions]);bold">Functions</a>
       </details>
     </details>

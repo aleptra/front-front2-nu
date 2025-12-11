@@ -1,6 +1,10 @@
 {
-    "liveServer.settings.port": 5502,
-    "editor.insertSpaces": true,
-    "editor.indentSize": 2,
-    "editor.detectIndentation": false
+  "liveServer.settings.port": 5502,
+  "editor.insertSpaces": true,
+  "editor.indentSize": 2,
+  "editor.detectIndentation": false,
+  "editor.stickyScroll.enabled": false,
+  "[html]": {
+    "editor.formatOnSave": false
+  }
 }
