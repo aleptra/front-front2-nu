@@ -40,18 +40,29 @@
       By default, attributes run sequentially in the order they appear.
       When multiple attributes affect the same property, the last one takes precedence.
     </p>
-    <small margintop="1rem">Example</small>
-    <code bgcolor="white01" color="white" spellcheck="false" padding="1rem" whitespace="pre" minwidth="30vw"
+    <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem"
+    ><span bgimage="favicon.ico 16px no-repeat 10px" flex="1" lineheight="1.9rem" paddingleft="2.2rem" style="flex: 1"
+    >FTML</span><button
+      bgcolor="unset"
+      mouseover="color:[lightgray]"
+      mouseout="color:[unset]"
+      zoom="0.9"
+      padding="0.45rem 0.6rem" minheight="0" margin="0"
+      click="clipboard-copy:*code[0]">Copy</button></small>
+    <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]" whitespace="pre" maxwidth="60rem" minwidth="30vw"
       font="monospace" syntaxhighlighting--set>&lt;!-- Element displays "Second text" because the last settext wins --&gt;
 &lt;div settext="First text" settext="Second text"&gt;&lt;/div&gt;</code>
-
     <h3 zoom="0.8" color="white" padding="2rem 0 0.5rem 0">Selective Order</h3>
     <p>
       The default sequence can be overriden with the <b>runorder</b> attribute to define the exact execution order for
       attributes.
     </p>
-    <small margintop="1rem">Example</small>
-    <code bgcolor="white01" color="white" spellcheck="false" padding="1rem" whitespace="pre" minwidth="30vw"
+    <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem"><span
+        bgimage="favicon.ico 16px no-repeat 10px" flex="1" lineheight="1.9rem" paddingleft="2.2rem"
+        style="flex: 1">FTML</span><button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9"
+        padding="0.45rem 0.6rem" minheight="0" margin="0" click="clipboard-copy:*code[1]">Copy</button></small>
+    <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
+      whitespace="pre" maxwidth="60rem" minwidth="30vw"
       font="monospace" syntaxhighlighting--set>&lt;!-- Attribute execution order: settext → uppercase → lowercase --&gt;
 &lt;div runorder="uppercase;lowercase" settext="hello world" lowercase uppercase&gt;&lt;/div&gt;</code>
   </section>
