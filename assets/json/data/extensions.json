@@ -14,6 +14,18 @@
     },
     {
       "id": 2,
+      "key": "clipboard",
+      "title": "Clipboard",
+      "version": "0.1.0",
+      "screenshot": "",
+      "icon": "./assets/img/icon_plugin.svg",
+      "url": "./marketplace/app/stream",
+      "type": 0,
+      "author": "Front Labs",
+      "cost": "0"
+    },
+    {
+      "id": 3,
       "key": "responsivevoice",
       "title": "ResponsiveVoice",
       "version": "0.1.0",
@@ -25,7 +37,7 @@
       "cost": "0"
     },
     {
-      "id": 3,
+      "id": 4,
       "key": "filtersearch",
       "title": "Filter Search",
       "version": "0.1.0",
@@ -37,7 +49,7 @@
       "cost": "0"
     },
     {
-      "id": 4,
+      "id": 5,
       "key": "particles",
       "title": "Particles",
       "description": "Bring your page to life with a dynamic particles. This plugin adds configurable and colorful particles that drift downward and subtly follow your mouse movements, creating a lively and interactive effect. You can enjoy a customizable, animated backdrop that makes your content feel more engaging and visually appealing.",
