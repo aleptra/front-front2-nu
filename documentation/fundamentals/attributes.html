@@ -48,7 +48,9 @@
       mouseout="color:[unset]"
       zoom="0.9"
       padding="0.45rem 0.6rem" minheight="0" margin="0"
-      click="clipboard--copy:*code[0]">Copy</button></small>
+      click="clipboard--copy:*code[0]"
+      onclicked="settext:[✓ Copied]"
+      onsettext="log:[test]">Copy</button></small>
     <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]" whitespace="pre" maxwidth="60rem" minwidth="30vw"
       font="monospace" syntaxhighlighting--set>&lt;!-- Element displays "Second text" because the last settext wins --&gt;
 &lt;div settext="First text" settext="Second text"&gt;&lt;/div&gt;</code>
