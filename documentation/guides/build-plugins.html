@@ -39,16 +39,21 @@
   </section>
 
   <section>
-    <h2 color="white" id="example" zoom="0.9" padding="3rem 0 1rem 0">Example Plugin</h2>
+        <h5 zoom="0.8" color="white" padding="3rem 0 1rem 0">Example Plugin:</h3>
     <p>Below is a minimal example plugin that logs when loaded and provides a function to update an element.</p>
-    <small padding="0.25rem">example.js</small>
-    <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
-      font="monospace" syntaxhighlighting--set>'use strict';
+          <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem"><span
+              flex="1" lineheight="1.85rem" paddingleft="1rem" style="flex: 1">JS
+              (example.js)</span><button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9"
+              padding="0.45rem 0.6rem" minheight="0" margin="0" click="clipboard--copy:*code[0]" onclicked="settext:[✓ Copied]"
+              onsettext="rundelay[2000]:reset">Copy</button></small>
+          <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
+            whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>'use strict';
 
 app.plugin.example = {
   __autoload: function(options) {
     app.log.info()('Example plugin loaded!', options && options.name)
   },
+
   highlight: function(options) {
     var el = options.element
     if (el) {
@@ -56,6 +61,7 @@ app.plugin.example = {
       el.textContent = 'Highlighted by Example Plugin!'
     }
   },
+
   greet: function(options) {
     var el = options.element
     if (el) {
@@ -68,11 +74,14 @@ app.plugin.example = {
 
   <!-- Section: FTML Usage -->
   <section>
-    <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">FTML Usage</h2>
-    <p>Use your plugin in FTML as shown below:</p>
-    <small padding="0.25rem">page.ftml</small>
-    <code bgcolor="white01" padding="1.5rem" color="white" spellcheck="false" whitespace="pre" minwidth="30vw"
-      font="monospace" syntaxhighlighting--set>&lt;html&gt;
+    <h5 zoom="0.8" color="white" padding="3rem 0 1rem 0">FTML Usage:</h3>
+      <p>Use your plugin in FTML as shown below:</p>
+      <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem"><span bgimage="favicon.ico 16px no-repeat 10px" flex="1" lineheight="1.85rem" paddingleft="2.2rem"
+        style="flex: 1">FTML</span><button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9"
+          padding="0.45rem 0.6rem" minheight="0" margin="0" click="clipboard--copy:*code[1]"
+          onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button></small>
+      <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
+        whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;html&gt;
   &lt;head&gt;
     &lt;script src="https://cdn.front.nu/nightly/front.js" plugin="example" conf="debug:true"&gt;&lt;/script&gt;
     &lt;!-- Include example.js in plugins folder --&gt;
@@ -117,9 +126,4 @@ app.plugin.example = {
       <li>Consult the <a href="/documentation/reference/api/functions.html" globalize-get>API reference for functions</a> for detailed information.</li>
     </ul>
   </section>
-
-  <hr bgcolor="white03" margin="3rem 0">
-  <a href="documentation/guides/plugins-advanced.html" minheight="2.7rem" radius="1rem" paddingleft="1.25rem"
-    paddingright="1.25rem" lineheight="2.7" class="button" bgcolor="white" color="black" globalize-get
-    insertbeforeend=" →" insertcontent="true">Goto Next Step</a>
 </article>
