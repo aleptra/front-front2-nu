@@ -39,8 +39,8 @@
     <figure margin="0">
       <a href="./" key="0" marginright="2rem"><img height="85%" maxwidth="unset" src="assets/img/logo.png"></a>
     </figure>
-    <div flex class="gap2-" width="100%" screen-xs="hide" screen-sm="hide" screen-md="show">
-      <div class="pr f1" screen-xs="hide" screen-sm="hide" screen-md="show">
+    <div flex style="justify-content: flex-end" class="gap2-" width="100%" screen-xs="hide" screen-sm="hide" screen-md="show">
+      <div class="pr f1" bindglobal="href:href" if="([{href}]~[/documentation]);show?hide">
         <div zindex="100">
           <form class="zi3" id="form" method="get" action="search.html" target="_top">
             <input id="query2" name="q" type="text" height="2.75rem" radius="0.25rem" bgcolor="white01" width="100%" color="white" padding="1rem" class="zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div screen-xs="hide" screen-sm="show;zoom:[0.8]" screen-md="show;zoom:[0.9]" class="gap1-">
+      <div screen-xs="hide" screen-sm="show;zoom:[0.8]" screen-md="show;zoom:[0.9]" class="gap2-" flex="auto">
         <a href="documentation" globalize-get bindglobal="href:href" if="([{href}]~[/documentation]);underline">Documentation</a>
         <a href="extensions.html" globalize-get bindglobal="href:href" if="([{href}]~[/extensions]);underline">Extensions</a>
         <a href="playground.html" globalize-get if="([{href}]~[/playground]);underline">Playground</a>
