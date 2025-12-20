@@ -7,11 +7,9 @@
   <section>
     <a href="#down"><h2>Featured</h2></a>
     <hr class="bcblack01">
-    <style>.loader{display: inherit}</style>
-    <div id="loader" class="loader"></div>
+    <div id="loader" class="loader" flex></div>
     <div id="error" class="red mb2" hide>Something went wrong!</div>
     <div id="empty" class="mb2 fwb" hide>Not found!</div>
-    <div id="success" class="green mb2" hide>It's working!</div>
     <div
       bindquery="page:page"
       data-src="./assets/json/data/extensions.json"
@@ -20,15 +18,16 @@
       data-loader="#loader"
       data-onerror="show:#error"
       data-onempty="#empty"
-      class="box cards gut1-"
+      class="cards gut5-"
+      width="inherit"
     >
     <a href="extension.html?k={k}" data-set="k:key" class="br05-" bgcolor="#212121">
-            <figure class="bos8 bw1 p1">
-                <img class="w5r m0a" data-get="icon" src="">
-                <figcaption class="fwb" data-get="title"></figcaption>
-                <small data-get="author">Front</small>
-                <small class="z09" data-get="version" jsonbefore="Version: ">Version: 0.1</small>
-            </figure>
-       </a>
+      <figure flexdirection="column" width="100%" class="bw1 p1">
+        <img class="w5r m0a" data-get="icon">
+        <figcaption class="fwb" data-get="title"></figcaption>
+        <small data-get="author">Front</small>
+        <small class="z09" data-get="version" jsonbefore="Version: ">Version: 0.1</small>
+      </figure>
+     </a>
     </div>
 </article>
