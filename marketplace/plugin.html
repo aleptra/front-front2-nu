@@ -8,7 +8,6 @@
 </style>
 <div id="error" class="red" hide>Plugin not found!</div>
 <div id="loader" class="loader"></div>
-<h2 id="title"></h2>
 <hr class="bcblack01">
 <section
   bindquery="k:k"
@@ -20,11 +19,17 @@
   data-onerror="show:#error"
   data-onfinish="doctitle:[{title}];settext:#title:[{title}]"
   >
-  <a>
-    <figure class="bos8 bw1 p05" bgcolor="#212121" padding="1rem">
-      <img class="w5r m0a" data-get="extensions.0.icon">
-    </figure>
-  </a>
+  <div flex>
+    <a paddingright="1rem">
+      <figure class="p05" bgcolor="#212121" padding="1rem">
+        <img class="w5r m0a" data-get="extensions.0.icon">
+      </figure>
+    </a>
+    <div flexdirection="column">
+      <h3 id="title"></h3>
+      <b data-get="extensions.0.author"></b>
+    </div>
+  </div>
 
   <h4 margintop="2rem">Description</h4>
   <hr color="darkgray" margin="0.5rem 0">
