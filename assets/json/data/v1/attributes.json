@@ -381,6 +381,12 @@
     "description_short": "Sets the source of the image.",
     "example": "<img setsrc=\"https:\//placehold.co\/200x100\">"
   },
+  "stop": {
+    "category": "behavior"
+  },
+  "start": {
+    "category": "behavior"
+  },
   "togglevalue": {
     "category": "value",
     "description_short": "Toggles the value of the element."
