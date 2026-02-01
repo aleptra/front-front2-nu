@@ -9,6 +9,11 @@
     "description": "Executes a specific function reference with arguments.",
     "example": "app.exec('dom.toggle', { exec: { element: el } })"
   },
+  "wait": {
+    "category": "app",
+    "description": "Wait for a specified number of milliseconds before executing a callback.",
+    "example": "app.wait(500, function(){})"
+  },
   "click": {
     "category": "app",
     "description": "Simulates a click or double-click event on a DOM element.",
