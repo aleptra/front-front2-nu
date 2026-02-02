@@ -49,12 +49,20 @@
       "description": "Sets font style and size."
     },
     {
+      "attribute": "fontsize",
+      "description": "Sets the size of the text."
+    },
+    {
       "attribute": "height",
       "description": "Sets the height of the element."
     },
     {
       "attribute": "justifycontent",
       "description": "Aligns flex items along the main axis."
+    },
+    {
+      "attribute": "letterspacing",
+      "description": "Sets the spacing between letters in text."
     },
     {
       "attribute": "lineheight",
@@ -378,11 +386,64 @@
     },
     {
       "source": "module",
+      "attribute": "keyboard-action",
+      "description": "Enables an element to respond to keyboard keys; works with keyboard-key, keyboard-word, and related attributes.",
+      "requires": [
+        "keyboard-key",
+        "keyboard-word"
+      ]
+    },
+    {
+      "source": "module",
+      "attribute": "keyboard-finalizer",
+      "description": "Specifies a key required to finalize a word sequence action; used with keyboard-word and keyboard-action.",
+      "requires": [
+        "keyboard-action",
+        "keyboard-word"
+      ]
+    },
+    {
+      "source": "module",
       "attribute": "keyboard-key",
-      "description": ""
+      "description": "Specifies which keyboard key triggers the action on an element with the keyboard-action attribute.",
+      "requires": [
+        "keyboard-action"
+      ]
+    },
+    {
+      "source": "module",
+      "attribute": "keyboard-translate",
+      "description": "Maps a key to a replacement character in an input or text element; used with keyboard-action.",
+      "requires": [
+        "keyboard-action"
+      ]
+    },
+    {
+      "source": "module",
+      "attribute": "keyboard-untranslate",
+      "description": "Removes a previously translated character from an input or text element; used with keyboard-action.",
+      "requires": [
+        "keyboard-action"
+      ]
+    },
+    {
+      "source": "module",
+      "attribute": "keyboard-word",
+      "description": "Specifies a word sequence that triggers an action on an element with the keyboard-action attribute.",
+      "requires": [
+        "keyboard-action"
+      ]
     }
   ],
   "configuration": [
+    {
+      "source": "module",
+      "attribute": "keyboard-scope",
+      "description": "Limits where the keyboard-key or keyboard-word action applies; optional and used with keyboard-action.",
+      "requires": [
+        "keyboard-action"
+      ]
+    },
     {
       "attribute": "hrefhost",
       "description": "Sets the base URL based on host match."
