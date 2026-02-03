@@ -135,6 +135,11 @@
     "description_short": "Conditional insertion.",
     "example": ""
   },
+  "include": {
+    "category": "content",
+    "description_short": "Includes another internal HTML file or page fragment into the element.",
+    "example": "<div include=\"assets/html/dummy.html\"></div>"
+  },
   "insertbeforebegin": {
     "category": "content",
     "description_short": "Inserts new content immediately before the element.",
@@ -227,6 +232,16 @@
     "category": "style",
     "description_short": "Sets the maximum width.",
     "example": "<div maxwidth=\"400px\">This div cannot be wider than 400px</div>"
+  },
+  "mouseout": {
+    "category": "behavior",
+    "description_short": "Executes an action when the mouse leaves the element.",
+    "example": "<button mouseover=\"bgcolor:[yellow]\" mouseout=\"bgcolor:[white]\">Hover over me</button>"
+  },
+  "mouseover": {
+    "category": "behavior",
+    "description_short": "Executes an action when the mouse enters the element.",
+    "example": "<button mouseover=\"bgcolor:[yellow]\">Hover over me</button>"
   },
   "onconfirm": {
     "category": "event",
