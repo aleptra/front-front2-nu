@@ -3,6 +3,7 @@
   "code": "eng",
   "direction": "ltr",
   "translations": {
+    "Marketplace": "Marketplace",
     "section1_title": "The Intelligent Low-Code Framework",
     "section1_subtitle": "Harness the power with FTML",
     "section2_title": "Paradigm",
