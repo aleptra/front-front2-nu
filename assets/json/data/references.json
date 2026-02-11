@@ -409,6 +409,36 @@
         "description": "Prevents sending the payload for POST, PUT, or PATCH requests when set."
       },
       {
+        "module": "screen",
+        "attribute": "screen-xs",
+        "description": "Trigger an element's action when the window width matches the 'xs' breakpoint."
+      },
+      {
+        "module": "screen",
+        "attribute": "screen-sm",
+        "description": "Trigger an element's action when the window width matches the 'sm' breakpoint."
+      },
+      {
+        "module": "screen",
+        "attribute": "screen-md",
+        "description": "Trigger an element's action when the window width matches the 'md' breakpoint."
+      },
+      {
+        "module": "screen",
+        "attribute": "screen-lg",
+        "description": "Trigger an element's action when the window width matches the 'lg' breakpoint."
+      },
+      {
+        "module": "screen",
+        "attribute": "screen-xl",
+        "description": "Trigger an element's action when the window width matches the 'xl' breakpoint."
+      },
+      {
+        "module": "screen",
+        "attribute": "screen-xxl",
+        "description": "Trigger an element's action when the window width matches the 'xxl' breakpoint."
+      },
+      {
         "attribute": "show",
         "description": "Shows the element."
       },
