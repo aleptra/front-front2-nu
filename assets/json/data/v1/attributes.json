@@ -49,11 +49,6 @@
     "description_short": "Sets the border of the element.",
     "example": "<div border=\"1px solid black\">This div has a black border</div>"
   },
-  "focus": {
-    "category": "behavior",
-    "description_short": "Gives focus to the element.",
-    "example": "<input type=\"text\" value=\"Hello\" focus>"
-  },
   "blur": {
     "category": "behavior",
     "description_short": "Removes focus from the element.",
@@ -89,6 +84,16 @@
     "description_short": "Shows a confirmation dialog to the user.",
     "example": "<button click=\"confirm:[Are you sure?]\">Delete</button>"
   },
+  "data-src": {
+    "category": "binding",
+    "description_short": "Specifies the source URL or endpoint for data to be fetched and bound to the element.",
+    "example": "<div data-src=\"https://dummyjson.com/products\" data-iterate=\"true\">Product info here</div>"
+  },
+  "data-iterate": {
+    "category": "binding",
+    "description_short": "Indicates that the element should iterate over an array from the data source.",
+    "example": "<div data-src=\"/api/users\" data-iterate=\"true\">User info here</div>"
+  },
   "escape": {
     "category": "content",
     "description_short": "Escapes HTML or special characters to display as plain text.",
@@ -108,6 +113,11 @@
     "category": "style",
     "description_short": "Sets properties of a flex item.",
     "example": ""
+  },
+  "focus": {
+    "category": "behavior",
+    "description_short": "Gives focus to the element.",
+    "example": "<input type=\"text\" value=\"Hello\" focus>"
   },
   "font": {
     "category": "style",
