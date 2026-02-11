@@ -256,6 +256,51 @@
       {
         "attribute": "bindfield",
         "description": "Binds a specific field."
+      },
+      {
+        "module": "data",
+        "attribute": "data-src",
+        "description": "Specifies an external data source URL to bind data from."
+      },
+      {
+        "module": "data",
+        "attribute": "data-iterate",
+        "description": "Iterates over items from a bound data source."
+      },
+      {
+        "module": "data",
+        "attribute": "data-get",
+        "description": "Retrieves a value from the current bound data context."
+      },
+      {
+        "module": "data",
+        "attribute": "data-set",
+        "description": "Assigns a value to a variable or field within the bound data context."
+      },
+      {
+        "module": "data",
+        "attribute": "data-bind",
+        "description": "Binds an element directly to a data variable or expression."
+      },
+      {
+        "module": "data",
+        "attribute": "data-bindpayload",
+        "description": "Maps a value from a payload into a bound variable or field."
+      },
+      {
+        "module": "data",
+        "attribute": "data-loader",
+        "description": "Specifies an element to show while data is loading."
+      },
+      {
+        "module": "data",
+        "attribute": "data-wait",
+        "description": "Defines the delay before executing the data request."
+      },
+      {
+        "module": "data",
+        "attribute": "data-srcjoin",
+        "description": "Fetches and merges an additional data source into the same binding context."
       }
     ],
     "logic": [
@@ -386,7 +431,7 @@
         "description": "Executes an action or expression when the element is clicked."
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-action",
         "description": "Enables an element to respond to keyboard keys; works with keyboard-key, keyboard-word, and related attributes.",
         "requires": [
@@ -395,7 +440,7 @@
         ]
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-finalizer",
         "description": "Specifies a key required to finalize a word sequence action; used with keyboard-word and keyboard-action.",
         "requires": [
@@ -404,7 +449,7 @@
         ]
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-key",
         "description": "Specifies which keyboard key triggers the action on an element with the keyboard-action attribute.",
         "requires": [
@@ -412,7 +457,7 @@
         ]
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-translate",
         "description": "Maps a key to a replacement character in an input or text element; used with keyboard-action.",
         "requires": [
@@ -420,7 +465,7 @@
         ]
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-untranslate",
         "description": "Removes a previously translated character from an input or text element; used with keyboard-action.",
         "requires": [
@@ -428,7 +473,7 @@
         ]
       },
       {
-        "source": "module",
+        "module": "keyboard",
         "attribute": "keyboard-word",
         "description": "Specifies a word sequence that triggers an action on an element with the keyboard-action attribute.",
         "requires": [
@@ -438,7 +483,12 @@
     ],
     "configuration": [
       {
-        "source": "module",
+        "module": "data",
+        "attribute": "data-ttl",
+        "description": "Sets cache lifetime (time-to-live) for the bound data source."
+      },
+      {
+        "module": "keyboard",
         "attribute": "keyboard-scope",
         "description": "Limits where the keyboard-key or keyboard-word action applies; optional and used with keyboard-action.",
         "requires": [
