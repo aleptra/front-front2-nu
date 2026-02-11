@@ -289,16 +289,6 @@
       },
       {
         "module": "data",
-        "attribute": "data-loader",
-        "description": "Specifies an element to show while data is loading."
-      },
-      {
-        "module": "data",
-        "attribute": "data-wait",
-        "description": "Defines the delay before executing the data request."
-      },
-      {
-        "module": "data",
         "attribute": "data-srcjoin",
         "description": "Fetches and merges an additional data source into the same binding context."
       }
@@ -395,6 +385,16 @@
       {
         "attribute": "blur",
         "description": "Removes focus from the element."
+      },
+      {
+        "module": "data",
+        "attribute": "data-loader",
+        "description": "Specifies an element to show while data is loading."
+      },
+      {
+        "module": "data",
+        "attribute": "data-wait",
+        "description": "Defines the delay before executing the data request."
       },
       {
         "attribute": "focus",
