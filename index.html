@@ -33,14 +33,14 @@
 
 <body bgcolor="black" color="white">
   <div id="navloader" class="navloader pa t0 bcwhite05" width="100%" height="2" hide><div bgcolor="black" height="2"></div></div>
-  <header class="topbar" screen-xs="padding:[0px 1rem 0px 1rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]" screen-md="padding:[0 3rem 0 2.5rem];height:[4.5rem]" screen-lg="padding:[0px 3.5rem 0rem 3.5rem];height:[4.5rem]" color="white">
+  <header class="topbar" screen-xs="padding:[0px 1rem 0px 1rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]" screen-md="padding:[0 3rem 0 2.5rem];height:[4.5rem]" screen-lg="padding:[0px 3.5rem 0rem 3.5rem];height:[4.5rem]" color="white" zindex="50">
     <button click="toggledisplay" clicktargetfield="aside[0]" bgcolor="black" color="white" screen-xs="show" screen-lg="hide" padding="0 0.5rem 0 0.5rem" marginright="1rem" bindglobal="href:href" if="([{href}]!~[/documentation]);hide"><i class="icon32">≡</i></button>
     <figure margin="0">
       <a href="./" key="0" marginright="2rem"><img height="85%" maxwidth="unset" src="assets/img/logo.png"></a>
     </figure>
-    <div flex style="justify-content: flex-end" class="gap2-" width="100%" screen-xs="hide" screen-sm="hide" screen-md="show">
-      <div class="pr f1" bindglobal="href:href" if="([{href}]~[/documentation]);show?hide">
-        <div zindex="100">
+    <div flex style="justify-content: flex-end" gap="2rem" width="100%" screen-xs="hide" screen-sm="hide" screen-md="show">
+      <div class="pr f1" screen-xs="hide" screen-sm="hide" screen-md="hide" screen-lg="show">
+        <div zindex="100" bindglobal="href:href" if="([{href}]~[/documentation]);show?hide">
           <form class="zi3" id="form" method="get" action="search.html" target="_top">
             <input id="query2" name="q" type="text" height="2.75rem" radius="0.25rem" bgcolor="white01" width="100%" color="white" padding="1rem" class="zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
             <input type="submit" padding="1rem" height="4rem" class="bos0 bc0 white w4 icon icon16 pa r0" value="🔍">
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div screen-xs="hide" screen-sm="show;zoom:[0.8]" screen-md="show;zoom:[0.9]" class="gap2-" flex="auto">
+      <div screen-xs="hide" screen-sm="show;zoom:[0.7];gap:[0rem]" screen-md="show;zoom:[0.9];gap:[2rem]" screen-xxl="gap:[4rem];zoom:[1]" flex="auto">
         <a href="documentation" globalize-get bindglobal="href:href" if="([{href}]~[/documentation]);underline">Documentation</a>
         <a href="marketplace" globalize-get bindglobal="href:href" if="([{href}]~[/marketplace]);underline">Marketplace</a>
         <a href="playground.html" globalize-get if="([{href}]~[/playground]);underline">Playground</a>
