@@ -1,5 +1,15 @@
 <template>
-  <aside resize="horizontal" minwidth="15rem" maxwidth="20rem" screen-xl="width:[15rem]" screen-xxl="width:[20rem]">
+  <aside
+    resize="horizontal"
+    minwidth="15rem"
+    maxwidth="20rem"
+    screen-xs="width:[100vw];minwidth:[100vw];fixed"
+    screen-sm="width:[100vw];minwidth:[100vw];fixed"
+    screen-md="width:[100vw];minwidth:[unset];fixed"
+    screen-xl="width:[15rem];minwidth:[unset];relative"
+    screen-xxl="width:[20rem];minwidth:[unset];relative"
+    zindex="20"
+  >
     <div width="100%" include="_includes/sidebar.html"></div>
   </aside>
   <main screen-xs="padding:[1.5rem]" screen-sm="padding:[2rem]" screen-md="padding:[3rem]" screen-lg="padding:[4rem]" include height></main>
