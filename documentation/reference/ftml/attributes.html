@@ -20,14 +20,15 @@
   </form>
   <section margintop="1rem">
     <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json" data-ttl="0">
-      <tr id="title1">
+      <tr id="titleContent">
         <td colspan="2" paddingtop="2rem">
           <h4>Content</h4>
           <hr color="darkgray" margin="0.5rem 0">
         </td>
       </tr>
       <tbody class="z09" data-iterate="attribute.content">
-        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count1" if="([{count1}]:[0])/hide:#title1?show:#title1">
+        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="countContent"
+        if="([{countContent}]:[0])/hide:#titleContent?show:#titleContent">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
@@ -80,7 +81,8 @@
         </td>
       </tr>
       <tbody class="z09" data-iterate="attribute.behavior">
-        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count4" if="([{count4}]:[0])/hide:#title4?show:#title4">
+        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count4"
+          if="([{count4}]:[0])/hide:#title4?show:#title4">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>
