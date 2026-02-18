@@ -37,11 +37,6 @@
           if="([{href}]~[/fundamentals/plugins])/bold">Plugins</a>
       </details>
     </details>
-    <details bindglobal="href:href" if="([{href}]~[/guides])/setattr:[open]">
-      <summary globalize-get bold>Guides</summary>
-      <a href="documentation/guides/build-plugins.html" globalize-get bindglobal="href:href"
-        if="([{href}]~[/guides/build-plugins])/bold" margintop="0.5rem" marginbottom="1rem">Build plugins</a>
-    </details>
     <details bindglobal="href:href" if="([{href}]~[/reference])/setattr:[open]">
       <summary globalize-get bold>Reference</summary>
       <details margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/ftml])/setattr:[open]">
@@ -51,10 +46,16 @@
         <a href="documentation/reference/ftml/variables.html" globalize-get bindglobal="href:href"
           if="([{href}]~[/reference/ftml/variable])/bold">Variables</a>
       </details>
-      <details margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/api])/setattr:[open]">
+      <details paddingbottom="1rem" margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/api])/setattr:[open]">
         <summary bindglobal="href:href" if="([{href}]~[/reference/api])/bold">API</summary>
-        <a href="documentation/reference/api/functions.html" globalize-get bindglobal="href:href" if="([{href}]~[/api/functions])/bold">Functions</a>
+        <a href="documentation/reference/api/functions.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/api/functions])/bold">Functions</a>
       </details>
+    </details>
+    <details bindglobal="href:href" if="([{href}]~[/guides])/setattr:[open]">
+      <summary globalize-get bold>Guides</summary>
+      <a href="documentation/guides/build-plugins.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/guides/build-plugins])/bold" margintop="0.5rem" marginbottom="1rem">Build plugins</a>
     </details>
   </form>
 </nav>
