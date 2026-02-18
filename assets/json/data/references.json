@@ -509,6 +509,14 @@
         "requires": [
           "keyboard-action"
         ]
+      },
+      {
+        "attribute": "mouseover",
+        "description": "Triggered when the mouse pointer moves over the element."
+      },
+      {
+        "attribute": "mouseout",
+        "description": "Triggered when the mouse pointer moves out of the element."
       }
     ],
     "configuration": [
