@@ -20,6 +20,20 @@
   </form>
   <section margintop="1rem">
     <table color="white" class="mt1" width="100%" data-src="assets/json/data/references.json" data-ttl="0">
+      <tr id="title5">
+        <td colspan="2" paddingtop="2rem">
+          <h4>Interactive</h4>
+          <hr color="darkgray" margin="0.5rem 0">
+        </td>
+      </tr>
+      <tbody class="z09" data-iterate="attribute.interactive">
+        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count5"
+          if="([{count5}]:[0])/hide:#title5?show:#title5">
+          <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
+          </td>
+          <td data-get="description"></td>
+        </tr>
+      </tbody>
       <tr id="titleContent">
         <td colspan="2" paddingtop="2rem">
           <h4>Content</h4>
@@ -97,19 +111,6 @@
       <tbody class="z09" data-iterate="attribute.binding">
         <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count8"
           if="([{count8}]:[0])/hide:#title8?show:#title8">
-          <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
-          </td>
-          <td data-get="description"></td>
-        </tr>
-      </tbody>
-      <tr id="title5">
-        <td colspan="2" paddingtop="2rem">
-          <h4>Interactive</h4>
-          <hr color="darkgray" margin="0.5rem 0">
-        </td>
-      </tr>
-      <tbody class="z09" data-iterate="attribute.interactive">
-        <tr mouseover="bgcolor:[white01]" mouseout="bgcolor:[inherit]" filtersearch--select filtersearch--count="count5" if="([{count5}]:[0])/hide:#title5?show:#title5">
           <td><a href="documentation/reference/ftml/attribute/?a={d}" data-set="d:attribute" data-get="attribute"></a>
           </td>
           <td data-get="description"></td>

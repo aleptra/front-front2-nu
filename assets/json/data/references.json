@@ -180,6 +180,10 @@
         "description": "Inserts new content just inside the element, after its last child."
       },
       {
+        "attribute": "trim",
+        "description": "Removes whitespace from the start and end of content."
+      },
+      {
         "attribute": "trimleft",
         "description": "Removes characters from the start of content."
       },
