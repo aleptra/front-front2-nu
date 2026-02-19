@@ -67,7 +67,14 @@
   "click": {
     "category": "interactive",
     "description_short": "Executes an action or expression when the element is clicked.",
-    "example": "<button click=\"settext:[Button clicked!]\">Click me</button>"
+    "example": "<button click=\"settext:[Button clicked!]\">Click me</button>",
+    "related_to": [
+      "onclicked"
+    ],
+    "see_also": [
+      "mouseover",
+      "mouseout"
+    ]
   },
   "color": {
     "category": "style",
@@ -158,7 +165,12 @@
   "insertafterbegin": {
     "category": "content",
     "description_short": "Inserts new content just inside the element, before its first child.",
-    "example": "<p insertafterbegin=\"Intro: \">Hello World</p>"
+    "example": "<p insertafterbegin=\"Intro: \">Hello World</p>",
+    "see_also": [
+      "insertafterend",
+      "insertbeforebegin",
+      "insertbeforeend"
+    ]
   },
   "insertbeforeend": {
     "category": "content",
@@ -251,7 +263,11 @@
   "mouseover": {
     "category": "behavior",
     "description_short": "Executes an action when the mouse enters the element.",
-    "example": "<button mouseover=\"bgcolor:[yellow]\">Hover over me</button>"
+    "example": "<button mouseover=\"bgcolor:[yellow]\">Hover over me</button>",
+    "see_also": [
+      "click",
+      "mouseout"
+    ]
   },
   "onconfirm": {
     "category": "event",
@@ -266,7 +282,10 @@
   "onclicked": {
     "category": "event",
     "description_short": "Triggered when the element is clicked.",
-    "example": "<button click=\"sethtml:[Button clicked!]\" onclicked=\"insertbeforeend:[ Added after]\">Click me</button>"
+    "example": "<button click=\"sethtml:[Button clicked!]\" onclicked=\"insertbeforeend:[ Added after]\">Click me</button>",
+    "related_to": [
+      "click"
+    ]
   },
   "onenabled": {
     "category": "event",

@@ -164,20 +164,20 @@
         "description": "Includes another internal HTML file or page fragment into the element."
       },
       {
-        "attribute": "insertbeforebegin",
-        "description": "Inserts new content immediately before the element."
-      },
-      {
         "attribute": "insertafterbegin",
         "description": "Inserts new content just inside the element, before its first child."
       },
       {
-        "attribute": "insertbeforeend",
-        "description": "Inserts new content just inside the element, after its last child."
-      },
-      {
         "attribute": "insertafterend",
         "description": "Inserts new content immediately after the element."
+      },
+      {
+        "attribute": "insertbeforebegin",
+        "description": "Inserts new content immediately before the element."
+      },
+      {
+        "attribute": "insertbeforeend",
+        "description": "Inserts new content just inside the element, after its last child."
       },
       {
         "attribute": "trimleft",
@@ -371,14 +371,6 @@
       {
         "attribute": "onvaluechange",
         "description": "Triggered when value is changed inside an element."
-      },
-      {
-        "attribute": "mouseover",
-        "description": "Triggered when the mouse pointer moves over the element."
-      },
-      {
-        "attribute": "mouseout",
-        "description": "Triggered when the mouse pointer moves out of the element."
       }
     ],
     "behavior": [
