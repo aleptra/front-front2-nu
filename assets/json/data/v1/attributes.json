@@ -147,7 +147,13 @@
   "height": {
     "category": "style",
     "description_short": "Sets the height of the element.",
-    "example": "<div height=\"100px\" bgcolor=\"lightblue\">100px tall div</div>"
+    "example": "<div height=\"100px\" bgcolor=\"lightblue\">100px tall div</div>",
+    "see_also": [
+      "maxheight",
+      "minheight",
+      "maxwidth",
+      "minwidth"
+    ]
   },
   "hide": {
     "category": "behavior",
@@ -178,7 +184,12 @@
   "insertbeforebegin": {
     "category": "content",
     "description_short": "Inserts new content immediately before the element.",
-    "example": "<p insertbeforebegin=\"Note: \">Hello World</p>"
+    "example": "<p insertbeforebegin=\"Note: \">Hello World</p>",
+    "see_also": [
+      "insertafterbegin",
+      "insertafterend",
+      "insertbeforeend"
+    ]
   },
   "insertafterbegin": {
     "category": "content",
@@ -193,12 +204,22 @@
   "insertbeforeend": {
     "category": "content",
     "description_short": "Inserts new content just inside the element, after its last child.",
-    "example": "<div insertbeforeend=\"!\">Hello World</div>"
+    "example": "<div insertbeforeend=\"!\">Hello World</div>",
+    "see_also": [
+      "insertafterbegin",
+      "insertafterend",
+      "insertbeforebegin"
+    ]
   },
   "insertafterend": {
     "category": "content",
     "description_short": "Inserts new content immediately after the element.",
-    "example": "<div insertafterend=\"!\">Hello World</div>"
+    "example": "<div insertafterend=\"!\">Hello World</div>",
+    "see_also": [
+      "insertafterbegin",
+      "insertbeforebegin",
+      "insertbeforeend"
+    ]
   },
   "justifycontent": {
     "category": "style",
@@ -241,10 +262,9 @@
     "description_short": "Sets margin around the element.",
     "example": "<div margin=\"20px\">This div has 20px margin on all sides</div>",
     "see_also": [
-      "margin",
       "marginbottom",
       "marginleft",
-      "marginrigt",
+      "marginright",
       "margintop"
     ]
   },
@@ -254,9 +274,8 @@
     "example": "<div marginbottom=\"15px\">This div has 15px bottom margin</div>",
     "see_also": [
       "margin",
-      "marginbottom",
       "marginleft",
-      "marginrigt",
+      "marginright",
       "margintop"
     ]
   },
@@ -267,7 +286,7 @@
     "see_also": [
       "margin",
       "marginbottom",
-      "marginrigt",
+      "marginright",
       "margintop"
     ]
   },
@@ -290,18 +309,26 @@
       "margin",
       "marginbottom",
       "marginleft",
-      "marginrigt"
+      "marginright"
     ]
   },
   "minheight": {
     "category": "style",
     "description_short": "Sets the minimum height.",
-    "example": "<div minheight=\"100px\">This div cannot be shorter than 100px</div>"
+    "example": "<div minheight=\"100px\">This div cannot be shorter than 100px</div>",
+    "see_also": [
+      "height",
+      "maxheight"
+    ]
   },
   "minwidth": {
     "category": "style",
     "description_short": "Sets the minimum width.",
-    "example": "<div minwidth=\"200px\">This div cannot be narrower than 200px</div>"
+    "example": "<div minwidth=\"200px\">This div cannot be narrower than 200px</div>",
+    "see_also": [
+      "maxwidth",
+      "width"
+    ]
   },
   "maxwidth": {
     "category": "style",
@@ -309,7 +336,7 @@
     "example": "<div maxwidth=\"400px\">This div cannot be wider than 400px</div>",
     "see_also": [
       "minwidth",
-      "max"
+      "width"
     ]
   },
   "mouseout": {
@@ -394,7 +421,10 @@
   },
   "onsubmitted": {
     "category": "event",
-    "description_short": "Triggered when a form is submitted."
+    "description_short": "Triggered when a form is submitted.",
+    "related_to": [
+      "submit"
+    ]
   },
   "padding": {
     "category": "style",
@@ -600,7 +630,13 @@
   "width": {
     "category": "style",
     "description_short": "Sets the width of the element.",
-    "example": "<div width=\"200px\" bgcolor=\"lightblue\">This div is 200px wide</div>\n<div width=\"50%\" bgcolor=\"lightgreen\">This div is 50% of its container's width</div>"
+    "example": "<div width=\"200px\" bgcolor=\"lightblue\">This div is 200px wide</div>\n<div width=\"50%\" bgcolor=\"lightgreen\">This div is 50% of its container's width</div>",
+    "see_also": [
+      "maxwidth",
+      "minwidth",
+      "maxheight",
+      "minheight"
+    ]
   },
   "wordbreak": {
     "category": "style",
