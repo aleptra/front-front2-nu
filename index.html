@@ -38,12 +38,12 @@
       click="toggledisplay:*aside[0]"
       bgcolor="black"
       color="white"
-      screen-xs="show;runattr:[if]"
-      screen-lg="hide"
+      bindglobal="href:href"
       if="([{href}]!~[/documentation])/hide"
+      screen-xs="show;runattr:[if]"
+      screen-lg="hide;runattr:[if]"
       padding="0 0.5rem 0 0.5rem"
-      marginright="1rem"
-      bindglobal="href:href"><i class="icon32">≡</i>
+      marginright="1rem"><i class="icon32">≡</i>
     </button>
     <figure margin="0">
       <a href="./" key="0" marginright="2rem"><img height="85%" maxwidth="unset" src="assets/img/logo.png"></a>
