@@ -1,4 +1,4 @@
-<script src="http://localhost/front/front.js"></script>
+<script src="https://cdn.front.nu/nightly/front.js"></script>
 <title globalize-get>HTML vs FTML</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
 <article color="silver">
@@ -12,21 +12,15 @@
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
   <section margintop="2rem">
-    <p>
-      FTML enhances HTML by extending the markup processed by the Front engine, while the browser renders the resulting output.
-    </p>
-    <p margintop="1rem">It addresses many limitations of traditional HTML, such as static content, the need for separate
-      JavaScript for
-      logic and interactivity,
-      and reliance on CSS for styling. With FTML, developers can declare dynamic behavior, inline styling, and
-      data-driven content directly in the markup.
-    </p>
+    <p>HTML defines the static structure and content of web pages that browsers render directly, relying on separate technologies for behavior and styling. It supports basic inline styles and semantic tags but lacks native support for dynamic behavior.</p>
+    <p margintop="1rem">FTML extends HTML by embedding declarative logic, styling, and interactivity within markup, enabling dynamic, reactive, and reusable interfaces that compile to standard HTML for the browser. It natively supports loops, conditionals, templates, and reactive bindings, allowing for comprehensive behavior and dynamic content.</p>
+    <p margintop="1rem">This comparison outlines the core behavioral differences between HTML and FTML, highlighting how FTML integrates dynamic capabilities natively while preserving standard browser rendering.</p>
   </section>
   <section margintop="2rem">
     <table width="100%">
       <caption>
         <small>
-          The following table compares key features:</small>
+          The following table compares HTML and FTML behavior:</small>
       </caption>
       <thead color="white">
         <th>Feature</th>
@@ -36,38 +30,68 @@
       <tbody>
         <tr>
           <td>Structure</td>
-          <td>✅ Describes structure</td>
-          <td>✅ Describes structure + behavior</td>
+          <td>✅ Static markup</td>
+          <td>✅ Static + dynamic</td>
         </tr>
         <tr>
           <td>Interpretation</td>
           <td>✅ Browser renders</td>
-          <td>✅ Front engine parses → browser renders</td>
+          <td>✅ Browser renders compiled output</td>
         </tr>
         <tr>
           <td>Logic</td>
-          <td>❌ Requires JavaScript</td>
-          <td>✅ Logic inline via attributes</td>
+          <td>❌ Not supported</td>
+          <td>✅ Declarative logic</td>
         </tr>
         <tr>
           <td>Styling</td>
-          <td>❌ Requires CSS</td>
-          <td>✅ Styling inline via attributes</td>
+          <td>⚠️ Inline styles &amp; semantic tags</td>
+          <td>✅ Declarative styling</td>
         </tr>
         <tr>
           <td>Dynamic content</td>
-          <td>❌ Static</td>
-          <td>✅ Data binding, conditionals, loops</td>
+          <td>❌ Not supported</td>
+          <td>✅ Bindings &amp; loops</td>
         </tr>
         <tr>
           <td>Interactivity</td>
-          <td>❌ Separate scripts</td>
-          <td>✅ Declarative in markup</td>
+          <td>❌ Not supported</td>
+          <td>✅ Event handling</td>
         </tr>
         <tr>
           <td>Components</td>
-          <td>❌ Standard HTML only</td>
-          <td>✅ Custom components & reusable templates</td>
+          <td>❌ Not supported</td>
+          <td>✅ Reusable components</td>
+        </tr>
+        <tr>
+          <td>Reactive updates</td>
+          <td>❌ Not supported</td>
+          <td>✅ Auto DOM sync</td>
+        </tr>
+        <tr>
+          <td>Templates</td>
+          <td>❌ Not supported</td>
+          <td>✅ Reusable templates</td>
+        </tr>
+        <tr>
+          <td>Computed values</td>
+          <td>❌ Not supported</td>
+          <td>✅ Computed in markup</td>
+        </tr>
+        <tr>
+          <td>Data-driven rendering</td>
+          <td>❌ Not supported</td>
+          <td>✅ Reactive rendering</td>
+        </tr>
+        <tr>
+          <td>Conditionals</td>
+          <td>❌ Not supported</td>
+          <td>✅ Conditional rendering</td>
+        </tr>
+        <tr>
+          <td>Event handling</td>
+          <td>❌ Not supported</td>
+          <td>✅ Inline events</td>
         </tr>
       </tbody>
     </table>
