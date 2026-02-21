@@ -1,0 +1,43 @@
+<script src="http://localhost/front/front.js"></script>
+<title globalize-get>Philosophy</title>
+<template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="documentation/concepts" globalize-get>Concepts</a></li>
+      <li>Philosophy</li>
+    </ol>
+  </nav>
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get">Philosophy</h1>
+  <section margintop="2rem">
+    <p>
+      The idea for Front and FTML first took shape in 2019 by me, Josef Gabrielsson, while at work. I found myself
+      increasingly frustrated with existing frameworks that often felt overly complicated. They required numerous files
+      even for the simplest tasks, making maintenance and deployment more cumbersome than necessary.
+    </p>
+    <p margintop="1rem">
+      Motivated by these challenges, I spent years experimenting to find a solution. Through this process, I designed a
+      new paradigm aimed at simplifying development. This initial design sought to unify different aspects of web
+      development into a more streamlined approach. However, it remained a personal project and was never released
+      publicly.
+    </p>
+    <p margintop="1rem">
+      At the time, many people were skeptical about programming directly with markup. This approach challenged
+      conventional methods and the established expectations of web development workflows.
+    </p>
+    <p margintop="1rem">
+      This journey ultimately led to the creation of Front and FTML, which embody a declarative and unified approach to
+      building web interfaces. The core philosophy integrates structure, behavior, and styling directly within the
+      markup. I also chose ECMA5 as the JavaScript target to ensure compatibility with older browsers and to avoid
+      relying on polyfills. By doing so, development becomes simpler, more maintainable, and more efficient, eliminating
+      the need to juggle multiple separate files and tools.
+    </p>
+    <p margintop="1rem">
+      With Front and FTML, developers can declare dynamic behavior, data binding, and interactivity clearly and
+      concisely. This fosters a more intuitive and productive experience that addresses the complexities I originally
+      encountered.
+    </p>
+  </section>
+</article>

@@ -1,0 +1,75 @@
+<script src="http://localhost/front/front.js"></script>
+<title globalize-get>HTML vs FTML</title>
+<template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="#" globalize-get>Concepts</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+    </ol>
+  </nav>
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
+  <section margintop="2rem">
+    <p>
+      FTML enhances HTML by extending the markup processed by the Front engine, while the browser renders the resulting output.
+    </p>
+    <p margintop="1rem">It addresses many limitations of traditional HTML, such as static content, the need for separate
+      JavaScript for
+      logic and interactivity,
+      and reliance on CSS for styling. With FTML, developers can declare dynamic behavior, inline styling, and
+      data-driven content directly in the markup.
+    </p>
+  </section>
+  <section margintop="2rem">
+    <table width="100%">
+      <caption>
+        <small>
+          The following table compares key features:</small>
+      </caption>
+      <thead color="white">
+        <th>Feature</th>
+        <th>HTML</th>
+        <th>FTML</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Structure</td>
+          <td>✅ Describes structure</td>
+          <td>✅ Describes structure + behavior</td>
+        </tr>
+        <tr>
+          <td>Interpretation</td>
+          <td>✅ Browser renders</td>
+          <td>✅ Front engine parses → browser renders</td>
+        </tr>
+        <tr>
+          <td>Logic</td>
+          <td>❌ Requires JavaScript</td>
+          <td>✅ Logic inline via attributes</td>
+        </tr>
+        <tr>
+          <td>Styling</td>
+          <td>❌ Requires CSS</td>
+          <td>✅ Styling inline via attributes</td>
+        </tr>
+        <tr>
+          <td>Dynamic content</td>
+          <td>❌ Static</td>
+          <td>✅ Data binding, conditionals, loops</td>
+        </tr>
+        <tr>
+          <td>Interactivity</td>
+          <td>❌ Separate scripts</td>
+          <td>✅ Declarative in markup</td>
+        </tr>
+        <tr>
+          <td>Components</td>
+          <td>❌ Standard HTML only</td>
+          <td>✅ Custom components & reusable templates</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
