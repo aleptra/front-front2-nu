@@ -25,27 +25,57 @@
   "bindvar": {
     "category": "binding",
     "description_short": "Binds a variable.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "bindasset",
+      "bindfield",
+      "bindglobal",
+      "bindquery"
+    ]
   },
   "bindquery": {
     "category": "binding",
     "description_short": "Binds data from a query.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "bindasset",
+      "bindfield",
+      "bindglobal",
+      "bindvar"
+    ]
   },
   "bindasset": {
     "category": "binding",
     "description_short": "Binds an asset.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "bindfield",
+      "bindglobal",
+      "bindvar",
+      "bindquery"
+    ]
   },
   "bindglobal": {
     "category": "binding",
     "description_short": "Binds a global variable.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "bindasset",
+      "bindfield",
+      "bindvar",
+      "bindquery"
+    ]
   },
   "bindfield": {
     "category": "binding",
     "description_short": "Binds a specific field.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "bindasset",
+      "bindglobal",
+      "bindvar",
+      "bindquery"
+    ]
   },
   "border": {
     "category": "style",
@@ -55,7 +85,10 @@
   "blur": {
     "category": "behavior",
     "description_short": "Removes focus from the element.",
-    "example": "<input type=\"text\" value=\"Hello\" focus blur>"
+    "example": "<input type=\"text\" value=\"Hello\" focus blur>",
+    "see_also": [
+      "focus"
+    ]
   },
   "bold": {
     "category": "style",
@@ -103,12 +136,18 @@
   "data-src": {
     "category": "binding",
     "description_short": "Specifies the source URL or endpoint for data to be fetched and bound to the element.",
-    "example": "<div data-src=\"https://dummyjson.com/products\" data-iterate=\"true\">Product info here</div>"
+    "example": "<div data-src=\"https://dummyjson.com/products\" data-iterate=\"true\">Product info here</div>",
+    "see_also": [
+      "data-iterate"
+    ]
   },
   "data-iterate": {
     "category": "binding",
     "description_short": "Indicates that the element should iterate over an array from the data source.",
-    "example": "<div data-src=\"/api/users\" data-iterate=\"true\">User info here</div>"
+    "example": "<div data-src=\"/api/users\" data-iterate=\"true\">User info here</div>",
+    "see_also": [
+      "data-src"
+    ]
   },
   "escape": {
     "category": "content",
@@ -123,12 +162,18 @@
   "flexdirection": {
     "category": "style",
     "description_short": "Sets the flex direction.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "flex"
+    ]
   },
   "flexitem": {
     "category": "style",
     "description_short": "Sets properties of a flex item.",
-    "example": ""
+    "example": "",
+    "see_also": [
+      "flex"
+    ]
   },
   "focus": {
     "category": "behavior",
@@ -136,12 +181,26 @@
     "example": "<input type=\"text\" value=\"Hello\" focus>",
     "related_to": [
       "onfocused"
+    ],
+    "see_also": [
+      "blur"
     ]
   },
   "font": {
     "category": "style",
     "description_short": "Sets font style and size.",
-    "example": "<p font=\"Comic Sans MS\">This text uses a custom font</p>"
+    "example": "<p font=\"Comic Sans MS\">This text uses a custom font</p>",
+    "see_also": [
+      "fontsize"
+    ]
+  },
+  "fontsize": {
+    "category": "style",
+    "description_short": "Sets font size.",
+    "example": "<p fontsize=\"25px\">This text uses fontsize</p>",
+    "see_also": [
+      "font"
+    ]
   },
   "grid": {},
   "height": {
@@ -409,7 +468,10 @@
   "onhide": {
     "category": "event",
     "description_short": "Triggered when the element is hidden.",
-    "example": "<button click=\"hide\" onhide=\"insertafterend:[Element hidden]\">Hide me</button>"
+    "example": "<button click=\"hide\" onhide=\"insertafterend:[Element hidden]\">Hide me</button>",
+    "related_to": [
+      "hide"
+    ]
   },
   "onshow": {
     "category": "event",
@@ -545,12 +607,18 @@
   "sethref": {
     "category": "content",
     "description_short": "Sets the href attribute of the element.",
-    "example": "<a sethref=\"https://example.com\">Visit Example</a>"
+    "example": "<a sethref=\"https://example.com\">Visit Example</a>",
+    "see_also": [
+      "setqueryhref"
+    ]
   },
   "setqueryhref": {
     "category": "content",
     "description_short": "Updates the href attribute of the element with operation support.",
-    "example": "<a href=\"?page=1\" click=\"setqueryhref:[page:++]\">Next Page</a><br>\n<a href=\"?page=5\" click=\"setqueryhref:[page:--]\">Previous Page</a><br>\n<a href=\"?zoom=1\" click=\"setqueryhref:[zoom:*2]\">Zoom In</a><br>\n<a href=\"?zoom=4\" click=\"setqueryhref:[zoom:/2]\">Zoom Out</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:+5]\">Add 5 Points</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:-3]\">Subtract 3 Points</a>"
+    "example": "<a href=\"?page=1\" click=\"setqueryhref:[page:++]\">Next Page</a><br>\n<a href=\"?page=5\" click=\"setqueryhref:[page:--]\">Previous Page</a><br>\n<a href=\"?zoom=1\" click=\"setqueryhref:[zoom:*2]\">Zoom In</a><br>\n<a href=\"?zoom=4\" click=\"setqueryhref:[zoom:/2]\">Zoom Out</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:+5]\">Add 5 Points</a><br>\n<a href=\"?score=10\" click=\"setqueryhref:[score:-3]\">Subtract 3 Points</a>",
+    "see_also": [
+      "sethref"
+    ]
   },
   "setvalue": {
     "category": "content",
@@ -560,12 +628,18 @@
   "setid": {
     "category": "content",
     "description_short": "Sets the id of the element.",
-    "example": "<div setid=\"id1\">This div has an id</div>"
+    "example": "<div setid=\"id1\">This div has an id</div>",
+    "see_also": [
+      "setname"
+    ]
   },
   "setname": {
     "category": "content",
     "description_short": "Sets the name of the element.",
-    "example": "<div setname=\"name1\">This div has a name</div>"
+    "example": "<div setname=\"name1\">This div has a name</div>",
+    "see_also": [
+      "setid"
+    ]
   },
   "setsrc": {
     "category": "content",
