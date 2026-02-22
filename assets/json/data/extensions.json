@@ -25,7 +25,19 @@
       "cost": "0"
     },
     {
-      "id": 3,
+      "id": 2,
+      "key": "scrollbar",
+      "title": "Scrollbar",
+      "description": "Adds a customizable scrollbar to your application, allowing you to control appearance, size, and behavior. The Scrollbar plugin improves navigation in scrollable content areas by providing smooth scrolling and consistent styling across different browsers and devices.",
+      "version": "0.1.0",
+      "screenshot": "",
+      "icon": "./assets/img/icon_plugin.svg",
+      "type": 0,
+      "author": "Front Labs",
+      "cost": "0"
+    },
+    {
+      "id": 4,
       "key": "responsivevoice",
       "title": "ResponsiveVoice",
       "description": "Adds text-to-speech functionality using ResponsiveVoice service by responsivevoice.org, allowing your app to read text aloud in multiple languages and voices.",
@@ -37,7 +49,7 @@
       "cost": "0"
     },
     {
-      "id": 4,
+      "id": 6,
       "key": "filtersearch",
       "title": "Filter Search",
       "description": "The Filter Search plugin lets users instantly narrow down lists or sections by typing a search term. It dynamically shows or hides matching elements and automatically updates counters per section, giving immediate visual feedback. This makes it ideal for large lists, menus, dictionaries, or categorized content where quick filtering and clarity are important.",
@@ -49,7 +61,7 @@
       "cost": "0"
     },
     {
-      "id": 5,
+      "id": 8,
       "key": "particles",
       "title": "Particles",
       "description": "Bring your page to life with a dynamic particles. This plugin adds configurable and colorful particles that drift downward and subtly follow your mouse movements, creating a lively and interactive effect. You can enjoy a customizable, animated backdrop that makes your content feel more engaging and visually appealing.",
