@@ -2,10 +2,6 @@
   "attribute": {
     "style": [
       {
-        "attribute": "align",
-        "description": "Sets alignment of content within the element."
-      },
-      {
         "attribute": "bgcolor",
         "description": "Sets the background color of the element."
       },
@@ -156,6 +152,10 @@
     ],
     "content": [
       {
+        "attribute": "align",
+        "description": "Sets alignment of content within the element."
+      },
+      {
         "attribute": "escape",
         "description": "Escapes HTML or special characters to display as plain text."
       },
@@ -206,6 +206,10 @@
       {
         "attribute": "sethtml",
         "description": "Sets HTML content."
+      },
+      {
+        "attribute": "valign",
+        "description": "Sets the vertical alignment of content within the element."
       }
     ],
     "binding": [

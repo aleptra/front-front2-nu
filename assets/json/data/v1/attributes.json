@@ -5,9 +5,17 @@
     "example": "<button click=\"alert:[Hello World!]\">Show Alert</button>"
   },
   "align": {
-    "category": "style",
+    "category": "content",
     "description_short": "Sets alignment of content within the element.",
     "example": "<div align=\"left\">Left aligned</div>\n<div align=\"center\">Center aligned</div>\n<div align=\"right\">Right aligned</div>"
+  },
+  "valign": {
+    "category": "content",
+    "description_short": "Sets the vertical alignment of content within the element.",
+    "example": "<table border=\"1\" height=\"100px\" width=\"300px\">\n  <tr>\n    <td valign=\"top\">Top aligned</td>\n    <td valign=\"middle\">Middle aligned</td>\n    <td valign=\"bottom\">Bottom aligned</td>\n  </tr>\n</table>",
+    "see_also": [
+      "align"
+    ]
   },
   "bgcolor": {
     "category": "style",
