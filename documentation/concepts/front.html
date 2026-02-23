@@ -1,0 +1,71 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<title>Framework</title>
+<template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+<article color="silver">
+  <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
+    <ol>
+      <li><a href="documentation" globalize-get>Documentation</a></li>
+      <li><a href="#" globalize-get>Concepts</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+    </ol>
+  </nav>
+  <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
+    runorder="bindglobal;settext;globalize-get"></h1>
+  <p margintop="2rem">See <a href="philosophy.html">Philosophy</a> for the core vision and mindset behind Front.</p>
+
+  <h2 margintop="2rem" color="white">Framework Overview</h2>
+  <p margintop="1rem">Front's runtime executes FTML markup, manages modules and plugins, and handles reactivity and event propagation efficiently.</p>
+
+  <h2 margintop="2rem" color="white">Front vs Tradional Frameworks/Libraries</h2>
+  <table width="100%" border="1" bordercolor="white03" cellpadding="10" cellspacing="0" margintop="1rem">
+    <tr bgcolor="white03">
+      <th align="left">Aspect</th>
+      <th align="left">Front (FTML)</th>
+      <th align="left">React</th>
+      <th align="left">Vue</th>
+      <th align="left">Angular</th>
+    </tr>
+    <tr>
+      <td><b>Approach</b></td>
+      <td>Markup-first, declarative</td>
+      <td>Component + JSX</td>
+      <td>Component + template syntax</td>
+      <td>Component + TypeScript, MVVM</td>
+    </tr>
+    <tr>
+      <td><b>Setup</b></td>
+      <td>No build tools required</td>
+      <td>Requires bundler (Webpack/CRA)</td>
+      <td>Optional bundler, can use CDN</td>
+      <td>CLI setup, TypeScript configuration</td>
+    </tr>
+    <tr>
+      <td><b>Learning Curve</b></td>
+      <td>Easy if you know HTML</td>
+      <td>Moderate, JSX and props/state concepts</td>
+      <td>Moderate, template syntax and reactivity</td>
+      <td>Steep, TypeScript, DI, RxJS</td>
+    </tr>
+    <tr>
+      <td><b>Development Style</b></td>
+      <td>Express behavior directly in markup</td>
+      <td>Split between JSX, state, and logic</td>
+      <td>Split between templates, scripts, and reactive data</td>
+      <td>MVVM, TypeScript classes, services</td>
+    </tr>
+    <tr>
+      <td><b>Prototyping Speed</b></td>
+      <td>Very fast</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Slower due to setup and boilerplate</td>
+    </tr>
+    <tr>
+      <td><b>Best For</b></td>
+      <td>Data-driven apps, rapid development, collaboration</td>
+      <td>Dynamic SPAs</td>
+      <td>Dynamic SPAs and progressive apps</td>
+      <td>Large-scale enterprise apps</td>
+    </tr>
+  </table>
+</article>

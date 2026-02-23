@@ -16,18 +16,16 @@
 
   <section>
     <p margintop="1rem">
-      Variables in Front allow you to store, manipulate, and bind data dynamically in your FTML markup.
-      They can exist globally, locally within elements, or be provided by modules and plugins.
+      Variables in FTML are reactive: any change automatically updates all elements bound to them, removing the need for
+      manual DOM manipulation.
+      They can store and manage dynamic data within your markup and exist in global scope, local element scope, or be
+      supplied by modules and plugins.
     </p>
     <ul class="list">
       <li><b>Global Variables:</b> Accessible from anywhere in your application using <b>bindglobal</b>.</li>
       <li><b>Element Variables:</b> Scoped to a particular element or template using <b>bindvar</b>.</li>
       <li><b>Mapped Variables:</b> Variables that can be dynamically computed or transformed via <b>mapbindvar</b>.</li>
     </ul>
-    <p>
-      Variables are reactive: changes propagate automatically to elements bound to them, eliminating the need for manual
-      DOM updates.
-    </p>
   </section>
 
   <!-- Section: Variable Binding -->

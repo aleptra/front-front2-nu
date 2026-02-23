@@ -46,7 +46,8 @@
         <a href="documentation/reference/ftml/variables.html" globalize-get bindglobal="href:href"
           if="([{href}]~[/reference/ftml/variable])/bold">Variables</a>
       </details>
-      <details paddingbottom="1rem" margintop="0.5rem" bindglobal="href:href" if="([{href}]~[/reference/api])/setattr:[open]">
+      <details paddingbottom="1rem" margintop="0.5rem" bindglobal="href:href"
+        if="([{href}]~[/reference/api])/setattr:[open]">
         <summary bindglobal="href:href" if="([{href}]~[/reference/api])/bold">API</summary>
         <a href="documentation/reference/api/functions.html" globalize-get bindglobal="href:href"
           if="([{href}]~[/api/functions])/bold">Functions</a>
@@ -57,12 +58,14 @@
       <a href="documentation/guides/build-plugins.html" globalize-get bindglobal="href:href"
         if="([{href}]~[/guides/build-plugins])/bold" margintop="0.5rem" marginbottom="1rem">Build plugins</a>
     </details>
-    <details bindglobal="href:href" if="([{href}]~[/concepts])/setattr:[open]">
+    <details bindglobal="href:href" if="([{href}]~[/concepts])/setattr:[open]" lineheight="2">
       <summary globalize-get bold>Concepts</summary>
-      <a href="documentation/concepts/html-vs-ftml.html" globalize-get bindglobal="href:href"
-        if="([{href}]~[/concepts/html-vs-ftml])/bold" margintop="0.5rem">HTML vs FTML</a>
       <a href="documentation/concepts/philosophy.html" globalize-get bindglobal="href:href"
         if="([{href}]~[/concepts/philosophy])/bold">Philosophy</a>
+      <a href="documentation/concepts/front.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/concepts/front])/bold">Framework</a>
+      <a href="documentation/concepts/ftml.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/concepts/ftml])/bold">Language</a>
     </details>
   </form>
 </nav>
