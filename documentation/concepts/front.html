@@ -5,67 +5,186 @@
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
       <li><a href="documentation" globalize-get>Documentation</a></li>
-      <li><a href="#" globalize-get>Concepts</a></li>
-      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get></li>
+      <li><a href="documentation/concepts" globalize-get>Concepts</a></li>
+      <li color="silver" bindglobal="title:title" settext="{title}" globalize-get
+        runorder="bindglobal;settext;globalize-get"></li>
     </ol>
   </nav>
+
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get"></h1>
-  <p margintop="2rem">See <a href="philosophy.html">Philosophy</a> for the core vision and mindset behind Front.</p>
 
-  <h2 margintop="2rem" color="white">Framework Overview</h2>
-  <p margintop="1rem">Front's runtime executes FTML markup, manages modules and plugins, and handles reactivity and event propagation efficiently.</p>
+  <section>
+    <p><b>Front</b> is the low-code frontend framework for building interactive, data-driven, and modular applications
+      using a markup-first approach. Unlike traditional frontend frameworks or libraries that rely heavily on complex
+      logic, Front keeps development simple, clean, and maintainable. Everything can be expressed through markup,
+      enabling developers and designers to work seamlessly together while producing readable and scalable code.
+    </p>
+  </section>
 
-  <h2 margintop="2rem" color="white">Front vs Tradional Frameworks/Libraries</h2>
-  <table width="100%" border="1" bordercolor="white03" cellpadding="10" cellspacing="0" margintop="1rem">
-    <tr bgcolor="white03">
-      <th align="left">Aspect</th>
-      <th align="left">Front (FTML)</th>
-      <th align="left">React</th>
-      <th align="left">Vue</th>
-      <th align="left">Angular</th>
-    </tr>
-    <tr>
-      <td><b>Approach</b></td>
-      <td>Markup-first, declarative</td>
-      <td>Component + JSX</td>
-      <td>Component + template syntax</td>
-      <td>Component + TypeScript, MVVM</td>
-    </tr>
-    <tr>
-      <td><b>Setup</b></td>
-      <td>No build tools required</td>
-      <td>Requires bundler (Webpack/CRA)</td>
-      <td>Optional bundler, can use CDN</td>
-      <td>CLI setup, TypeScript configuration</td>
-    </tr>
-    <tr>
-      <td><b>Learning Curve</b></td>
-      <td>Easy if you know HTML</td>
-      <td>Moderate, JSX and props/state concepts</td>
-      <td>Moderate, template syntax and reactivity</td>
-      <td>Steep, TypeScript, DI, RxJS</td>
-    </tr>
-    <tr>
-      <td><b>Development Style</b></td>
-      <td>Express behavior directly in markup</td>
-      <td>Split between JSX, state, and logic</td>
-      <td>Split between templates, scripts, and reactive data</td>
-      <td>MVVM, TypeScript classes, services</td>
-    </tr>
-    <tr>
-      <td><b>Prototyping Speed</b></td>
-      <td>Very fast</td>
-      <td>Medium</td>
-      <td>Medium</td>
-      <td>Slower due to setup and boilerplate</td>
-    </tr>
-    <tr>
-      <td><b>Best For</b></td>
-      <td>Data-driven apps, rapid development, collaboration</td>
-      <td>Dynamic SPAs</td>
-      <td>Dynamic SPAs and progressive apps</td>
-      <td>Large-scale enterprise apps</td>
-    </tr>
-  </table>
+  <section margintop="2rem">
+    <h2 color="white">Core Ideas</h2>
+    <ul marginleft="1rem" margintop="1rem" class="list">
+      <li><b>HTML-first</b> — express behavior directly in markup.</li>
+      <li><b>Attribute DSL</b> — FTML maps attributes to actions, modules, and plugins.</li>
+      <li><b>Deterministic runtime</b> - explicit ordering via <i>runorder</i>, predictable execution.</li>
+      <li><b>No build step</b> — works from a CDN or any static host.</li>
+      <li><b>Extensible</b> — load modules/plugins at runtime.</li>
+    </ul>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Runtime Pipeline</h2>
+    <ol marginleft="1rem" margintop="1rem">
+      <li>Load runtime → discover <code>module</code>/<code>plugin</code>/<code>var</code> from the script tag.</li>
+      <li>Fetch &amp; initialize modules/plugins; read configuration from attributes (e.g., <code>*-conf</code>).</li>
+      <li>Scan DOM → map FTML attributes to actions; respect <code>runorder</code> and
+        <code>stop</code>/<code>start</code>.
+      </li>
+      <li>Execute actions directly on the DOM; preserve original state for reversibility.</li>
+      <li>Wire events (<code>click</code>, <code>input</code>, etc.); re-run scopes when needed (<code>rerun</code>).
+      </li>
+    </ol>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Extensions</h2>
+    <p>
+      Front supports a modular architecture: load functionality as <b>modules</b> or <b>plugins</b> at runtime.
+      This page uses <code>globalize</code> and <code>data</code> via the script tag’s <code>module</code> attribute.
+    </p>
+    <pre bgcolor="black02" color="white" padding="1rem" radius="6px" margintop="1rem" wordbreak="break-word"
+      whitespace="pre">
+&lt;script src="https://cdn.front.nu/nightly/front.js" module="globalize;data"&gt;&lt;/script&gt;
+    </pre>
+  </section>
+
+
+  <section margintop="2rem">
+    <h2 color="white">State Management</h2>
+    <p>
+      Front favors simple, explicit state: bind variables into attributes/content and update them via inputs or
+      actions.
+      The runtime updates affected nodes deterministically.
+    </p>
+    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
+      <label for="name">Name</label>
+      <input id="name" type="text" value="Ada" />
+      <p bindvar="greeting:Hello {name:friend}!" settext="{greeting}" runorder="bindvar;settext"></p>
+      <p fontsize="0.9rem" color="white06" margintop="0.5rem">Type to update the greeting.</p>
+    </div>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Data &amp; Templates</h2>
+    <p>
+      Use the <code>data</code> module to fetch and render lists with <code>data-src</code> and
+      <code>data-iterate</code>.
+      Below is an illustrative example (replace the URL with your API):
+    </p>
+    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
+      <ul data-src="/api/items" data-iterate="true" data-onsuccess="settext:#dataStatus[Loaded]" data-onempty="#empty"
+        data-sort="name" data-sortorder="asc">
+        <li data-get="name"></li>
+      </ul>
+      <p id="empty" hide color="white06" margintop="0.5rem">No items found.</p>
+      <p id="dataStatus" color="white06" margintop="0.25rem"></p>
+    </div>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Event Handling</h2>
+    <p>
+      Bind events declaratively with the <code>click</code> attribute (and others). Actions can target
+      the current element (<code>#</code>) or any selector.
+    </p>
+    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
+      <button click="togglevalue:#flag[true]; settext:#evMsg[Clicked!]" statevalue="false">Toggle</button>
+      <span id="flag" hide></span>
+      <p id="evMsg" margintop="0.5rem"></p>
+    </div>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Globalization</h2>
+    <p>
+      With the <code>globalize</code> module, mark strings using <code>globalize-get</code>.
+      Language can be switched via querystring (<code>?locale=sv</code>, for example) depending on your locale setup.
+    </p>
+    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
+      <h4 globalize-get settext="Framework">Framework</h4>
+      <p globalize-get settext="Markup-first and modular">Markup-first and modular</p>
+    </div>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Developer Experience</h2>
+    <p>
+      Front emphasizes simplicity: drop a script, author declaratively in HTML, and iterate quickly.
+      Its clear attribute semantics minimize boilerplate and keep mental overhead low.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Front vs Traditional Frameworks/Libraries</h2>
+    <table width="100%" border="1" bordercolor="white03" cellpadding="10" cellspacing="0" margintop="1rem">
+      <tr bgcolor="white03">
+        <th align="left">Aspect</th>
+        <th align="left">Front (FTML)</th>
+        <th align="left">React</th>
+        <th align="left">Vue</th>
+        <th align="left">Angular</th>
+      </tr>
+      <tr>
+        <td><b>Approach</b></td>
+        <td>Markup-first, attribute DSL</td>
+        <td>Components + JSX</td>
+        <td>Components + template syntax</td>
+        <td>Components + TypeScript, MVVM</td>
+      </tr>
+      <tr>
+        <td><b>Setup</b></td>
+        <td>CDN, no build step</td>
+        <td>Typically bundler; CDN possible</td>
+        <td>CDN or bundler</td>
+        <td>CLI, TS config, tooling</td>
+      </tr>
+      <tr>
+        <td><b>Rendering</b></td>
+        <td>Direct DOM, deterministic</td>
+        <td>Virtual DOM</td>
+        <td>Virtual DOM</td>
+        <td>Template compiler</td>
+      </tr>
+      <tr>
+        <td><b>State</b></td>
+        <td>Inline variables, bindings</td>
+        <td>Hooks / external stores</td>
+        <td>Reactivity system</td>
+        <td>Services / RxJS patterns</td>
+      </tr>
+      <tr>
+        <td><b>Extensibility</b></td>
+        <td>Runtime modules/plugins</td>
+        <td>Libraries, ecosystem</td>
+        <td>Plugins, ecosystem</td>
+        <td>Modules, DI, ecosystem</td>
+      </tr>
+      <tr>
+        <td><b>Prototyping Speed</b></td>
+        <td>Very fast</td>
+        <td>Medium</td>
+        <td>Medium</td>
+        <td>Slower (setup/boilerplate)</td>
+      </tr>
+      <tr>
+        <td><b>Best For</b></td>
+        <td>Markup-driven apps, docs, dashboards</td>
+        <td>Dynamic SPAs</td>
+        <td>SPAs &amp; progressive apps</td>
+        <td>Large enterprise apps</td>
+      </tr>
+    </table>
+  </section>
+
 </article>

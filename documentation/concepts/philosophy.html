@@ -1,7 +1,9 @@
-<script src="http://localhost/front/front.js"></script>
+<script src="https://cdn.front.nu/nightly/front.js"></script>
 <title globalize-get>Philosophy</title>
 <template srcdoc="../../../index" src="../../../_templates/documentation"></template>
+
 <article color="silver">
+
   <nav class="crumbs pointer pt05" zoom="0.9" margintop="-2rem" marginbottom="2rem" color="white">
     <ol>
       <li><a href="documentation" globalize-get>Documentation</a></li>
@@ -9,74 +11,135 @@
       <li>Philosophy</li>
     </ol>
   </nav>
+
   <h1 color="white" zoom="0.9" bindglobal="title:title" settext="{title}" globalize-get marginbottom="2rem"
     runorder="bindglobal;settext;globalize-get">Philosophy</h1>
 
+  <!-- INTRODUCTION -->
   <p margintop="1rem">
-    Front embraces a declarative, low-code philosophy that simplifies development by unifying structure, behavior, and styling into a clear, coherent workflow.
+    Front, powered by FTML, is built on a declarative, low-code, markup-first philosophy that unifies structure,
+    behavior,
+    styling, and data. Developers focus on <b>what the interface should express</b>, while the runtime handles details
+    seamlessly.
   </p>
 
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">Origin Story</h2>
+  <!-- ORIGIN STORY -->
+  <section margintop="3rem">
+    <h2 color="white">Origin Story</h2>
     <p>
-      The spark for Front and FTML was ignited in 2019 by Josef Gabrielsson. Existing frameworks had become fragmented, requiring a dizzying array of files even for simple tasks. This exploration evolved into a low-code vision: reduce the code developers must orchestrate manually and express intent directly through structured markup.
+      Front and FTML began in 2019 by Josef Gabrielsson to address growing complexity in interface development across
+      platforms. Traditional frameworks scattered logic and styling across multiple layers, obscuring the core goal: to
+      build interfaces. The project was intentionally kept closed for several years while the declarative paradigm was
+      explored and validated, allowing the approach to mature before being released publicly.
+    </p>
+  </section>
+
+  <!-- THE CHALLENGE -->
+  <section margintop="3rem">
+    <h2 color="white">The Challenge</h2>
+    <p>
+      Traditional approaches imposed mental overhead through scattered abstractions, rigid structures, and unnecessary
+      steps. Logic, styling, and data handling were often separated across multiple layers, requiring developers to move
+      between different syntaxes and contexts to express a single idea. Developers were forced to translate intent into
+      framework-specific patterns and boilerplate. This fragmentation reduced clarity, increased context-switching, and
+      made even simple interfaces harder to reason about and maintain.
+    </p>
+  </section>
+
+  <!-- THE SOLUTION -->
+  <section margintop="3rem">
+    <h2 color="white">The Solution</h2>
+    <p>
+      Front introduces a new paradigm in interface development: a declarative, low-code approach that unifies structure,
+      behavior, styling, and data.
+      It minimizes friction, making interfaces intuitive and approachable while remaining powerful.
     </p>
     <p margintop="1rem">
-      At the time, the industry was deep into the "separation of concerns" dogma. Proposing a way to program directly within markup was often met with skepticism.
+      Front provides a declarative framework where markup is the authoritative source of truth.
+      Every element expresses intent, forming a cohesive, self-describing runtime.
+    </p>
+    <p margintop="1rem">
+      Guided by a modular, declarative philosophy, components and plugins manage responsibilities,
+      letting developers focus on high-level design and creating clear, coherent experiences.
+    </p>
+
+    <!-- CORE PRINCIPLES -->
+    <h3 color="white" margintop="2rem">Foundational Pillars</h3>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">1. Declarative Expression</h5>
+    <p marginleft="1rem">
+      Developers describe <i>what should happen</i>, not <i>how</i>. The runtime interprets intent automatically.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">2. Markup as the Runtime</h5>
+    <p marginleft="1rem">
+      Markup serves as the expressive surface for declarative structure, behavior, and styling across platforms, letting
+      developers build interfaces directly in markup without writing JavaScript or CSS.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">3. Predictable and Reversible</h5>
+    <p marginleft="1rem">
+      Actions occur in a clear, deterministic order, preserving clarity and making the interface easy to reason about.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">4. Minimal Ceremony</h5>
+    <p marginleft="1rem">
+      No toolchains or compilation are required. Interfaces work immediately in any environment.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">5. Pragmatic Clarity</h5>
+    <p marginleft="1rem">
+      Understanding is prioritized over rigid patterns. Logic is placed where it enhances comprehension.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">6. Extensible Simplicity</h5>
+    <p marginleft="1rem">
+      Modules and plugins extend behavior without adding complexity, keeping the runtime transparent and approachable.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">7. Minimalistic Logic</h5>
+    <p marginleft="1rem">
+      Logic is kept concise and close to the markup it affects, avoiding unnecessary abstraction.
+    </p>
+
+    <h5 marginleft="1rem" margintop="2rem" color="white">8. Universal Compatibility</h5>
+    <p marginleft="1rem">
+      Works reliably across platforms while enhancing markup rather than replacing it.
     </p>
   </section>
 
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">The Challenge</h2>
+  <!-- A DIFFERENT MENTAL MODEL -->
+  <section margintop="3rem">
+    <h2 color="white">A Different Mental Model</h2>
     <p>
-      Creating a new paradigm meant overcoming friction and the "mental tax" of context switching and technical complexity, refined over years of experimentation before public release.
+      In Front, each attribute expresses a small unit of behavior. Together, they form a declarative graph
+      describing the interface. Developers think in terms of <b>intent</b> rather than components or lifecycle.
     </p>
-  </section>
-
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">The Solution</h2>
-    <p>
-      Front and FTML form a declarative, unified framework where markup is the authoritative source of truth, weaving structure, behavior, and styling into a single coherent thread.
-    </p>
-    <ul margintop="1rem" class="list">
-      <li marginbottom="0.5rem"><strong>Simplicity:</strong> Reduce boilerplate and unnecessary files.</li>
-      <li marginbottom="0.5rem"><strong>Clarity:</strong> Intent is visible directly in markup.</li>
-      <li><strong>Productivity:</strong> Teams focus on delivering value rather than wrestling with technical overhead.</li>
+    <ul marginleft="1rem" margintop="1rem" class="list">
+      <li>"This should load data."</li>
+      <li>"This should react when a value changes."</li>
+      <li>"This should appear conditionally."</li>
+      <li>"This should map to a global value."</li>
+      <li>"This should repeat for each item."</li>
     </ul>
-  </section>
-
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">A Different Mental Model</h2>
-    <p>
-      Front shifts how interfaces are conceived: instead of assembling behavior step by step, developers describe what elements are and how they behave, letting the framework interpret intent.
+    <p margintop="1rem">
+      This mental model simplifies reasoning and makes interfaces self-describing.
     </p>
   </section>
 
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">Reducing Cognitive Load</h2>
+  <!-- THE GUIDING IDEA -->
+  <section margintop="3rem">
+    <h2 color="white">The Guiding Idea</h2>
     <p>
-      By keeping structure, behavior, and layout together, Front minimizes context switching and fragmented abstractions, letting developers reason about interfaces more intuitively.
+      Building interfaces should feel like crafting a document, not assembling a machine.
     </p>
-  </section>
-
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">Pragmatism Over Purity</h2>
-    <p>
-      Front favors practical cohesion over strict separation between technologies, organizing concerns around clarity and outcomes rather than file type.
+    <p margintop="1rem">
+      By collapsing unnecessary layers and embracing declarative expression, Front creates a direct path from intent to
+      implementation. Developers write markup that communicates meaning, which the runtime interprets seamlessly.
     </p>
-  </section>
-
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">Tooling Should Fade Into the Background</h2>
-    <p>
-      The framework aims to feel almost invisible, removing ceremony and heavy setup so that focus remains on the application itself.
-    </p>
-  </section>
-
-  <section margintop="2rem">
-    <h2 margintop="2rem" color="white">The Guiding Idea</h2>
-    <p>
-      Developing for the web should feel closer to composing a document than engineering a machine. By collapsing unnecessary layers and emphasizing declarative expression, Front restores a direct path between intention and implementation.
+    <p margintop="1rem">
+      The result is a framework that is powerful yet approachable, clear, and aligned with the principles of intuitive,
+      declarative interface design.
     </p>
   </section>
 </article>
