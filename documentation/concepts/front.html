@@ -25,7 +25,7 @@
   <section margintop="2rem">
     <h2 color="white">Core Ideas</h2>
     <ul marginleft="1rem" margintop="1rem" class="list">
-      <li><b>HTML-first</b> — express behavior directly in markup.</li>
+      <li><b>Markup-first</b> — express behavior directly in markup.</li>
       <li><b>Attribute DSL</b> — FTML maps attributes to actions, modules, and plugins.</li>
       <li><b>Deterministic runtime</b> - explicit ordering via <i>runorder</i>, predictable execution.</li>
       <li><b>No build step</b> — works from a CDN or any static host.</li>
@@ -35,93 +35,85 @@
 
   <section margintop="2rem">
     <h2 color="white">Runtime Pipeline</h2>
-    <ol marginleft="1rem" margintop="1rem">
-      <li>Load runtime → discover <code>module</code>/<code>plugin</code>/<code>var</code> from the script tag.</li>
-      <li>Fetch &amp; initialize modules/plugins; read configuration from attributes (e.g., <code>*-conf</code>).</li>
-      <li>Scan DOM → map FTML attributes to actions; respect <code>runorder</code> and
-        <code>stop</code>/<code>start</code>.
-      </li>
+    <ul marginleft="1rem" margintop="1rem" class="list">
+      <li>Load runtime → discover <i>module</i>/<i>plugin</i>/<i>var</i> from the script tag.</li>
+      <li>Fetch & initialize modules/plugins; read configuration from attributes (e.g., <i>*-conf</i>).</li>
+      <li>Scan DOM → map FTML attributes to actions; respect <i>runorder</i> and <i>stop</i>/<i>start</i>.</li>
       <li>Execute actions directly on the DOM; preserve original state for reversibility.</li>
-      <li>Wire events (<code>click</code>, <code>input</code>, etc.); re-run scopes when needed (<code>rerun</code>).
-      </li>
-    </ol>
+      <li>Wire events (<i>click</i>, <i>input</i>, etc.); re-run scopes when needed (<i>rerun</i>).</li>
+    </ul>
   </section>
 
   <section margintop="2rem">
-    <h2 color="white">Extensions</h2>
+    <h2 color="white">Document Object Model (DOM)</h2>
     <p>
-      Front supports a modular architecture: load functionality as <b>modules</b> or <b>plugins</b> at runtime.
-      This page uses <code>globalize</code> and <code>data</code> via the script tag’s <code>module</code> attribute.
+      Front operates directly on the <b>real DOM</b> rather than using a virtual DOM abstraction. This approach provides
+      several advantages:
     </p>
-    <pre bgcolor="black02" color="white" padding="1rem" radius="6px" margintop="1rem" wordbreak="break-word"
-      whitespace="pre">
-&lt;script src="https://cdn.front.nu/nightly/front.js" module="globalize;data"&gt;&lt;/script&gt;
-    </pre>
+    <ul marginleft="1rem" class="list">
+      <li><b>Performance:</b> Updates are applied immediately without diffing overhead.</li>
+      <li><b>Memory Efficiency:</b> No large virtual DOM copy is maintained in memory.</li>
+      <li><b>Reversibility:</b> Original DOM state is preserved, allowing deterministic updates and easy rollbacks.</li>
+      <li><b>Predictability:</b> Combined with the deterministic runtime, changes happen exactly as specified in markup
+        attributes.</li>
+    </ul>
   </section>
 
-
   <section margintop="2rem">
-    <h2 color="white">State Management</h2>
+    <h2 color="white">Partial Page Application (PPA)</h2>
+    <p zoom="0.8" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module Required:</b> Navigate</p>
     <p>
-      Front favors simple, explicit state: bind variables into attributes/content and update them via inputs or
-      actions.
-      The runtime updates affected nodes deterministically.
+      Partial Page Application (PPA) behavior intercepts link clicks and dynamically loads content into a target container
+      without a full page reload. Navigation is controlled via attributes on links or elements, enabling seamless updates
+      using AJAX.
     </p>
-    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
-      <label for="name">Name</label>
-      <input id="name" type="text" value="Ada" />
-      <p bindvar="greeting:Hello {name:friend}!" settext="{greeting}" runorder="bindvar;settext"></p>
-      <p fontsize="0.9rem" color="white06" margintop="0.5rem">Type to update the greeting.</p>
+
+    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem"><b>Note:</b> There is no route table - just
+      link to separate <i>.html</i> files.
     </div>
   </section>
 
   <section margintop="2rem">
-    <h2 color="white">Data &amp; Templates</h2>
-    <p>
-      Use the <code>data</code> module to fetch and render lists with <code>data-src</code> and
-      <code>data-iterate</code>.
-      Below is an illustrative example (replace the URL with your API):
+    <h2 color="white">State Binding</h2>
+    <p>Front keeps application state in sync across the page. Variables, user inputs, query parameters, global values,
+      and API responses are automatically connected to page elements so that any changes are reflected wherever they are
+      used.
     </p>
-    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
-      <ul data-src="/api/items" data-iterate="true" data-onsuccess="settext:#dataStatus[Loaded]" data-onempty="#empty"
-        data-sort="name" data-sortorder="asc">
-        <li data-get="name"></li>
-      </ul>
-      <p id="empty" hide color="white06" margintop="0.5rem">No items found.</p>
-      <p id="dataStatus" color="white06" margintop="0.25rem"></p>
-    </div>
   </section>
 
   <section margintop="2rem">
-    <h2 color="white">Event Handling</h2>
-    <p>
-      Bind events declaratively with the <code>click</code> attribute (and others). Actions can target
-      the current element (<code>#</code>) or any selector.
+    <h2 color="white">Persistent State Binding</h2>
+        <p zoom="0.8" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Storage module</p>
+    <p>Front also supports persistent state binding via the <code>storage</code> module, which keeps bound values saved
+    across page reloads. Changes in storage automatically update all connected elements, ensuring data remains consistent
+    between sessions
     </p>
-    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
-      <button click="togglevalue:#flag[true]; settext:#evMsg[Clicked!]" statevalue="false">Toggle</button>
-      <span id="flag" hide></span>
-      <p id="evMsg" margintop="0.5rem"></p>
-    </div>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Dynamic Data Rendering</h2>
+    <p zoom="0.8" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Data module</p>
+    <p>
+      Front provides a way for fetching, binding, and rendering data directly in your page. It allows
+      content to be updated dynamically based on external data sources, supporting lists, filtering, sorting, and
+      merging of data.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h2 color="white">Event Action Handling</h2>
+    <p>
+      Front lets you attach events directly to elements in markup. Built-in and custom events trigger actions automatically,
+      enabling interactive behavior and dynamic updates across the page.
+    </p>
   </section>
 
   <section margintop="2rem">
     <h2 color="white">Globalization</h2>
+    <p zoom="0.8" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Internationalize module, Chronitize module and Monetize module</p>
     <p>
       With the <code>globalize</code> module, mark strings using <code>globalize-get</code>.
-      Language can be switched via querystring (<code>?locale=sv</code>, for example) depending on your locale setup.
-    </p>
-    <div padding="1rem" radius="6px" bgcolor="black02" color="white" margintop="1rem">
-      <h4 globalize-get settext="Framework">Framework</h4>
-      <p globalize-get settext="Markup-first and modular">Markup-first and modular</p>
-    </div>
-  </section>
-
-  <section margintop="2rem">
-    <h2 color="white">Developer Experience</h2>
-    <p>
-      Front emphasizes simplicity: drop a script, author declaratively in HTML, and iterate quickly.
-      Its clear attribute semantics minimize boilerplate and keep mental overhead low.
+      Language can be switched via querystring (<code>?locale=sv</code>).
     </p>
   </section>
 
@@ -130,61 +122,83 @@
     <table width="100%" border="1" bordercolor="white03" cellpadding="10" cellspacing="0" margintop="1rem">
       <tr bgcolor="white03">
         <th align="left">Aspect</th>
-        <th align="left">Front (FTML)</th>
+        <th align="left">Front</th>
         <th align="left">React</th>
         <th align="left">Vue</th>
         <th align="left">Angular</th>
       </tr>
       <tr>
-        <td><b>Approach</b></td>
-        <td>Markup-first, attribute DSL</td>
-        <td>Components + JSX</td>
-        <td>Components + template syntax</td>
-        <td>Components + TypeScript, MVVM</td>
+        <td><b>Routing</b></td>
+        <td>✅ Declarative attributes</td>
+        <td>Library (React Router)</td>
+        <td>Library (Vue Router)</td>
+        <td>Built-in Module</td>
+      </tr>
+      <tr>
+        <td><b>Persistence</b></td>
+        <td>✅ Native <i>persist</i></td>
+        <td>Manual logic</td>
+        <td>Manual / Plugins</td>
+        <td>Manual / Services</td>
+      </tr>
+      <tr>
+        <td><b>I18n</b></td>
+        <td>✅ Native <i>globalize</i></td>
+        <td>External Libraries</td>
+        <td>External Libraries</td>
+        <td>Built-in Framework</td>
+      </tr>
+      <tr>
+        <td><b>Validation</b></td>
+        <td>✅ Attribute-driven logic</td>
+        <td>Script-heavy (Formik)</td>
+        <td>Script-heavy (Vuelidate)</td>
+        <td>Reactive Forms</td>
       </tr>
       <tr>
         <td><b>Setup</b></td>
         <td>CDN, no build step</td>
-        <td>Typically bundler; CDN possible</td>
+        <td>Typically bundler</td>
         <td>CDN or bundler</td>
-        <td>CLI, TS config, tooling</td>
+        <td>CLI, TS config</td>
       </tr>
       <tr>
-        <td><b>Rendering</b></td>
-        <td>Direct DOM, deterministic</td>
-        <td>Virtual DOM</td>
-        <td>Virtual DOM</td>
-        <td>Template compiler</td>
+        <td><b>Performance & Concurrency</b></td>
+        <td>
+          Deterministic runtime, explicit runorder, memory efficient, zero-build latency
+        </td>
+        <td>Virtual DOM diffing & reconciliation</td>
+        <td>Virtual DOM diffing & reconciliation</td>
+        <td>Change detection, digest cycles</td>
       </tr>
       <tr>
-        <td><b>State</b></td>
-        <td>Inline variables, bindings</td>
-        <td>Hooks / external stores</td>
-        <td>Reactivity system</td>
-        <td>Services / RxJS patterns</td>
+        <td><b>Security & Reliability</b></td>
+        <td>Security-by-design, reduced XSS surface</td>
+        <td>Manual sanitization required</td>
+        <td>Manual sanitization required</td>
+        <td>Manual sanitization required</td>
       </tr>
       <tr>
-        <td><b>Extensibility</b></td>
-        <td>Runtime modules/plugins</td>
-        <td>Libraries, ecosystem</td>
-        <td>Plugins, ecosystem</td>
-        <td>Modules, DI, ecosystem</td>
+        <td><b>Maintenance</b></td>
+        <td>Readable markup, low dependency overhead</td>
+        <td>Frequent updates, dependency management</td>
+        <td>Frequent updates, dependency management</td>
+        <td>High learning curve, breaking changes</td>
       </tr>
       <tr>
-        <td><b>Prototyping Speed</b></td>
-        <td>Very fast</td>
-        <td>Medium</td>
-        <td>Medium</td>
-        <td>Slower (setup/boilerplate)</td>
+        <td><b>SEO / Indexing</b></td>
+        <td>Native HTML visible to crawlers</td>
+        <td>Requires SSR or hydration</td>
+        <td>Requires SSR or hydration</td>
+        <td>Requires SSR or prerendering</td>
       </tr>
       <tr>
-        <td><b>Best For</b></td>
-        <td>Markup-driven apps, docs, dashboards</td>
-        <td>Dynamic SPAs</td>
-        <td>SPAs &amp; progressive apps</td>
-        <td>Large enterprise apps</td>
+        <td><b>Development Cost</b></td>
+        <td>Fast prototyping, minimal setup</td>
+        <td>Setup-heavy, build pipelines</td>
+        <td>Setup-heavy, build pipelines</td>
+        <td>Setup-heavy, CLI and configs</td>
       </tr>
     </table>
   </section>
-
 </article>

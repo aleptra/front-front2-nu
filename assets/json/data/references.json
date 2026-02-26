@@ -517,6 +517,10 @@
       {
         "attribute": "mouseout",
         "description": "Triggered when the mouse pointer moves out of the element."
+      },
+      {
+        "attribute": "navigate-go",
+        "description": "Triggers navigation as if clicked the link."
       }
     ],
     "configuration": [

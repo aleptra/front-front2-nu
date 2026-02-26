@@ -423,6 +423,11 @@
       "mouseout"
     ]
   },
+  "navigate-go": {
+    "category": "interactive",
+    "module": "navigate",
+    "description_short": "Programmatically triggers navigation as if a user clicked a link. Loads the target page via the Navigate module into the specified container without a full page reload."
+  },
   "onconfirm": {
     "category": "event",
     "description_short": "Triggered when the user confirms an action in a confirmation dialog.",
