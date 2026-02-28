@@ -15,16 +15,16 @@
 
   <section margintop="2rem">
     <p margintop="1rem">
-      FTML (Front Text Markup Language) is the language of Front. It extends standard HTML with FTML - a declarative
-      layer that allows you to define structure, style, layout, interactivity, and behavior directly through attributes,
-      without writing any JavaScript or CSS.
+    FTML (Front Text Markup Language) is the primary language of Front. It extends standard HTML with a declarative layer
+    that makes it possible to define structure, style, layout, interactivity, and behavior entirely through attributes, eliminating
+    the need for any language other than FTML.
     </p>
   </section>
 
   <section margintop="3rem">
     <h2 zoom="0.8" color="white">Fundamentals</h2>
     <p margintop="1rem">
-      FTML is built on a small set of fundamentals that define how interfaces are described and composed: Attributes,
+      FTML is structured around a small set of fundamentals that define how interfaces are described and composed: Attributes,
       Variables, Pages, Templates, Modules, and Plugins. These elements provide structure, state, reuse, and
       extensibility directly in markup, forming a cohesive model for building declarative and reactive interfaces.
     </p>
@@ -33,14 +33,30 @@
   <section margintop="3rem">
     <h2 zoom="0.8" margintop="2rem" color="white">Low-Code</h2>
     <p margintop="1rem">
-      FTML embodies a Low-Code approach by allowing developers and designers to define application structure, styling,
-      behavior, and interactivity directly through markup attributes. Common patterns like loops, conditionals, computed
-      values, event handling, and reusable templates are all expressed declaratively without writing JavaScript or CSS,
-      reducing boilerplate and accelerating prototyping.
+      FTML embodies a Low-Code approach, allowing developers and designers to define structure, styling, behavior, and
+      interactivity directly through markup attributes. Loops, conditionals, computed values, event handling, and reusable
+      templates are all expressed declaratively, reducing boilerplate, accelerating prototyping, and promoting rapid,
+      maintainable, and consistent application development within a single markup language.
     </p>
+  </section>
+
+  <!-- A DIFFERENT MENTAL MODEL -->
+  <section margintop="3rem">
+    <h2 zoom="0.8" color="white">The Mental Model</h2>
     <p margintop="1rem">
-      This attribute-driven, declarative syntax enables rapid development, consistent application behavior, and
-      maintainable code while allowing teams to collaborate seamlessly within a single markup language.
+      Each attribute expresses a small unit of behavior. Together, they form a graph describing the interface.
+      Developers focus on <b>intent</b> rather than components or lifecycle, thinking in terms like:
+    </p>
+    <ul margintop="1rem" class="list" lineheight="1.8rem">
+      <li>"This should load data."</li>
+      <li>"This should react when a value changes."</li>
+      <li>"This should appear conditionally."</li>
+      <li>"This should map to a global value."</li>
+      <li>"This should repeat for each item."</li>
+    </ul>
+    <p margintop="1rem">
+      This mental model simplifies reasoning and makes interfaces self-describing, enabling a direct path from intent to
+      implementation.
     </p>
   </section>
 
@@ -48,10 +64,7 @@
     <h2 zoom="0.8" margintop="2rem" color="white">FTML vs Traditional Markup</h2>
     <p margintop="1rem">
       FTML simplifies interface development by overcoming limitations of traditional markup languages like HTML, XHTML,
-      and XML, which often lack dynamic capabilities and require external scripts. Structure, logic, styling,
-      interactivity,
-      templates, and reactive updates are all defined declaratively in markup. The table below highlights these
-      differences.
+      and XML, which often lack dynamic capabilities and require external scripts.
     </p>
     <table width="100%" margintop="1rem">
       <caption>
