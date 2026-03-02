@@ -10,7 +10,8 @@
     plugin="particles;syntaxhighlighting;filtersearch;clipboard;scrollbar"
     conf="debug:false;debugLocalhost:false;varsDir:/assets/json/vars;storageKey:front"
     globalize-conf="folder:assets/json/locales;ttl:3600000"
-    navigate-conf="startpage:front-front2-nu;startpageLocal:github-test-folder">
+    navigate-conf="startpage:front-front2-nu;startpageLocal:github-test-folder"
+    scrollbar--conf="width:auto;radius:3;thumb:white;hover:#ffffff;track:#0b0d10">
   </script>
   <link type="text/css" href="https://cdn.front.nu/dist/front.css" rel="stylesheet">
   <link rel="icon" href="data:,">
@@ -73,8 +74,8 @@
     </div>
   </header>
   <nav></nav>
-  <aside height="100%" screen-xs="hide;fixed" screen-lg="flex;relative" top="0" zindex="20"></aside>
-  <main height="100%" include="_includes/home.html" scrollbar--set scrollbar--conf="width:6;radius:3;thumb:white;hover:#ffffff;track:#0b0d10"></main>
+  <aside height="100%" screen-xs="hide;fixed" screen-lg="flex;relative" scrollbar--set="width:thin;thumb:white" top="0" zindex="20"></aside>
+  <main height="100%" include="_includes/home.html" scrollbar--set></main>
   <aside></aside>
   <footer></footer>
 </body>
