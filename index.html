@@ -28,13 +28,17 @@
     a {
       color: inherit
     }
+
+    .bottombar *, .topbar *{
+      max-height: unset;
+    }
   </style>
   <title>Front</title>
 </head>
 
 <body bgcolor="black" color="white">
   <div id="navloader" class="navloader pa t0 bcwhite05" width="100%" height="2" hide><div bgcolor="black" height="2"></div></div>
-  <header class="topbar" screen-xs="padding:[0px 1rem 0px 1rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]" screen-md="padding:[0 3rem 0 2.5rem];height:[4.5rem]" screen-lg="padding:[0px 3.5rem 0rem 3.5rem];height:[4.5rem]" color="white" zindex="30">
+  <header class="topbar" maxheight="unset" screen-xs="padding:[0px 1rem 0px 1rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]" screen-md="padding:[0 3rem 0 2.5rem];height:[4.5rem]" screen-lg="padding:[0px 3.5rem 0rem 3.5rem];height:[4.5rem]" color="white" zindex="30">
     <button
       click="toggledisplay:*aside[0]"
       bgcolor="black"
@@ -56,7 +60,7 @@
             <input id="query2" name="q" type="text" height="2.75rem" radius="0.25rem" bgcolor="white01" width="100%" color="white" padding="1rem" class="zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
             <input type="submit" padding="1rem" height="4rem" class="bos0 bc0 white w4 icon icon16 pa r0" value="🔍">
           </form>
-          <div stop="data-src" bindglobal="l:globalize.code" bindfield="q:#query2" data-src="assets/json/data/doc.json" data-iterate="true" data-loader="false" bgcolor="black" class="box br05 pa bos1 w100 ail- zi2 autocomplete" data-onempty="#empty2" hide="" style="display: none !important;">
+          <div stop="data-src" bindglobal="l:globalize.code" bindfield="q:#query2" data-src="assets/json/data/doc.json" data-iterate="true" data-loader="false" bgcolor="black" class="box pa w100 ail- autocomplete" border="1px solid #333" data-onempty="#empty2" hide>
             <figure stop>
               <a style="align-items: normal;" bindglobal="l:globalize.code" data-set="link:link" data-get="title" href="{link}" class="p1" stop="data-set;data-get;href;class"></a>
             </figure>
