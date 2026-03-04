@@ -58,7 +58,30 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Josef Gabrielsson",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+      "markup": [
+        {
+          "attribute": "filtersearch--select",
+          "description": "Marks an element as a filterable row. No value required."
+        },
+        {
+          "attribute": "filtersearch--count",
+          "description": "Groups the row under a named section counter. Value is the counter key, e.g. filtersearch--count=\"count1\"."
+        },
+        {
+          "attribute": "filtersearch--onempty",
+          "description": "Placed on the container. Shows the target element when no rows match, hides it otherwise, e.g. filtersearch--onempty=\"#emptyMessage\"."
+        }
+      ],
+      "config": [
+        {
+          "key": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+      }
     },
     {
       "id": 8,
