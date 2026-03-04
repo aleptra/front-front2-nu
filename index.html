@@ -57,16 +57,18 @@
       <div class="pr f1" screen-xs="hide" screen-sm="hide" screen-md="hide" screen-lg="show">
         <div zindex="100" bindglobal="href:href" if="([{href}]~[/documentation])/show?hide">
           <form class="zi3" id="form" method="get" action="search.html" target="_top">
-            <input id="querysearch" name="q" type="text" height="2.75rem" radius="0.25rem" bgcolor="white01" width="100%" color="white" padding="1rem" class="zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
+            <input id="querysearch" onvaluechange="filtersearch--run:#searchTable;show:#searchTable" name="q" type="text" height="2.75rem" radius="0.25rem" bgcolor="white01" width="100%" color="white" padding="1rem" class="zi3" globalize-get="input_search" globalize-target="placeholder" autocomplete="off" placeholder="Search for words...">
             <input type="submit" padding="1rem" height="4rem" class="bos0 bc0 white w4 icon icon16 pa r0" value="🔍">
           </form>
-          <div stop="data-src" bindglobal="l:globalize.code" bindfield="q:#querysearch" data-src="assets/json/data/doc.json" data-iterate="true" data-loader="false" bgcolor="black" class="box pa w100 ail- autocomplete" border="1px solid #333" data-onempty="#empty2" hide>
-            <figure stop>
-              <a style="align-items: normal;" bindglobal="l:globalize.code" data-set="link:link" data-get="title" href="{link}" class="p1" stop="data-set;data-get;href;class"></a>
+          <div id="searchTableEmpty" bgcolor="black" padding="1rem" class="box pa w100 ail- autocomplete" border="1px solid #333" hide>
+            <figure>
+              <span bindfield="q:#querysearch">No results found for <b>{q}</b></span>
             </figure>
           </div>
-          <div id="empty2" class="pa w100 bcwhite zi2" hide="" style="display: none !important;">
-            <p class="m1" bindfield="q:#querysearch">No results found for <b>{q}</b></p>
+          <div id="searchTable" filtersearch--onempty="#searchTableEmpty" data-src="assets/json/data/doc.json" data-iterate="true" bgcolor="black" class="box pa w100 ail- autocomplete" border="1px solid #333" data-onempty="#empty2" hide>
+            <figure stop>
+              <a style="align-items: normal;" bindglobal="l:globalize.code" data-set="link:link" data-get="title" href="{link}" class="p1" stop="data-set;data-get;href;class" filtersearch--select></a>
+            </figure>
           </div>
         </div>
       </div>

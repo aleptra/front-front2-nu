@@ -1,10 +1,14 @@
 [
   {
-    "link": "documentation",
-    "title": "Documentation"
+    "title": "Attributes",
+    "link": "documentation/reference/ftml/attributes.html"
   },
   {
-    "link": "documentation/references/ftml/attributes",
-    "title": "Attributes"
+    "title": "Functions",
+    "link": "documentation/reference/api/functions.html"
+  },
+  {
+    "title": "Variables",
+    "link": "documentation/reference/ftml/variables.html"
   }
 ]
