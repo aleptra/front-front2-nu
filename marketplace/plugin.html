@@ -1,17 +1,25 @@
 <script src="http://localhost/front/front.js"></script>
 <title>Plugin</title>
 <template srcdoc="../../index" src="../../_templates/plugins"></template>
-<style>
-  .loader {
-    display: inherit
-  }
-</style>
 <div id="error" class="red" hide>Plugin not found!</div>
 <div id="loader" class="loader"></div>
 <hr class="bcblack01">
 <section bindquery="k:k" data-src="./assets/json/data/extensions.json" data-filterkey="extensions"
   data-filteritem="key:'{k}'" data-loader="#loader" data-set="title:extensions.0.title" data-onerror="show:#error"
   data-onfinish="doctitle:[{title}];settext:#title:[{title}]">
+  <a class="button"
+    bgcolor="white"
+    color="black"
+    minwidth="9rem"
+    minheight="2.7rem"
+    radius="1rem"
+    paddingleft="1.25rem"
+    paddingright="1.25rem"
+    lineheight="2.7"
+    float="right"
+    target="_blank"
+    data-set="key:extensions.0.key"
+    href="https://playground.front.nu/?slug={key}&id=0">Launch Demo</a>
   <div flex>
     <a paddingright="1rem">
       <figure class="p05" bgcolor="#212121" padding="1rem">
