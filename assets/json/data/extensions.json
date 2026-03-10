@@ -10,7 +10,22 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Front Labs",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "syntaxhighlighting--set",
+            "description": ""
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -22,7 +37,22 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Front Labs",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "clipboard--copy",
+            "description": ""
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -34,7 +64,22 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Front Labs",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "scrollbar--set",
+            "description": ""
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "id": 4,
@@ -46,7 +91,22 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Josef Gabrielsson",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "responsivevoice--speak",
+            "description": ""
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "id": 6,
@@ -60,27 +120,27 @@
       "author": "Josef Gabrielsson",
       "cost": "0",
       "attributes": {
-      "markup": [
-        {
-          "attribute": "filtersearch--select",
-          "description": "Marks an element as a filterable row. No value required."
-        },
-        {
-          "attribute": "filtersearch--count",
-          "description": "Groups the row under a named section counter. Value is the counter key, e.g. filtersearch--count=\"count1\"."
-        },
-        {
-          "attribute": "filtersearch--onempty",
-          "description": "Placed on the container. Shows the target element when no rows match, hides it otherwise, e.g. filtersearch--onempty=\"#emptyMessage\"."
-        }
-      ],
-      "config": [
-        {
-          "key": "",
-          "value": "",
-          "description": ""
-        }
-      ]
+        "markup": [
+          {
+            "attribute": "filtersearch--select",
+            "description": "Marks an element as a filterable row. No value required."
+          },
+          {
+            "attribute": "filtersearch--count",
+            "description": "Groups the row under a named section counter. Value is the counter key, e.g. filtersearch--count=\"count1\"."
+          },
+          {
+            "attribute": "filtersearch--onempty",
+            "description": "Placed on the container. Shows the target element when no rows match, hides it otherwise, e.g. filtersearch--onempty=\"#emptyMessage\"."
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
       }
     },
     {
@@ -93,12 +153,37 @@
       "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Josef Gabrielsson",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "particles--load",
+            "description": "Loads particles inside of the element."
+          }
+        ],
+        "config": [
+          {
+            "key": "particles",
+            "value": "number",
+            "description": ""
+          },
+          {
+            "key": "size",
+            "value": "number",
+            "description": ""
+          },
+          {
+            "key": "mousemove",
+            "value": "boolean",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "id": 11,
-      "key": "maps",
-      "title": "Maps",
+      "key": "map",
+      "title": "Map",
       "description": "Integrate Google Maps into your application, allowing you to display interactive maps, add markers, routes, and locations. This plugin makes it easy to enhance your app with geolocation features and visual map data.",
       "version": "0.1.0",
       "screenshot": "",
@@ -107,7 +192,27 @@
       "url_target": 0,
       "type": 2,
       "author": "Josef Gabrielsson",
-      "cost": "0"
+      "cost": "0",
+      "attributes": {
+        "markup": [
+          {
+            "attribute": "map--lat",
+            "description": ""
+          },
+
+          {
+            "attribute": "map--lng",
+            "description": ""
+          }
+        ],
+        "config": [
+          {
+            "key": "",
+            "value": "",
+            "description": ""
+          }
+        ]
+      }
     }
   ]
 }
