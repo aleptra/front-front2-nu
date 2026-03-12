@@ -21,8 +21,7 @@
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Overview</h2>
     <p margintop="1rem">
-      The Data module allows declarative data pipelines in HTML without writing custom JavaScript. 
-      You can fetch remote data, bind it to DOM elements, iterate over lists, filter, sort, merge multiple responses, refresh periodically, and cache results.
+      The Data module allows you to fetch remote data, bind it to DOM elements, iterate over lists, filter, sort, merge multiple responses, refresh periodically, and cache results.
     </p>
   </section>
 
@@ -39,8 +38,7 @@
         onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button>
     </small>
     <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>
-&lt;div data-src="/api/users" data-bind="total:#count"&gt;&lt;/div&gt;
+      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users" data-bind="total:#count"&gt;&lt;/div&gt;
 &lt;ul data-iterate="users"&gt;
   &lt;li&gt;
     &lt;span data-get="name"&gt;&lt;/span&gt; - 
@@ -78,8 +76,7 @@
         onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button>
     </small>
     <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>
-&lt;div data-src="/api/users" data-srcjoin="/api/orders" data-merge="users;orders" data-filteritem="status:'active'" data-sort="name"&gt;&lt;/div&gt;
+      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users" data-srcjoin="/api/orders" data-merge="users;orders" data-filteritem="status:'active'" data-sort="name"&gt;&lt;/div&gt;
 &lt;ul data-iterate="users"&gt;
   &lt;li&gt;
     &lt;span data-get="name"&gt;&lt;/span&gt; -
