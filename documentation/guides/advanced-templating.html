@@ -34,8 +34,7 @@ This guide explains how to use advanced templating features to create flexible a
     </small>
 
     <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-          maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>
-&lt;!-- Defines a reusable layout --&gt;
+          maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;!-- Defines a reusable layout --&gt;
 &lt;template&gt;
   &lt;header&gt;&lt;/header&gt;
   &lt;aside&gt;&lt;/aside&gt;
@@ -43,7 +42,7 @@ This guide explains how to use advanced templating features to create flexible a
   &lt;aside&gt;&lt;/aside&gt;
   &lt;footer&gt;&lt;/footer&gt;
 &lt;/template&gt;
-</code>
+    </code>
 
     <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem">
       <b>Note:</b> If an FTML attribute is without a value, it will be removed from the final output.
@@ -75,8 +74,7 @@ This guide explains how to use advanced templating features to create flexible a
     </small>
 
     <code bgcolor="white01" color="white" spellcheck="false" whitespace="pre" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-          maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>
-&lt;!-- Loads two templates:
+          maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;!-- Loads two templates:
 1. Start Page (srcdoc="./index") - base layout
 2. Layout template (src="./_templates/template1") - overrides base layout --&gt;
 &lt;template srcdoc="./index" src="./_templates/template1"&gt;&lt;/template&gt;
