@@ -4,13 +4,10 @@
       "id": 1,
       "key": "syntaxhighlighting",
       "title": "Basics",
-      "description": "Automatically detects the language of your code and applies clear, readable syntax highlighting. The plugin analyzes the content and highlights it without requiring manual configuration. It improves code readability by coloring tags, keywords, strings, comments, and attributes inline, making embedded code snippets easier to scan and understand.",
+      "description": "Your task is to build a simple HTML page. In the editor:\n• Start with the DOCTYPE declaration.\n• Add the main html element.\n• Place a body element inside it.\n• Inside the body, create a heading that says Hello World.\n• Load the Front script before the closing body tag.",
       "version": "0.1.0",
-      "screenshot": "",
-      "icon": "./assets/img/icon_plugin.svg",
       "type": 0,
       "author": "Front Labs",
-      "cost": "0",
       "attributes": {
         "markup": [
           {
