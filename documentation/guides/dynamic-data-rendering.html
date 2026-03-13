@@ -38,11 +38,10 @@
         onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button>
     </small>
     <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users" data-bind="total:#count"&gt;&lt;/div&gt;
-&lt;ul data-iterate="users"&gt;
+      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users"&lt;/div&gt;
+&lt;ul data-iterate="dynamic-data-rendering.features"&gt;
   &lt;li&gt;
-    &lt;span data-get="name"&gt;&lt;/span&gt; - 
-    &lt;span data-get="email"&gt;&lt;/span&gt;
+    &lt;span data-get="key"&gt;&lt;/span&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
     </code>
