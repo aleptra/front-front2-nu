@@ -21,15 +21,10 @@
   <div>
     <h4 margintop="2rem">Instructions</h4>
     <hr color="darkgray" margin="0.5rem 0">
-    <table color="white" width="100%">
-      <tbody valign="top" data-iterate="workshop.0.instructions">
-        <tr>
-          <td data-get="[*]"></td>
-          <td data-get="description"></td>
-        </tr>
-      </tbody>
-    </table>
-
+    <ul class="list" data-iterate="workshop.0.instructions">
+      <li data-get="[*]"></li>
+    </ul>
+    
     <h4 margintop="2rem">Hints</h4>
     <hr color="darkgray" margin="0.5rem 0">
     <table color="white" width="100%">
