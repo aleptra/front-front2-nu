@@ -24,7 +24,7 @@
 
   <h2 zoom="0.9" color="white" padding="3rem 0 1rem 0">Essentials:</h2>
   <section>
-    <ul class="list" lineheight="1.8rem">
+    <ul lineheight="1.8rem">
       <li><b>Markup-First Development:</b> Define all UI elements and behavior directly in markup.</li>
       <li><b>Interactive and Dynamic:</b> Built-in attributes enable events, data-binding, and reactive behavior.</li>
       <li><b>Modular Architecture:</b> Extend markup functionality with modules or plugins.</li>
@@ -40,7 +40,7 @@
 
   <section margintop="3rem">
     <h2 zoom="0.9" color="white">Runtime Pipeline</h2>
-    <ul margintop="1rem" class="list" lineheight="1.8rem">
+    <ul margintop="1rem" lineheight="1.8rem">
       <li>Load runtime → discover <i>module</i>/<i>plugin</i>/<i>var</i> from the script tag.</li>
       <li>Fetch & initialize modules/plugins; read configuration from attributes (e.g., <i>*-conf</i>).</li>
       <li>Scan DOM → map FTML attributes to actions; respect <i>runorder</i> and <i>stop</i>/<i>start</i>.</li>
@@ -57,7 +57,7 @@
       Front operates directly on the <b>real DOM</b> rather than using a virtual DOM abstraction. This approach provides
       several advantages:
     </p>
-    <ul margintop="1rem" class="list" lineheight="1.8rem">
+    <ul margintop="1rem" lineheight="1.8rem">
       <li><b>Performance:</b> Updates are applied immediately without diffing overhead.</li>
       <li><b>Memory Efficiency:</b> No large virtual DOM copy is maintained in memory.</li>
       <li><b>Reversibility:</b> Original DOM state is preserved, allowing deterministic updates and easy rollbacks.</li>

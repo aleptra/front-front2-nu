@@ -19,7 +19,7 @@
     <p margintop="1rem">
       To build a plugin, you need:
     </p>
-    <ul class="list">
+    <ul>
       <li>Choose a unique plugin name that is not already in use.</li>
       <li>Load Front with your plugin name(s) via the <b>plugin</b> attribute on the script tag.</li>
       <li>Create a plugin file in the <b>plugins/</b> directory.</li>
@@ -32,7 +32,7 @@
     <p>
       Each plugin is defined as a property on <b>app.plugin</b> with your chosen plugin name. A plugin can export any number of methods. There are two special conventions:
     </p>
-    <ul class="list">
+    <ul>
       <li><b>__autoload</b>: Called automatically when the plugin is loaded; receives an <i>options</i> object.</li>
       <li><b>pluginName--methodName</b>: Attributes matching this pattern invoke the corresponding method with an <i>options</i> object (including <i>element</i>).</li>
     </ul>
@@ -102,7 +102,7 @@ app.plugin.example = {
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Usage Details</h2>
-    <ul class="list">
+    <ul>
       <li><b>Plugin Loading:</b> List plugin name(s) in the <b>plugin</b> attribute of your <b>&lt;script src="front.js"&gt;</b> tag. Place your plugin file in the <b>plugins/</b> directory.</li>
       <li><b>Method Mapping:</b> Any attribute in the form <b>pluginName--methodName</b> invokes <b>app.plugin.pluginName.methodName</b> for that element.</li>
       <li><b>Autoload:</b> If defined, <b>__autoload</b> is called once when the plugin loads, before attribute methods.</li>
@@ -112,7 +112,7 @@ app.plugin.example = {
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Best Practices</h2>
-    <ul class="list">
+    <ul>
       <li>Use <b>__autoload</b> for setup or initialization logic.</li>
       <li>Always use Front API functions instead of direct DOM changes.</li>
       <li>Keep plugin methods focused and reusable; avoid side effects outside the provided <b>element</b>.</li>
@@ -124,7 +124,7 @@ app.plugin.example = {
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Next Steps</h2>
-    <ul class="list">
+    <ul>
       <li>Experiment with your own plugins and extend your application's capabilities.</li>
       <li>Consult the <a href="/documentation/reference/api/functions.html" globalize-get>API reference for functions</a> for detailed information.</li>
     </ul>

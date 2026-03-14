@@ -24,7 +24,7 @@
 
     <section margintop="1rem">
       <h2 color="white" zoom="0.9" padding="2rem 0 1rem 0">Variable Types</h2>
-      <ul class="list">
+      <ul>
         <li><b>Global Variables:</b> Accessible from anywhere in your application using <b>bindglobal</b>.</li>
         <li><b>Element Variables:</b> Scoped to a particular element or template using <b>bindvar</b>.</li>
         <li><b>Mapped Variables:</b> Variables that can be dynamically computed or transformed via <b>mapbindvar</b>.</li>
@@ -37,7 +37,7 @@
     <p>
       Bind variables to elements using attributes in FTML. Common binding attributes include:
     </p>
-    <ul class="list">
+    <ul>
       <li><b>bindvar:</b> Bind a local variable to an element's content or attributes.</li>
       <li><b>bindglobal:</b> Bind a global variable to any element in your application.</li>
       <li><b>bindasset:</b> Bind to structured data cached or loaded from external JSON or assets.</li>
@@ -55,7 +55,7 @@
     <p>
       Understanding scope is critical for variable management:
     </p>
-    <ul class="list">
+    <ul>
       <li><b>Global Scope:</b> Variables accessible everywhere. Ideal for application-wide settings, shared data, or
         theme values.</li>
       <li><b>Local Scope:</b> Variables restricted to a template or element. Useful for loops, forms, or reusable
@@ -70,7 +70,7 @@
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Best Practices</h2>
-    <ul class="list">
+    <ul>
       <li>Name variables descriptively to indicate their purpose and scope.</li>
       <li>Prefer <b>bindglobal</b> only for data that truly needs to be shared across templates.</li>
       <li>Use <b>bindvar</b> for local or reusable templates to avoid global namespace collisions.</li>
@@ -81,7 +81,7 @@
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Next Steps</h2>
-    <ul class="list">
+    <ul>
       <li>See the <a href="documentation/reference/ftml/attributes.html" globalize-get>full list of attributes</a> for
         binding examples.</li>
       <li>Learn how <a href="documentation/reference/ftml/variables.html" globalize-get>variables work with modules and
