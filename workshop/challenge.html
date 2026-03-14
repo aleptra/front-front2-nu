@@ -7,14 +7,7 @@
 <section bindquery="k:k" data-src="./assets/json/data/workshop.json" data-filterkey="workshop"
   data-filteritem="key:'{k}'" data-loader="#loader" data-set="title:workshop.0.title" data-onerror="show:#error"
   data-onfinish="doctitle:[{title}];settext:#title:[{title}]">
-  <div flex>
-    <div flexdirection="column">
-      <h3 id="title"></h3>
-      <b data-get="workshop.0.author"></b>
-    </div>
-  </div>
-
-  <h4 margintop="2rem">Mission</h4>
+  <h3 id="title"></h3>
   <hr color="darkgray" margin="0.5rem 0">
   <div color="white" data-get="workshop.0.mission"></div>
 
@@ -24,7 +17,7 @@
     <ul class="list" data-iterate="workshop.0.instructions">
       <li data-get="[*]"></li>
     </ul>
-    
+
     <h4 margintop="2rem">Hints</h4>
     <hr color="darkgray" margin="0.5rem 0">
     <table color="white" width="100%">

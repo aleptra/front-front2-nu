@@ -15,13 +15,15 @@
     runorder="bindglobal;settext;globalize-get"></h1>
 
   <p margintop="1rem">
-    This guide explains how to use Front’s Data module to fetch, bind, and render dynamic JSON data directly into HTML elements.
+    This guide explains how to use Front’s Data module to fetch, bind, and render dynamic JSON data directly into HTML
+    elements.
   </p>
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Overview</h2>
     <p margintop="1rem">
-      The Data module allows you to fetch remote data, bind it to DOM elements, iterate over lists, filter, sort, merge multiple responses, refresh periodically, and cache results.
+      The Data module allows you to fetch remote data, bind it to DOM elements, iterate over lists, filter, sort, merge
+      multiple responses, refresh periodically, and cache results.
     </p>
   </section>
 
@@ -31,33 +33,67 @@
       Include the Data module via Front and add <b>data-*</b> attributes to your elements:
     </p>
 
-    <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem">
-      <span flex="1" lineheight="1.85rem" paddingleft="1rem" style="flex: 1">FTML</span>
-      <button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9"
-        padding="0.45rem 0.6rem" minheight="0" margin="0" click="clipboard--copy:*code[0]"
-        onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button>
-    </small>
-    <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-      whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users"&lt;/div&gt;
-&lt;ul data-iterate="dynamic-data-rendering.features"&gt;
-  &lt;li&gt;
-    &lt;span data-get="key"&gt;&lt;/span&gt;
-  &lt;/li&gt;
+    <nav flexdirection="column" margintop="1.5rem" maxwidth="60rem" minwidth="30vw" maxheight="2rem">
+
+      <!-- Tabpanel 1 -->
+      <div id="tab1" role="tabpanel" onshow="hide:#tab2">
+        <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" height="1.8rem"><span
+            bgimage="favicon.ico 16px no-repeat 10px" flex="1" lineheight="1.85rem" paddingleft="2.2rem"
+            style="flex: 1">FTML</span><button id="copy1" bgcolor="unset" mouseover="color:[lightgray]"
+            mouseout="color:[unset]" zoom="0.9" padding="0.45rem 0.6rem" minheight="0" margin="0"
+            click="clipboard--copy:*code[1]" onclicked="settext:[✓ Copied]"
+            onsettext="rundelay[2000]:reset">Copy</button></small>
+        <code id="code" bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
+          whitespace="pre" font="monospace" syntaxhighlighting--set>&lt;ul class="list" data-src="https://aleptra.github.io/front-front2-nu/assets/json/data/dummy.json" data-iterate="dynamic-data-rendering.features"&gt;
+  &lt;li data-get="key"&gt;&lt;/li&gt;
 &lt;/ul&gt;</code>
+      </div>
+
+      <!-- Tabpanel 2 -->
+      <div id="tab2" role="tabpanel" hide onshow="hide:#tab1;sethtml:#preview:#code">
+        <pre id="preview" minheight="10rem" bgcolor="white" color="black" onsethtml="start:#preview"></pre>
+      </div>
+
+      <!-- Tab Menu -->
+      <menu zoom="0.8" bgcolor="white02" bordertop="1px solid gray" height="2rem" lineheight="1.85rem">
+        <a
+          id="tab1link"
+          click="show:#tab1"
+          onclicked="bordertop:#tab2link:[0]"
+          padding="0 0.75rem"
+          bordertop="1px solid lightgray"
+          borderright="1px solid black"
+        ><b width="1.25rem">&#9781;</b>Source</a>
+        <a
+          id="tab2link"
+          click="show:#tab2"
+          onclicked="bordertop:#tab1link:[0]"
+          padding="0 0.75rem"
+          bordertop="1px solid lightgray"
+          borderright="1px solid black"
+        ><b width="1.25rem">&#9654;</b>Preview</a>
+      </menu>
+    </nav>
   </section>
 
   <section>
     <h2 color="white" zoom="0.9" padding="3rem 0 1rem 0">Supported Features</h2>
-    <ul class="list">
-      <li><b>Binding values:</b> <i>data-get</i>, <i>data-set</i></li>
+    <ul>
+      <li><b>Fetching data:</b> <i>data-src</i></li>
+      <li><b>Triggering API actions:</b> GET, POST, PATCH, DELETE</li>
+      <li><b>Binding values:</b> <i>data-get</i>, <i>data-set</i>, <i>data-bind</i></li>
       <li><b>Iterating lists:</b> <i>data-iterate</i></li>
       <li><b>Filtering arrays:</b> <i>data-filteritem</i>, <i>data-filterkey</i></li>
       <li><b>Sorting arrays:</b> <i>data-sort</i>, <i>data-sortorder</i></li>
       <li><b>Merging multiple API responses:</b> <i>data-srcjoin</i>, <i>data-merge</i></li>
+      <li><b>Transforming response data:</b> <i>data-replace</i></li>
+      <li><b>Loading indicators:</b> <i>data-loader</i></li>
+      <li><b>Delayed requests:</b> <i>data-wait</i></li>
+      <li><b>Handling empty responses:</b> <i>data-onempty</i></li>
+      <li><b>Handling response status:</b> <i>data-status</i></li>
+      <li><b>Lifecycle hooks:</b> <i>data-onsuccess</i>, <i>data-onerror</i>, <i>data-onfinish</i></li>
       <li><b>Periodic refreshing:</b> <i>data-interval</i></li>
-      <li><b>Caching responses with TTL:</b> <i>data-ttl</i> (local or session storage)</li>
-      <li><b>Triggering API actions:</b> GET, POST, DELETE</li>
-      <li><b>Binding data to other elements:</b> <i>data-bind</i></li>
+      <li><b>Caching responses:</b> <i>data-ttl</i></li>
     </ul>
   </section>
 
@@ -69,9 +105,9 @@
 
     <small bgcolor="white02" maxwidth="60rem" minwidth="30vw" margintop="1.5rem" height="1.8rem">
       <span flex="1" lineheight="1.85rem" paddingleft="1rem" style="flex: 1">FTML</span>
-      <button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9"
-        padding="0.45rem 0.6rem" minheight="0" margin="0" click="clipboard--copy:*code[1]"
-        onclicked="settext:[✓ Copied]" onsettext="rundelay[2000]:reset">Copy</button>
+      <button bgcolor="unset" mouseover="color:[lightgray]" mouseout="color:[unset]" zoom="0.9" padding="0.45rem 0.6rem"
+        minheight="0" margin="0" click="clipboard--copy:*code[1]" onclicked="settext:[✓ Copied]"
+        onsettext="rundelay[2000]:reset">Copy</button>
     </small>
     <code bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
       whitespace="pre" maxwidth="60rem" minwidth="30vw" font="monospace" syntaxhighlighting--set>&lt;div data-src="/api/users" data-srcjoin="/api/orders" data-merge="users;orders" data-filteritem="status:'active'" data-sort="name"&gt;&lt;/div&gt;
