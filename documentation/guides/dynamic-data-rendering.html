@@ -33,7 +33,7 @@
       Include the Data module via Front and add <b>data-*</b> attributes to your elements:
     </p>
 
-    <nav flexdirection="column" margintop="1.5rem" maxwidth="60rem" minwidth="30vw" maxheight="2rem">
+    <nav flexdirection="column" margintop="1.5rem" maxwidth="60rem" minwidth="30vw">
 
       <!-- Tabpanel 1 -->
       <div id="tab1" role="tabpanel" onshow="hide:#tab2">
@@ -44,32 +44,39 @@
             click="clipboard--copy:*code[1]" onclicked="settext:[✓ Copied]"
             onsettext="rundelay[2000]:reset">Copy</button></small>
         <code id="code" bgcolor="white01" color="white" spellcheck="false" screen-xs="padding:[1rem]" screen-md="padding:[1.5rem]"
-          whitespace="pre" font="monospace" syntaxhighlighting--set>&lt;ul class="list" data-src="https://aleptra.github.io/front-front2-nu/assets/json/data/dummy.json" data-iterate="dynamic-data-rendering.features"&gt;
+          whitespace="pre" font="monospace" syntaxhighlighting--set>&lt;ul data-src="https://aleptra.github.io/front-front2-nu/assets/json/data/dummy.json" data-iterate="dynamic-data-rendering.features"&gt;
   &lt;li data-get="key"&gt;&lt;/li&gt;
 &lt;/ul&gt;</code>
       </div>
 
       <!-- Tabpanel 2 -->
       <div id="tab2" role="tabpanel" hide onshow="hide:#tab1;sethtml:#preview:#code">
-        <pre id="preview" minheight="10rem" bgcolor="white" color="black" onsethtml="start:#preview"></pre>
+        <pre
+          id="preview"
+          minheight="10rem"
+          maxheight="5rem"
+          bgcolor="white"
+          color="black"
+          onsethtml="start:#preview"
+          overflow="scroll"
+          scrollbar--set="thumb:black"></pre>
       </div>
 
       <!-- Tab Menu -->
-      <menu zoom="0.8" bgcolor="white02" bordertop="1px solid gray" height="2rem" lineheight="1.85rem">
+      <menu zoom="0.8" bgcolor="white01" bordertop="1px solid black" height="2rem" lineheight="2rem">
         <a
           id="tab1link"
           click="show:#tab1"
-          onclicked="bordertop:#tab2link:[0]"
+          onclicked="bgcolor:#tab2link:[initial];bgcolor:#tab1link:[black03]"
+          bgcolor="black03"
           padding="0 0.75rem"
-          bordertop="1px solid lightgray"
           borderright="1px solid black"
         ><b width="1.25rem">&#9781;</b>Source</a>
         <a
           id="tab2link"
           click="show:#tab2"
-          onclicked="bordertop:#tab1link:[0]"
+          onclicked="bgcolor:#tab1link:[initial];bgcolor:#tab2link:[black03]"
           padding="0 0.75rem"
-          bordertop="1px solid lightgray"
           borderright="1px solid black"
         ><b width="1.25rem">&#9654;</b>Preview</a>
       </menu>
