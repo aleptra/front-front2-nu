@@ -49,10 +49,8 @@
     </ul>
   </section>
 
-  <h2 zoom="0.9" color="white" margintop="3rem">Core features</h2>
-  <p color="white">- The fundamental behavior built into the engine.</p>
-  <section margintop="2rem">
-    <h6 color="white">Document Object Model (DOM)</h6>
+  <section margintop="3rem">
+    <h2 zoom="0.9" color="white">Document Object Model (DOM)</h2>
     <p>
       Front operates directly on the <b>real DOM</b> rather than using a virtual DOM abstraction. This approach provides
       several advantages:
@@ -66,20 +64,39 @@
     </ul>
   </section>
 
+  <h2 zoom="0.9" color="white" margintop="3rem">Core features</h2>
+  <p color="white">- The fundamental behavior built into the engine.</p>
+
+  <section margintop="2rem">
+    <h6 color="white">Runtime Hybrid</h6>
+    <p>
+      Actions occur in a determined order when using the runorder attribute, ensuring consistent updates and reducing
+      side effects or race conditions, while the natural element order is respected when no explicit runorder is set.
+    </p>
+  </section>
+
   <section margintop="2rem">
     <h6 color="white">State Binding</h6>
-    <p>Front keeps application state in sync across the page. Variables, user inputs, query parameters, global values,
-      and API responses are automatically connected to page elements so that any changes are reflected wherever they are
-      used.
-    </p>
+    <p>
+      Page elements stay in sync with application state. Variables, user inputs, query parameters, global values, and
+      API responses update automatically wherever they appear.</p>
   </section>
 
   <section margintop="2rem">
     <h6 color="white">Event Action Handling</h6>
     <p>
-      Front lets you attach events directly to elements in markup. Built-in and custom events trigger actions
-      automatically,
-      enabling interactive behavior and dynamic updates across the page.
+      Events are triggered through markup attributes. Attributes that support events invoke corresponding actions,
+      allowing elements to respond immediately and update content, control modules, or modify other elements
+      declaratively.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Dynamic Content Manipulation</h6>
+    <p>
+      Updates or changes content in real time based on events, user actions, or data changes. Enables declarative
+      control over
+      showing/hiding elements, formatting, and automatically updating lists or content without manual DOM manipulation.
     </p>
   </section>
 
@@ -106,19 +123,18 @@
     <h6 color="white">Dynamic Data Rendering</h6>
     <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Data module</p>
     <p>
-      Front provides a way for fetching, binding, and rendering data directly in your page. It allows
-      content to be updated dynamically based on external data sources, supporting lists, filtering, sorting, and
-      merging of data.
+      Front provides a way to fetch, bind, and render dynamic data directly into your page. Content can be updated
+      automatically from external sources, with support for lists, filtering, sorting, merging, transforming, and
+      caching. Built-in lifecycle hooks and other features make it flexible for interactive, data-driven interfaces.
     </p>
   </section>
 
   <section margintop="2rem">
     <h6 color="white">Persistent State Binding</h6>
     <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Storage module</p>
-    <p>Front also supports persistent state binding via the <code>storage</code> module, which keeps bound values saved
+    <p>Front also supports persistent state binding, which keeps bound values saved
       across page reloads. Changes in storage automatically update all connected elements, ensuring data remains
-      consistent
-      between sessions
+      consistent between sessions.
     </p>
   </section>
 
