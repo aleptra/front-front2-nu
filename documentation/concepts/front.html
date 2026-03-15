@@ -64,16 +64,10 @@
     </ul>
   </section>
 
-  <h2 zoom="0.9" color="white" margintop="3rem">Core features</h2>
-  <p color="white">- The fundamental behavior built into the engine.</p>
-
-  <section margintop="2rem">
-    <h6 color="white">Runtime Hybrid</h6>
-    <p>
-      Actions occur in a determined order when using the runorder attribute, ensuring consistent updates and reducing
-      side effects or race conditions, while the natural element order is respected when no explicit runorder is set.
-    </p>
-  </section>
+  <hgroup flexdirection="column">
+    <h2 zoom="0.9" color="white" margintop="3rem">Core features</h2>
+    <p color="silver">- The fundamental behavior built into the engine.</p>
+  </hgroup>
 
   <section margintop="2rem">
     <h6 color="white">State Binding</h6>
@@ -92,20 +86,65 @@
   </section>
 
   <section margintop="2rem">
-    <h6 color="white">Dynamic Content Manipulation</h6>
+    <h6 color="white">Dynamic Content</h6>
     <p>
-      Updates or changes content in real time based on events, user actions, or data changes. Enables declarative
-      control over
-      showing/hiding elements, formatting, and automatically updating lists or content without manual DOM manipulation.
+      Update element content in real time as data or user actions change. Declarative attributes automatically sync
+      visibility, formatting, and lists, ensuring the interface stays current without the need for manual structural
+      changes.
     </p>
   </section>
 
-  <h2 zoom="0.9" color="white" margintop="5rem">Module features</h2>
-  <p color="white">- The extended behavior loaded into the engine.</p>
+  <section margintop="2rem">
+    <h6 color="white">Runtime Hybrid</h6>
+    <p>
+      Actions occur in a determined order when using the runorder attribute, ensuring consistent updates and reducing
+      side effects or race conditions, while the natural element order is respected when no explicit runorder is set.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Conditional Execution</h6>
+    <p>
+      Allows actions or attributes to run only when specified conditions are met. Elements can evaluate values,
+      bindings, or expressions to control whether updates occur, enabling declarative logic within the page.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Execution Control</h6>
+    <p>
+      Manage the lifecycle of your interface with total flexibility. Keep elements dormant to prevent initialization and
+      logic execution until they are required. Activating these sections dynamically on demand ensures resources are
+      utilized only when relevant, maximizing efficiency.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Scope Management</h6>
+    <p>
+      Perform surgical UI updates by re-evaluating specific components or containers. This localized approach allows you
+      to refresh individual parts of your interface instantly without a full page reload, keeping your application fast
+      and memory-efficient.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Recursive Component Composition</h6>
+    <p>
+      Build modular interfaces by stacking external files and internal fragments. Using a layered injection system, you
+      can override templates indefinitely-later fragments extend or replace earlier ones-allowing for deeply nested,
+      reusable UI components that remain fully scoped and reactive.
+    </p>
+  </section>
+
+  <hgroup flexdirection="column">
+    <h2 zoom="0.9" color="white" margintop="5rem">Module features</h2>
+    <p color="white">- The extended behavior loaded into the engine.</p>
+  </hgroup>
 
   <section margintop="2rem">
     <h6 color="white">Single Page Application (SPA)</h6>
-    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Navigate module</p>
+    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Navigate</p>
     <p>
       Single Page Application (SPA) behavior intercepts link clicks and dynamically loads content into a target
       container
@@ -121,7 +160,7 @@
 
   <section margintop="2rem">
     <h6 color="white">Dynamic Data Rendering</h6>
-    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Data module</p>
+    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Data</p>
     <p>
       Front provides a way to fetch, bind, and render dynamic data directly into your page. Content can be updated
       automatically from external sources, with support for lists, filtering, sorting, merging, transforming, and
@@ -131,7 +170,7 @@
 
   <section margintop="2rem">
     <h6 color="white">Persistent State Binding</h6>
-    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Storage module</p>
+    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Storage</p>
     <p>Front also supports persistent state binding, which keeps bound values saved
       across page reloads. Changes in storage automatically update all connected elements, ensuring data remains
       consistent between sessions.
@@ -140,7 +179,7 @@
 
   <section margintop="2rem">
     <h6 color="white">Globalization</h6>
-    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Requires:</b> Internationalize module,
+    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Internationalize module,
       Chronitize module and Monetize module</p>
     <p>
       With the <code>globalize</code> module, mark strings using <code>globalize-get</code>.
