@@ -70,10 +70,19 @@
   </hgroup>
 
   <section margintop="2rem">
-    <h6 color="white">State Binding</h6>
+    <h6 color="white">Runtime Hybrid</h6>
     <p>
-      Page elements stay in sync with application state. Variables, user inputs, query parameters, global values, and
-      API responses update automatically wherever they appear.</p>
+      Actions occur in a determined order when using the runorder attribute, ensuring consistent updates and reducing
+      side effects or race conditions, while the natural element order is respected when no explicit runorder is set.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Action Chaining</h6>
+    <p>
+      Multiple actions can be chained on a single element through attribute values. Each attribute triggers an action,
+      and together they form a declarative execution chain processed by the runtime. This allows complex behavior to be
+      built by stacking small, reusable actions.</p>
   </section>
 
   <section margintop="2rem">
@@ -95,11 +104,10 @@
   </section>
 
   <section margintop="2rem">
-    <h6 color="white">Runtime Hybrid</h6>
+    <h6 color="white">State Binding</h6>
     <p>
-      Actions occur in a determined order when using the runorder attribute, ensuring consistent updates and reducing
-      side effects or race conditions, while the natural element order is respected when no explicit runorder is set.
-    </p>
+      Page elements stay in sync with application state. Variables, user inputs, query parameters, global values, and
+      API responses update automatically wherever they appear.</p>
   </section>
 
   <section margintop="2rem">
@@ -134,6 +142,15 @@
       Build modular interfaces by stacking external files and internal fragments. Using a layered injection system, you
       can override templates indefinitely-later fragments extend or replace earlier ones-allowing for deeply nested,
       reusable UI components that remain fully scoped and reactive.
+    </p>
+  </section>
+
+  <section margintop="2rem">
+    <h6 color="white">Modular Includes</h6>
+    <p>
+      Seamlessly inject external HTML templates into your page using a single attribute. This allows you to manage
+      reusable components like headers, footers, or UI fragments in separate files, keeping your main markup clean and
+      easy to maintain.
     </p>
   </section>
 
