@@ -163,23 +163,17 @@
     <h6 color="white">Single Page Application (SPA)</h6>
     <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Navigate</p>
     <p>
-      Single Page Application (SPA) behavior intercepts link clicks and dynamically loads content into a target
-      container
-      without a full page reload. Navigation is controlled via attributes on links or elements, enabling seamless
-      updates
-      using AJAX.
+      Intercept link clicks and dynamically loads content into a target container without a full page reload.
+      Navigation is controlled via attributes on links or elements, enabling seamlessupdates using AJAX, with links
+      pointing directly to separate <i>.html</i> files instead of a route table.
     </p>
-
-    <div borderleft="2px solid white" paddingleft="1rem" margintop="1rem"><b>Note:</b> There is no route table - just
-      link to separate <i>.html</i> files.
-    </div>
   </section>
 
   <section margintop="2rem">
     <h6 color="white">Dynamic Data Rendering</h6>
     <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Data</p>
     <p>
-      Front provides a way to fetch, bind, and render dynamic data directly into your page. Content can be updated
+      Fetch, bind, and render dynamic data directly into pages. Content can be updated
       automatically from external sources, with support for lists, filtering, sorting, merging, transforming, and
       caching. Built-in lifecycle hooks and other features make it flexible for interactive, data-driven interfaces.
     </p>
@@ -188,19 +182,22 @@
   <section margintop="2rem">
     <h6 color="white">Persistent State Binding</h6>
     <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Storage</p>
-    <p>Front also supports persistent state binding, which keeps bound values saved
-      across page reloads. Changes in storage automatically update all connected elements, ensuring data remains
-      consistent between sessions.
+    <p>
+      Persistent state binding keeps values saved across page reloads and automatically updates all connected elements.
+      It supports structured data, enabling adding, updating, setting, or removing values, and allows stored data to be
+      injected directly into element content or attributes, keeping the interface synchronized and reactive.
     </p>
   </section>
 
   <section margintop="2rem">
     <h6 color="white">Globalization</h6>
-    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Internationalize module,
-      Chronitize module and Monetize module</p>
+    <p zoom="0.9" color="silver" margintop="0.3rem" marginbottom="1rem"><b>Module:</b> Internationalize, Chronotize and
+      Localize</p>
     <p>
-      With the <code>globalize</code> module, mark strings using <code>globalize-get</code>.
-      Language can be switched via querystring (<code>?locale=sv</code>).
+      Ensure that interfaces adapt seamlessly to users worldwide. Support multilingual,
+      regional formatting of dates, times, numbers, and other content, as well as proper handling of locale-specific
+      conventions. Combining translation, localization, and temporal adaptation allows the interface to respond
+      accurately and consistently across different languages and regions.
     </p>
   </section>
 
