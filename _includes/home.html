@@ -42,8 +42,12 @@
   <section height="100%" bgcolor="white">
     100%
   </section>
-  <footer justifycontent="center" padding="2rem">
+  <footer block align="center" padding="2rem">
     Released under the&nbsp;<a href="https://opensource.org/license/MIT" target="_blank">MIT License</a>.
     Copyright ©&nbsp;<span chronotize-get="Y"></span>&nbsp;Josef Gabrielsson
+    <br>
+    <small block bindglobal="ma:frontVersion.major;mi:frontVersion.minor;pa:frontVersion.patch">
+      Front version: {ma}.{mi}.{pa}
+    </small>
   </footer>
 </article>
