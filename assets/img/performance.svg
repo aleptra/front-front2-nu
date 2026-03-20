@@ -1,4 +1,4 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="15 15 170 170" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate(100, 100)">
     <circle cx="0" cy="0" r="75" fill="none" stroke="#eee" stroke-width="10" />
     <circle cx="0" cy="0" r="75" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="10 40">
@@ -10,7 +10,7 @@
     </circle>
 
     <circle cx="0" cy="0" r="15" fill="#000">
-      <animate attributeName="r" values="12;18;12" dur="0.2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="1;0.7;1" dur="0.2s" repeatCount="indefinite" />
     </circle>
     
