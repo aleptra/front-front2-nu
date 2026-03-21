@@ -1,7 +1,8 @@
-<svg viewBox="15 15 170 170" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(100, 100)">
-    <circle cx="0" cy="0" r="75" fill="none" stroke="#eee" stroke-width="10" />
-    <circle cx="0" cy="0" r="75" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="10 40">
+<svg viewBox="-70 -70 140 140" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ddd" stroke-width="5" />
+    
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="10 45">
       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
     </circle>
 
@@ -11,7 +12,6 @@
 
     <circle cx="0" cy="0" r="15" fill="#000">
       <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;0.7;1" dur="0.2s" repeatCount="indefinite" />
     </circle>
     
     <path d="M-30 0 H30 M0 -30 V30" stroke="white" stroke-width="2" opacity="0.5" />
