@@ -9,7 +9,7 @@
     screen-xxl="width:[15rem];minwidth:[15rem];maxwidth:[20rem];relative;show"
     screen-xxxl="width:[20rem];minwidth:[20rem];maxwidth:[25rem];relative;show"
   >
-    <div width="100%" include="_includes/sidebar.html"></div>
+    <div width="100%" bindvar="sidebar" include="_includes/{sidebar:sidebar}.html"></div>
   </aside>
   <main include height screen-xs="padding:[1.5rem]" screen-sm="padding:[2rem]" screen-md="padding:[3rem]" screen-lg="padding:[4rem]"></main>
 </template>
