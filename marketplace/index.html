@@ -35,12 +35,15 @@
       width="inherit"
     >
       <a href="marketplace/plugin.html?k={k}" data-set="k:key" class="br05-" bgcolor="#212121" filtersearch--select>
-        <figure flexdirection="column" width="100%" class="bw1 p1">
-          <img width="4rem" marginbottom="1rem" data-get="icon">
-          <figcaption class="fwb" data-get="title"></figcaption>
+        <figure screen-xxs="flexdirection:[row]" screen-lg="flexdirection:[column]" width="100%" class="bw1 p1">
+          <img width="4rem" screen-xxs="marginbottom:[0]" screen-lg="marginbottom:[1rem]" marginright="1rem" data-get="icon">
+          <div flexdirection="column">
+            <figcaption class="fwb" data-get="title" paddingright="1rem"></figcaption>
           <small data-get="author">Front</small>
           <small class="z09" data-get="version" jsonbefore="Version: ">Version: 0.1</small>
+          </div>
         </figure>
       </a>
     </div>
+  </section>
 </article>
