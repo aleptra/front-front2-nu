@@ -13,7 +13,7 @@
     "section3_title": "Performance",
     "section3_subtitle": "Maximum speed and efficiency are achieved through continuous source-code optimizations and direct manipulation of the real DOM. By avoiding reliance on a virtual DOM and its associated overhead, this approach delivers highly responsive and performant user interfaces.",
     "section4_title": "Source Code",
-    "section4_subtitle": "Free and open source under the MIT license. Written in ECMAScript 5 for broad browser compatibility; source code is available to explore, fork, and modify as needed.",
+    "section4_subtitle": "Free and open source under the MIT License. Written in ECMAScript 5 for broad browser compatibility; source code is available to explore, fork, and modify as needed.",
     "movie": "Movie",
     "Movies": "Movies",
     "show": "Show",
