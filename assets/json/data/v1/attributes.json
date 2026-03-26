@@ -294,7 +294,9 @@
     "example": ""
   },
   "keyboard-key": {
-    "category": "behavior"
+    "category": "behavior",
+    "description_short": "Defines one or more keys that trigger the element's action. Multiple keys can be separated by a semicolon.",
+    "example": "<div keyboard-key=\"Enter\" keyboard-action=\"alert:[Pressed]\">Press Enter</div>"
   },
   "lineheight": {
     "category": "style",
