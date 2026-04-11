@@ -661,17 +661,25 @@
     "description_short": "Sets the source of the image.",
     "example": "<img setsrc=\"https:\//placehold.co\/200x100\">"
   },
-  "stop": {
-    "category": "behavior",
-    "see_also": [
-      "start"
-    ]
+  "slice": {
+    "category": "content",
+    "description_short": "Extracts part of the content by index."
   },
   "start": {
     "category": "behavior",
     "see_also": [
       "stop"
     ]
+  },
+  "stop": {
+    "category": "behavior",
+    "see_also": [
+      "start"
+    ]
+  },
+  "split": {
+    "category": "content",
+    "description_short": "Splits content by delimiter and returns a part."
   },
   "togglevalue": {
     "category": "value",
