@@ -208,6 +208,14 @@
         "description": "Sets HTML content."
       },
       {
+        "attribute": "slice",
+        "description": "Extracts part of the content by index."
+      },
+      {
+        "attribute": "split",
+        "description": "Splits content by delimiter and returns a part."
+      },
+      {
         "attribute": "valign",
         "description": "Sets the vertical alignment of content within the element."
       }
